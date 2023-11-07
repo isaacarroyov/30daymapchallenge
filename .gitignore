@@ -1,1 +1,10 @@
 .DS_Store
+# En pausa los demás scripts
+/scripts/2023_30daymapchallenge_day0[2-9]_*.R
+/scripts/2023_30daymapchallenge_day1[0-9]_*.R
+/scripts/2023_30daymapchallenge_day2[0-9]_*.R
+/scripts/2023_30daymapchallenge_day30_*.R
+# En pausa los conjuntos de datos
+data/*_shp/
+data/*_descriptor_*
+data/lineas_*.json
