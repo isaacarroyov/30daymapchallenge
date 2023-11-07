@@ -1,4 +1,5 @@
 .DS_Store
+ignored_files/
 # En pausa los demás scripts
 /scripts/2023_30daymapchallenge_day0[2-9]_*.R
 /scripts/2023_30daymapchallenge_day1[0-9]_*.R
