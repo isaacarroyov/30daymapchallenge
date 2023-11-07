@@ -67,7 +67,7 @@ p1 <- ggplot() +
   scale_fill_manual(
     values = MoMAColors::moma.colors("Picabia", n = 45, direction = 1)[35:45]) +
   labs(title = "#30DayMapChallenge. Day 1: Points",
-       subtitle = "Estaciones _(círculos)_ y Transbordos _(triángulos)_ del Metrobús de la CDMX", # nolint
+       subtitle = "Estaciones _(círculos)_ y Transbordos _(triángulos)_ del Metrobús de la CDMX<br>El color indica la línea: <span style='color:#B32118;'>1</span>, <span style='color:#893893;'>2</span>, <span style='color:#78A331;'>3</span>, <span style='color:#F68E1C;'>4</span>, <span style='color:#06357A;'>5</span>, <span style='color:#E83E97;'>6</span> y <span style='color:#017337;'>7</span>", # nolint
        caption = '<strong>Datos:</strong> <em>Ubicación de líneas y estaciones del Metrobús</em> a través del <strong>Portal de Datos Abiertos de la Ciudad de México</strong>. <em>Marco Geoestadístico de México (2022)</em> a través del <strong>INEGI</strong><br><br><em>Isaac Arroyo (@unisaacarroyov)</em>') + # nolint
   theme_void() +
   theme(
@@ -80,12 +80,13 @@ p1 <- ggplot() +
                                  size = 80,
                                  family = title_font, face = "bold"),
     plot.subtitle = element_textbox(colour = "white",
-                                    width = unit(8, "in"), size = 40,
+                                    width = unit(8, "in"),
+                                    size = 40, lineheight = 0.5,
                                     family = subtitle_font),
     plot.caption = element_textbox(color = "white",
                                    width = unit(8, "in"),
                                    margin = margin(t = -0.75, unit = "in"),
-                                   size = 30, lineheight = 0.3,
+                                   size = 30, lineheight = 0.4,
                                    family = subtitle_font,
                                    hjust = 0)
   )
