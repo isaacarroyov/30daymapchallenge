@@ -4,9 +4,10 @@
 
 ### Day 1: Points
 
-[**Code**](): `{ggplot2}` _and friends_  
-[**Data**](): 
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day01_points.R): `{ggplot2}` _and friends_  
+**Data**: [_Ubicación de líneas y estaciones del Metrobús_](https://datos.cdmx.gob.mx/dataset/geolocalizacion-metrobus): 
 
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day01_points.png)
 
 ### Day 2: Lines
 
