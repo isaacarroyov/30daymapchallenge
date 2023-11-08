@@ -1,0 +1,103 @@
+---
+format:
+  html:
+    echo: false
+jupyter: python3
+---
+
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Work+Sans:ital,wght@0,900;1,700&display=swap');
+
+    h1 {
+        font-weight: 900;
+        font-size: 1.8rem;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1rem;
+        
+        font-family: 'Open Sans', sans-serif;
+    }
+   
+   #caption {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: #5C2313;
+        text-decoration: none;
+    }
+
+    #quarto-content {
+        background: #ACB6B9;
+    }
+
+    #nota_subtitle {
+        font-size: 0.7rem;
+        font-style: italic;
+    }
+
+</style>
+
+<h1>#30DayMapChallenge Day 2: Lines</h1>
+
+<p style='margin-bottom:5px;'>
+Sistema del Metro de la Ciudad de México.
+</p>
+<p id="nota_subtitle" style="line-height: 1em;margin-top:0px"><b>Nota</b>: Los colores difieren a los que son conocidos, ya que usé otra <a id= "url_paleta_colores" href="https://64.media.tumblr.com/4bba94101ba9ada212d90b1266005c62/tumblr_o61c63iH1K1rbw940o1_1280.jpg">imagen de referencia para  la paleta de colores de las líneas del metro de la Ciudad de México</a>.
+</p>
+
+```{python}
+import altair as alt
+alt.renderers.set_embed_options(actions=False)
+# = = LOAD DATA = = #
+data_lineas_metro_cdmx = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/lineas_de_metro_cdmx.geojson", format = alt.DataFormat(property = "features"))
+
+data_manzanas_cdmx = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/manzanas_cdmx_2022.geojson", format = alt.DataFormat(property = "features"))
+
+# = = INTERACTIVITY = = #
+manzanas = alt.Chart(
+        data_manzanas_cdmx
+    ).mark_geoshape(
+        strokeWidth=0,
+        color = "#0C222A",
+    )
+
+lineas = alt.Chart(
+        data_lineas_metro_cdmx
+    ).mark_geoshape(
+        strokeWidth = 1.2,
+        filled = False,
+    ).encode(
+        detail = alt.Detail("properties.LINEA:N"),
+        color = alt.Color(
+            legend = None,
+            shorthand = "properties.LINEA:N",
+            scale = alt.Scale(
+                range = ["#E95EA2", "#664845", "#2166B1", "#8A802B", "#00A88E",
+                          "#FBF265", "#EE3A46", "#F37737", "#319F48", "#231F21",
+                          "#415064", "#7A4E9E"],
+            )
+        ),
+        
+    )
+
+mapa = (manzanas + lineas).properties(
+        background = "transparent",
+        width = "container",
+        height = 500
+    )
+
+mapa
+
+```
+
+<p id="caption">
+<b>Datos</b>: <em>Líneas y Estaciones de STC Metro</em> a través del <b>Portal de Datos Abiertos de la Ciudad de México</b>. <em>Marco Geoestadístico de México (2022)</em> a través del <b>INEGI</b>. <br><em>Isaac Arroyo (@unisaacarroyov)</em>
+</p>
