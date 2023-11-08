@@ -5,9 +5,6 @@ format:
 jupyter: python3
 ---
 
-
-
-
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Work+Sans:ital,wght@0,900;1,700&display=swap');
 
@@ -56,43 +53,36 @@ Sistema del Metro de la Ciudad de México.
 ```{python}
 import altair as alt
 alt.renderers.set_embed_options(actions=False)
+
 # = = LOAD DATA = = #
 data_lineas_metro_cdmx = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/lineas_de_metro_cdmx.geojson", format = alt.DataFormat(property = "features"))
 
 data_manzanas_cdmx = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/manzanas_cdmx_2022.geojson", format = alt.DataFormat(property = "features"))
 
-# = = INTERACTIVITY = = #
-manzanas = alt.Chart(
-        data_manzanas_cdmx
-    ).mark_geoshape(
-        strokeWidth=0,
-        color = "#0C222A",
-    )
+# = = DATAVIS CONFIG = = #
+list_colors_lineas = ["#E95EA2", "#664845", "#2166B1", "#8A802B", "#00A88E", "#FBF265", "#EE3A46", "#F37737", "#319F48", "#231F21", "#415064", "#7A4E9E"]
 
-lineas = alt.Chart(
-        data_lineas_metro_cdmx
-    ).mark_geoshape(
-        strokeWidth = 1.2,
-        filled = False,
-    ).encode(
-        detail = alt.Detail("properties.LINEA:N"),
-        color = alt.Color(
-            legend = None,
-            shorthand = "properties.LINEA:N",
-            scale = alt.Scale(
-                range = ["#E95EA2", "#664845", "#2166B1", "#8A802B", "#00A88E",
-                          "#FBF265", "#EE3A46", "#F37737", "#319F48", "#231F21",
-                          "#415064", "#7A4E9E"],
-            )
-        ),
-        
-    )
+# = = LAYERS = = #
+manzanas = alt.Chart(data_manzanas_cdmx).mark_geoshape(strokeWidth = 0, color = "#0C222A")
 
-mapa = (manzanas + lineas).properties(
-        background = "transparent",
-        width = "container",
-        height = 500
-    )
+lineas = (alt.Chart(data_lineas_metro_cdmx)
+             .mark_geoshape(
+                strokeWidth = 1.2,
+                filled = False)
+             .encode(
+                color = alt.Color(
+                    shorthand = "properties.LINEA:N",
+                    legend = None,
+                    scale = alt.Scale(range = list_colors_lineas)))
+          )
+
+# = = FINAL DATAVIS = = #
+mapa = ((manzanas + lineas)
+        .properties(
+            background = "transparent",
+            width = "container",
+            height = 500)
+        )
 
 mapa
 
