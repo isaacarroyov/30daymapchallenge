@@ -11,9 +11,10 @@
 
 ### Day 2: Lines
 
-[**Code**](): `{ggplot2}` _and friends_  
-[**Data**](): 
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day02_lines.qmd): `altair`
+**Data**: [_Líneas y Estaciones de STC Metro_](https://datos.cdmx.gob.mx/dataset/lineas-y-estaciones-del-metro/resource/288b10dd-4f21-4338-b1ed-239487820512): 
 
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day02_lines.jpg)
 
 ### Day 3: Polygons
 
