@@ -1,0 +1,87 @@
+---
+format:
+  html:
+    echo: false
+jupyter: python3
+---
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono&display=swap');
+    
+    #quarto-content {
+        background: #FAF6E8;
+        color: #4F0335;
+    }
+    
+    p code:not(.sourceCode), li code:not(.sourceCode) {
+        font-family: 'Space Mono', monospace;
+        background-color: #FDFCF6;
+        color: #034F1D;
+    }
+
+    h1 {
+        font-weight: 900;
+        font-size: 1.8rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.9rem;
+        font-family: 'Source Sans 3', sans-serif;
+    }
+   
+   #caption {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: #5C2313;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        font-size: 0.65rem;
+        font-style: italic;
+        margin-top: -1em;
+    }
+
+</style>
+
+<h1>#30DayMapChallenge Day 6: Asia</h1>
+
+<p>
+Active fires in Asia for the last 24 hours (November 8 and <em>part of</em> November 9)</p>
+<p id="nota_subtitle">
+<b>Note</b>: Active fire products from the <b>Moderate Resolution Imaging Spectroradiometer (MODIS)</b> satellites, <em>Terra</em> and <em>Aqua</em>.
+</p>
+
+```{python}
+import numpy as np
+import pandas as pd
+import geopandas
+import altair as alt
+
+alt.renderers.set_embed_options(actions=False)
+
+# = = LOAD DATA = = #
+
+
+# = = DATAVIS CONFIG = = #
+
+
+# = = LAYERS = = #
+
+
+
+# = = FINAL DATAVIS = = #
+
+```
+
+
+<p id="caption">
+<b>Data</b>: <em>Active fire products from the Moderate Resolution Imaging Spectroradiometer (MODIS) for the last 24 h in Asia</em> via NASA's <b>Fire Information for Resource Management System (FIRMS)</b><br><em>Isaac Arroyo (@unisaacarroyov)</em>
+</p>
+<br>
+<br>
