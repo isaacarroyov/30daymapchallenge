@@ -44,6 +44,10 @@ jupyter: python3
 
 <h1>#30DayMapChallenge Day 3: Polygons</h1>
 
+Simplificación de los límites geográficos de los estados de México (y por ende, de todo el país).<br>Los colores son de la paleta <strong>Klein</strong> de la paquetería <code>{MoMA Colors}</code> de <strong>Blake Robert Mills</strong> (<em>@BlakeRobMills</em>)
+
+Nota: Para lograr los polígonos, se usó <code>gdf['geometry'].simplify(tolerance = 0.35, preserve_topology = False)</code>
+
 ```{python load-libraries}
 #| eval: false
 import numpy as np
@@ -71,15 +75,29 @@ import altair as alt
 alt.renderers.set_embed_options(actions=False)
 
 # = = LOAD DATA = = #
-
+data_polygons_mexico = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/geom_mexico_polygons.geojson", format = alt.DataFormat(property = "features"))
 
 # = = DATAVIS CONFIG = = #
+blake_klein_colour_palette = ["#FF4D6F", "#C86780", "#928191", "#5C9BA2", "#7E9279", "#AA864B", "#D6791C", "#E5890E", "#EEA107", "#F6B801", "#DFBB0B", "#B9B51C", "#94AF2D", "#7EA147", "#708E67", "#637B87", "#627C96", "#6E9092", "#7AA58F", "#809E80", "#7F6D62", "#7E3C44", "#761B32", "#5C1F3D", "#412248", "#36264C", "#682B36", "#9A3020", "#C73710", "#C44C33", "#C06156", "#BD777A"]
 
 
 # = = LAYERS = = #
+poligonos = (alt.Chart(data_polygons_mexico)
+                .mark_geoshape(stroke = "white", strokeWidth = 1)
+                .encode(
+                    color = (alt.Color(shorthand = "properties.cve_geo:O")
+                                .legend(None)
+                                .scale(range = blake_klein_colour_palette))
+                )
+            )
 
 
 # = = FINAL DATAVIS = = #
+mapa = (poligonos
+        .properties(width = "container", height = 500, background = "transparent")
+       )
 
-
+mapa
 ```
+
+<b>Datos</b>: <em>Marco Geoestadístico de México (2022)</em> a través del <b>INEGI</b> (Poligonos oficiales).<br><em>Isaac Arroyo (@unisaacarroyov)</em>
