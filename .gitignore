@@ -10,3 +10,4 @@ scripts/*_day[0-9][0-9]_*.html
 # En pausa los conjuntos de datos
 data/*_shp/
 data/*_descriptor_*
+data/MODIS*
