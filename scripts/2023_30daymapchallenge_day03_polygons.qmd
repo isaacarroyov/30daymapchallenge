@@ -1,0 +1,77 @@
+---
+format:
+  html:
+    echo: false
+jupyter: python3
+---
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Work+Sans:ital,wght@0,900;1,700&display=swap');
+
+    h1 {
+        font-weight: 900;
+        font-size: 1.8rem;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1rem;
+        
+        font-family: 'Open Sans', sans-serif;
+    }
+   
+   #caption {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: #5C2313;
+        text-decoration: none;
+    }
+
+    #quarto-content {
+        background: #ACB6B9;
+    }
+
+    #nota_subtitle {
+        font-size: 0.7rem;
+        font-style: italic;
+    }
+
+</style>
+
+<h1>#30DayMapChallenge Day 3: Polygons</h1>
+
+```{python load-libraries}
+import numpy as np
+import pandas as pd
+import geopandas
+
+
+# = = DATA PROCESSING = = #
+# Espacio para mostrar el procesamiento de datos para crear los poligonos 
+# con GeoPandas
+
+
+
+```
+
+```{python datavis}
+import altair as alt
+alt.renderers.set_embed_options(actions=False)
+
+# = = LOAD DATA = = #
+
+
+# = = DATAVIS CONFIG = = #
+
+
+# = = LAYERS = = #
+
+
+# = = FINAL DATAVIS = = #
+
+
+```
