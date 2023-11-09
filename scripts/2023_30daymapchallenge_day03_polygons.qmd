@@ -6,19 +6,29 @@ jupyter: python3
 ---
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Work+Sans:ital,wght@0,900;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono&display=swap');
+    
+    #quarto-content {
+        background: #FAF6E8;
+        color: #4F0335;
+    }
+    
+    p code:not(.sourceCode), li code:not(.sourceCode) {
+        font-family: 'Space Mono', monospace;
+        background-color: #FDFCF6;
+        color: #034F1D;
+    }
 
     h1 {
         font-weight: 900;
         font-size: 1.8rem;
-        font-family: 'Work Sans', sans-serif;
+        font-family: 'Playfair Display', serif;
     }
 
     p {
         font-weight: 400;
-        font-size: 1rem;
-        
-        font-family: 'Open Sans', sans-serif;
+        font-size: 0.9rem;
+        font-family: 'Source Sans 3', sans-serif;
     }
    
    #caption {
@@ -31,22 +41,21 @@ jupyter: python3
         text-decoration: none;
     }
 
-    #quarto-content {
-        background: #ACB6B9;
-    }
-
     #nota_subtitle {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         font-style: italic;
+        margin-top: -1em;
     }
 
 </style>
 
 <h1>#30DayMapChallenge Day 3: Polygons</h1>
 
-Simplificación de los límites geográficos de los estados de México (y por ende, de todo el país).<br>Los colores son de la paleta <strong>Klein</strong> de la paquetería <code>{MoMA Colors}</code> de <strong>Blake Robert Mills</strong> (<em>@BlakeRobMills</em>)
-
-Nota: Para lograr los polígonos, se usó <code>gdf['geometry'].simplify(tolerance = 0.35, preserve_topology = False)</code>
+<p>
+Simplificación de los límites geográficos de los estados de México (y por ende, de todo el país).</p>
+<p id="nota_subtitle">
+<b>Nota</b>: Para lograr los polígonos, se usó <code>gdf['geometry'].simplify(tolerance = 0.35, preserve_topology = False)</code>. Los colores son de la paleta <strong>Klein</strong> de la paquetería de <strong>R</strong><code>{MoMAColors}</code> de <strong>Blake Robert Mills</strong> (<em>@BlakeRobMills</em> en Twitter/X)
+</p>
 
 ```{python load-libraries}
 #| eval: false
@@ -83,7 +92,7 @@ blake_klein_colour_palette = ["#FF4D6F", "#C86780", "#928191", "#5C9BA2", "#7E92
 
 # = = LAYERS = = #
 poligonos = (alt.Chart(data_polygons_mexico)
-                .mark_geoshape(stroke = "white", strokeWidth = 1)
+                .mark_geoshape(strokeWidth = 0)
                 .encode(
                     color = (alt.Color(shorthand = "properties.cve_geo:O")
                                 .legend(None)
@@ -100,4 +109,9 @@ mapa = (poligonos
 mapa
 ```
 
+
+<p id="caption">
 <b>Datos</b>: <em>Marco Geoestadístico de México (2022)</em> a través del <b>INEGI</b> (Poligonos oficiales).<br><em>Isaac Arroyo (@unisaacarroyov)</em>
+</p>
+<br>
+<br>
