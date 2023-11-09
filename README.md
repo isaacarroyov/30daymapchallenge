@@ -25,8 +25,10 @@
 
 ### Day 4: Bad Map
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day04_bad-map.R): `{ggplot2}` _and friends_ (`{biscale}`)  
+**Data**: [_TerraClimate a través de Google Earth Engine (tomados del repositorio de GitHub de "Desplazamiento Climático: La migración que no vemos")_](https://github.com/nmasfocusdatos/desplazamiento-climatico)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day04_bad-map.png)
 
 
 ### Day 5: Analog
@@ -35,124 +37,124 @@
 ### Day 6: Asia
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 7: Navigation
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 8: Africa
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 9: Hexagons
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 10: North America
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 11: Retro
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 12: South America
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 13: Choropleth
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 14: Europe
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 15: OpenStreetMap
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 16: Oceania
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 17: Flow
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 18: Atmosphere
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 19: 5 minute map
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 20: Outdoors
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 21: Raster
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 22: North is not always up
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 23: 3D
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 24: Black and White
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 25: Antartica
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 26: Minimal
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 27: Dot
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 28: Is this a chart or a map?
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 29: Population
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
 
 ### Day 30: My favourite...
 
 [**Code**](): `{ggplot2}` _and friends_  
-**Data**  [_Name_]()
+**Data**: [_Name_]()
