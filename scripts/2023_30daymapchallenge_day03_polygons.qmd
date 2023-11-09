@@ -45,6 +45,7 @@ jupyter: python3
 <h1>#30DayMapChallenge Day 3: Polygons</h1>
 
 ```{python load-libraries}
+#| eval: false
 import numpy as np
 import pandas as pd
 import geopandas
@@ -54,8 +55,15 @@ import geopandas
 # Espacio para mostrar el procesamiento de datos para crear los poligonos 
 # con GeoPandas
 
+# - - Cargar el GeoJSON desde GitHub - - #
+gdf = geopandas.read_file("https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Gobierno-Mexicano/geometrias/00ent_mexico.geojson")
 
+# - - Simplifcar las geometrias - - #
+gdf_simplified = gdf.copy()
+gdf_simplified['geometry'] = gdf_simplified['geometry'].simplify(tolerance = 0.35, preserve_topology = False)
 
+# - - Guardar para tener en el repositorio y usar directamente con una URL para graficar en Altair - - #
+gdf_simplified.to_file("./../data/geom_mexico_polygons.geojson", driver = "GeoJSON")
 ```
 
 ```{python datavis}
