@@ -36,8 +36,10 @@
 
 ### Day 6: Asia
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day06_asia.qmd): `altair`  
+**Data**: [_Active Fire Data from NASA's FIRMS_](https://firms.modaps.eosdis.nasa.gov/active_fire/)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day06_asia.png)
 
 ### Day 7: Navigation
 
