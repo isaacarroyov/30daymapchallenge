@@ -11,3 +11,4 @@ scripts/*_day[0-9][0-9]_*.html
 data/*_shp/
 data/*_descriptor_*
 data/MODIS*
+data/eras_tour_dates.csv
