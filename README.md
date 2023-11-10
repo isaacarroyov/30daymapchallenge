@@ -43,8 +43,9 @@
 
 ### Day 7: Navigation
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+**Tool**: Adobe Illustrator
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day07_navigation.png)
 
 ### Day 8: Africa
 
