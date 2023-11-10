@@ -6,11 +6,11 @@ jupyter: python3
 ---
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:wght@900&display=swap');
     
     #quarto-content {
-        background: #FAF6E8;
-        color: #4F0335;
+        background: #E0EAEC;
+        color: #4b1005;
     }
     
     p code:not(.sourceCode), li code:not(.sourceCode) {
@@ -22,13 +22,13 @@ jupyter: python3
     h1 {
         font-weight: 900;
         font-size: 1.8rem;
-        font-family: 'Playfair Display', serif;
+        font-family: 'Roboto', sans-serif;
     }
 
     p {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 0.9rem;
-        font-family: 'Source Sans 3', sans-serif;
+        font-family: 'Lora', serif;
     }
    
    #caption {
@@ -52,9 +52,9 @@ jupyter: python3
 <h1>#30DayMapChallenge Day 6: Asia</h1>
 
 <p>
-Active fires in Asia for the last 24 hours (November 8 and <em>part of</em> November 9)</p>
+Active fires in Asia for the last 24 hours (November 8 and part of November 9)</p>
 <p id="nota_subtitle">
-<b>Note</b>: Active fires (50% confidence) according to the <b>Moderate Resolution Imaging Spectroradiometer (MODIS)</b> satellites, <em>Terra</em>, and <em>Aqua</em>. Some points were located outside of Asia, so it is limited to showing the points that are within the Asian continent.
+<b>Note</b>: Active fires according to the <b>Moderate Resolution Imaging Spectroradiometer (MODIS)</b> satellites, <em>Terra</em>, and <em>Aqua</em>. Some points were located outside of Asia, so it is limited to showing the points that are within the Asian continent.
 </p>
 
 ```{python}
@@ -64,28 +64,52 @@ alt.renderers.set_embed_options(actions=False)
 # = = LOAD DATA = = #
 data_polygons_asia = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/geom_asia.geojson", format = alt.DataFormat(property = "features"))
 
-url_points = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/firms_modis_c6_asia_24h_2023-11-08_09_over50confidence.csv"
+url_points = "https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/firms_modis_c6_asia_24h_2023-11-08_09.csv"
 
 # = = DATAVIS CONFIG = = #
 
 
 # = = LAYERS = = #
-geom_asia = alt.Chart(data_polygons_asia).mark_geoshape(color = "#7D9451", strokeWidth=0.1, stroke = "black")
+geom_asia = alt.Chart(data_polygons_asia).mark_geoshape(color = "#949E63", strokeWidth = 0.5, stroke = "black")
 
 points = (alt.Chart(url_points)
+             .transform_calculate(
+                confidence_prop = "datum.confidence / 100")
              .encode(
                 latitude = "latitude:Q",
-                longitude = "longitude:Q")
-             .mark_circle(opacity = 0.5, size = 5, color = "red")
+                longitude = "longitude:Q",
+                size = alt.Size(
+                    shorthand = "confidence_prop:Q",
+                    title = "Fire confidence",
+                    scale = alt.Scale(domain = [0,1], range = [0,90]),
+                    legend = alt.Legend(formatType="number", format="%")))
+             .mark_circle(
+                color = "#641606",
+                stroke = "#FEF2F0",
+                strokeWidth = 0.2,
+                strokeOpacity = 0.25,
+                opacity = 0.25)
           )
 
 # = = FINAL DATAVIS = = #
 mapa = ((geom_asia + points)
-         .properties(
+        .properties(
             width = "container",
             height = 500,
-            background = "transparent"
-          )
+            background = "transparent")
+        .configure_legend(
+            orient = "none",
+            titleFont = "Roboto, sans-serif",
+            titleFontSize = 15,
+            titleColor = "#4b1005",
+            labelColor = "#4b1005",
+            labelFont = "Lora, serif",
+            symbolOpacity = 1,
+            symbolStrokeWidth = 0,
+            rowPadding = 5,
+            legendY = 370,
+        )
+         
         )
 
 mapa
@@ -94,7 +118,7 @@ mapa
 
 
 <p id="caption">
-<b>Data</b>: <em>Active fire products from the Moderate Resolution Imaging Spectroradiometer (MODIS) for the last 24 h in Asia</em> via NASA's <b>Fire Information for Resource Management System (FIRMS)</b><br><em>Isaac Arroyo (@unisaacarroyov)</em>
+<span style='font-weight:700;'>Data</span>: <em>Active fire products from the Moderate Resolution Imaging Spectroradiometer (MODIS) for the last 24 h in Asia</em> via NASA's <span style='font-weight:700;'>Fire Information for Resource Management System (FIRMS)</span><br><em>Isaac Arroyo (@unisaacarroyov)</em>
 </p>
 <br>
 <br>
