@@ -3,7 +3,7 @@ ignored_files/
 scripts/*_files/
 scripts/*_day[0-9][0-9]_*.html
 # En pausa los demás scripts
-/scripts/2023_30daymapchallenge_day0[7-9]_*
+/scripts/2023_30daymapchallenge_day09_*
 /scripts/2023_30daymapchallenge_day1[0-9]_*
 /scripts/2023_30daymapchallenge_day2[0-9]_*
 /scripts/2023_30daymapchallenge_day30_*

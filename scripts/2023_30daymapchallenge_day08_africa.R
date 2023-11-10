@@ -1,0 +1,5 @@
+library(tidyverse)
+library(sysfonts)
+library(showtextdb)
+library(showtext)
+library(sf)

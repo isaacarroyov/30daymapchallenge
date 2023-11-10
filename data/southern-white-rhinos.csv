@@ -1,0 +1,182 @@
+Entity,Code,Year,"Southern White Rhino population (AfRSG & other sources, 2019)"
+Angola,AGO,1895,0
+Angola,AGO,1929,0
+Angola,AGO,1948,0
+Angola,AGO,1968,0
+Angola,AGO,1987,0
+Angola,AGO,1991,0
+Angola,AGO,1992,0
+Angola,AGO,1993,0
+Angola,AGO,1995,0
+Angola,AGO,1997,0
+Angola,AGO,2021,3
+Botswana,BWA,1895,0
+Botswana,BWA,1929,0
+Botswana,BWA,1948,0
+Botswana,BWA,1968,0
+Botswana,BWA,1984,190
+Botswana,BWA,1987,125
+Botswana,BWA,1991,56
+Botswana,BWA,1992,27
+Botswana,BWA,1993,18
+Botswana,BWA,1995,20
+Botswana,BWA,1997,23
+Botswana,BWA,2005,99
+Botswana,BWA,2007,106
+Botswana,BWA,2010,135
+Botswana,BWA,2015,239
+Botswana,BWA,2017,452
+Botswana,BWA,2021,242
+Cote d'Ivoire,CIV,1895,0
+Cote d'Ivoire,CIV,1929,0
+Cote d'Ivoire,CIV,1948,0
+Cote d'Ivoire,CIV,1968,0
+Cote d'Ivoire,CIV,1984,0
+Cote d'Ivoire,CIV,1987,0
+Cote d'Ivoire,CIV,1991,5
+Cote d'Ivoire,CIV,1992,5
+Cote d'Ivoire,CIV,1993,5
+Cote d'Ivoire,CIV,1995,4
+Cote d'Ivoire,CIV,1997,4
+Cote d'Ivoire,CIV,2017,1
+Cote d'Ivoire,CIV,2021,1
+Democratic Republic of Congo,COD,2021,20
+Eswatini,SWZ,1895,0
+Eswatini,SWZ,1929,0
+Eswatini,SWZ,1948,0
+Eswatini,SWZ,1968,0
+Eswatini,SWZ,1984,60
+Eswatini,SWZ,1987,80
+Eswatini,SWZ,1991,60
+Eswatini,SWZ,1992,46
+Eswatini,SWZ,1993,33
+Eswatini,SWZ,1995,41
+Eswatini,SWZ,1997,50
+Eswatini,SWZ,2005,75
+Eswatini,SWZ,2007,89
+Eswatini,SWZ,2010,88
+Eswatini,SWZ,2015,76
+Eswatini,SWZ,2017,66
+Eswatini,SWZ,2021,98
+Kenya,KEN,1895,0
+Kenya,KEN,1929,0
+Kenya,KEN,1948,0
+Kenya,KEN,1968,0
+Kenya,KEN,1984,33
+Kenya,KEN,1987,47
+Kenya,KEN,1991,57
+Kenya,KEN,1992,74
+Kenya,KEN,1993,87
+Kenya,KEN,1995,122
+Kenya,KEN,1997,137
+Kenya,KEN,2005,234
+Kenya,KEN,2007,303
+Kenya,KEN,2010,361
+Kenya,KEN,2015,441
+Kenya,KEN,2017,510
+Kenya,KEN,2021,871
+Mozambique,MOZ,1895,0
+Mozambique,MOZ,1929,0
+Mozambique,MOZ,1948,0
+Mozambique,MOZ,1968,0
+Mozambique,MOZ,1984,1
+Mozambique,MOZ,2005,7
+Mozambique,MOZ,2007,9
+Mozambique,MOZ,2010,6
+Mozambique,MOZ,2015,29
+Mozambique,MOZ,2017,29
+Mozambique,MOZ,2021,14
+Namibia,NAM,1895,0
+Namibia,NAM,1929,0
+Namibia,NAM,1948,0
+Namibia,NAM,1968,0
+Namibia,NAM,1984,70
+Namibia,NAM,1987,63
+Namibia,NAM,1991,80
+Namibia,NAM,1992,91
+Namibia,NAM,1993,98
+Namibia,NAM,1995,107
+Namibia,NAM,1997,141
+Namibia,NAM,2005,293
+Namibia,NAM,2007,370
+Namibia,NAM,2010,469
+Namibia,NAM,2015,822
+Namibia,NAM,2017,975
+Namibia,NAM,2021,1234
+Rwanda,RWA,2021,30
+Senegal,SEN,2017,3
+Senegal,SEN,2021,3
+South Africa,ZAF,1895,20
+South Africa,ZAF,1929,150
+South Africa,ZAF,1948,550
+South Africa,ZAF,1968,1800
+South Africa,ZAF,1984,3234
+South Africa,ZAF,1987,4137
+South Africa,ZAF,1991,5057
+South Africa,ZAF,1992,5297
+South Africa,ZAF,1993,6376
+South Africa,ZAF,1995,7095
+South Africa,ZAF,1997,7913
+South Africa,ZAF,2005,13521
+South Africa,ZAF,2007,16273
+South Africa,ZAF,2010,18796
+South Africa,ZAF,2015,18413
+South Africa,ZAF,2017,15625
+South Africa,ZAF,2021,12968
+Uganda,UGA,2005,4
+Uganda,UGA,2007,6
+Uganda,UGA,2010,9
+Uganda,UGA,2015,15
+Uganda,UGA,2017,22
+Uganda,UGA,2021,35
+World,OWID_WRL,1895,20
+World,OWID_WRL,1929,150
+World,OWID_WRL,1948,550
+World,OWID_WRL,1968,1800
+World,OWID_WRL,1984,3800
+World,OWID_WRL,1987,4665
+World,OWID_WRL,1991,5565
+World,OWID_WRL,1992,5790
+World,OWID_WRL,1993,6760
+World,OWID_WRL,1995,7530
+World,OWID_WRL,1997,8440
+World,OWID_WRL,2005,14543
+World,OWID_WRL,2007,17470
+World,OWID_WRL,2010,20161
+World,OWID_WRL,2012,21316
+World,OWID_WRL,2015,20375
+World,OWID_WRL,2017,18064
+World,OWID_WRL,2021,15940
+Zambia,ZMB,1895,0
+Zambia,ZMB,1929,0
+Zambia,ZMB,1948,0
+Zambia,ZMB,1968,0
+Zambia,ZMB,1984,10
+Zambia,ZMB,1987,6
+Zambia,ZMB,1991,0
+Zambia,ZMB,1993,6
+Zambia,ZMB,1995,5
+Zambia,ZMB,1997,6
+Zambia,ZMB,2005,2
+Zambia,ZMB,2007,1
+Zambia,ZMB,2010,7
+Zambia,ZMB,2015,10
+Zambia,ZMB,2017,14
+Zambia,ZMB,2021,8
+Zimbabwe,ZWE,1895,0
+Zimbabwe,ZWE,1929,0
+Zimbabwe,ZWE,1948,0
+Zimbabwe,ZWE,1968,0
+Zimbabwe,ZWE,1984,200
+Zimbabwe,ZWE,1987,208
+Zimbabwe,ZWE,1991,250
+Zimbabwe,ZWE,1992,249
+Zimbabwe,ZWE,1993,134
+Zimbabwe,ZWE,1995,138
+Zimbabwe,ZWE,1997,167
+Zimbabwe,ZWE,2005,308
+Zimbabwe,ZWE,2007,313
+Zimbabwe,ZWE,2010,290
+Zimbabwe,ZWE,2015,330
+Zimbabwe,ZWE,2017,367
+Zimbabwe,ZWE,2021,417
