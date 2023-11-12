@@ -49,8 +49,10 @@
 
 ### Day 8: Africa
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day08_africa.R): `{ggplot2}` _and friends_  
+**Data**: [_African and Asian Rhino Specialist Groups (AfRSG) & other sources via Our World In Data_](https://ourworldindata.org/rhino-populations)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day08_africa.png)
 
 ### Day 9: Hexagons
 
