@@ -1,0 +1,85 @@
+---
+format:
+  html:
+    echo: false
+jupyter: python3
+---
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    
+    #quarto-content {
+        background: #29232B;
+        color: #FFEAF4;
+    }
+    
+    p code:not(.sourceCode), li code:not(.sourceCode) {
+        font-family: 'Space Mono', monospace;
+        background-color: #FDFCF6;
+        color: #034F1D;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        font-family: 'Abril Fatface', serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.9rem;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+
+   #caption {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: #5C2313;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        font-size: 0.65rem;
+        /*font-style: italic;*/
+        margin-top: -1em;
+    }
+
+</style>
+
+<h1>#30DayMapChallenge Day 10: North America (Taylor's Version)</h1>
+
+<p>Hello <span style="font-family:'Abril Fatface', serif;">THE ERAS TOUR</span>! Welcome to the North America dates!</p>
+<p id="nota_subtitle">
+<b>Note</b>: <b>"The Eras Tour"</b> has the concept of a musical journey through the different eras (musical albums and stages of life) of <b>Taylor Swift</b>. Currently, this tour is one of the most famous and successful in the world. It is also the first tour where Taylor Swift performs in Latin America.
+</p>
+
+```{python}
+#| eval: false
+import altair as alt
+alt.renderers.set_embed_options(actions=False)
+
+# = = LOAD DATA = = #
+url_geom_world = ""
+data_geom_world = alt.Data(url = url_geom_world, format = alt.DataFormat(property = "features"))
+
+# = = DATAVIS CONFIG = = #
+
+
+# = = LAYERS = = #
+
+
+# = = FINAL DATAVIS = = #
+
+
+```
+
+
+<p id="caption">
+<span style='font-weight:500;'>Data</span>: Eras Tour dates via <span style='font-weight:500;'>Wikipedia</span><br><em>Isaac Arroyo (@unisaacarroyov)</em>
+</p>
+<br>
+<br>
