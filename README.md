@@ -31,9 +31,6 @@
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day04_bad-map.png)
 
 
-### Day 5: Analog
-
-
 ### Day 6: Asia
 
 [**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day06_asia.qmd): `altair`  
