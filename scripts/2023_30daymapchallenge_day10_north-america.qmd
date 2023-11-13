@@ -59,20 +59,69 @@ jupyter: python3
 
 ```{python}
 #| eval: false
+import geopandas
+import pandas as pd
+gdf = geopandas.read_file("https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson")
+
+```
+
+
+```{python}
 import altair as alt
 alt.renderers.set_embed_options(actions=False)
 
 # = = LOAD DATA = = #
-url_geom_world = ""
+url_geom_world = "https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson"
 data_geom_world = alt.Data(url = url_geom_world, format = alt.DataFormat(property = "features"))
+
+url_eras_tour_dates = alt.UrlData("https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/eras_tour_dates.csv", format= alt.CsvDataFormat())
+url_eras_tour_locations = alt.UrlData("https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/eras_tour_long-lat.csv", format= alt.CsvDataFormat())
 
 # = = DATAVIS CONFIG = = #
 
 
 # = = LAYERS = = #
+north_america = (alt.Chart(data_geom_world)
+    .transform_filter("datum.properties.REGION_WB == 'North America'")
+    .mark_geoshape(fill = "black", stroke = "white"))
 
+points_eras_tour = (alt.Chart(url_eras_tour_dates)
+    .transform_filter("datum.continent_region == 'North America'")
+    .transform_calculate(date_year_num = "toNumber(year(datum.date_year_month_day))")
+    .transform_aggregate(
+        groupby = ["date_year_num", "address"], n_events = "count()")
+    .transform_lookup(
+        lookup = "address",
+        from_ = alt.LookupData(data=url_eras_tour_locations, key = "address", fields = ["lat","long"]))
+    .encode(
+        latitude = "lat:Q",
+        longitude = "long:Q",
+        size = alt.Size(shorthand = "n_events:Q",
+                        legend = None,
+                        scale = alt.Scale(range = [20, 200])),
+        color = alt.Color(shorthand = "date_year_num:N",
+                          title = "Year",
+                          legend = alt.Legend(orient="none"),
+                          ),
+        tooltip = [alt.Tooltip("n_events:Q", title = "# of concerts"),
+                   alt.Tooltip("address:N", title = "Where?")]
+    ).mark_circle()
+    )
 
 # = = FINAL DATAVIS = = #
+mapa = (north_america + points_eras_tour).project(
+        type = "equalEarth"
+    ).properties(
+        background = "transparent",
+        width = "container",
+    ).configure_legend(
+        legendX = 20,
+        legendY = 180
+    )
+
+mapa
+
+
 
 
 ```
