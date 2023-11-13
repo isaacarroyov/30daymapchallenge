@@ -56,8 +56,10 @@
 
 ### Day 9: Hexagons
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day09_hexagons.R): `{ggplot2}` _and friends_  
+**Data**: [_Marco Geostadístico de México (2022)_](https://www.inegi.org.mx/temas/mg/)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day09_hexagons.png)
 
 ### Day 10: North America
 
