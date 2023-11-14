@@ -70,9 +70,9 @@
 [**Code**](): `{ggplot2}` _and friends_  
 **Data**: [_Name_]()
 
-### Day 12: <span style='text-decoration:line-through 2px;'>South</span>Latin America
+### Day 12: <span style='text-decoration:line-through 2px;'>South</span> Latin America
 
-[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day12_south-america.qmd): `altair`  
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day12_latin-america.qmd): `altair`  
 **Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day12_latin-america.png)
