@@ -60,18 +60,22 @@
 
 ### Day 10: North America
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day10_north-america.qmd): `altair`  
+**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day10_north-america.png)
 
 ### Day 11: Retro
 
 [**Code**](): `{ggplot2}` _and friends_  
 **Data**: [_Name_]()
 
-### Day 12: South America
+### Day 12: <span style='text-decoration:line-through 2px;'>South</span>Latin America
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day12_south-america.qmd): `altair`  
+**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day12_latin-america.png)
 
 ### Day 13: Choropleth
 
@@ -80,8 +84,10 @@
 
 ### Day 14: Europe
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day14_europe.qmd): `altair`  
+**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day14_europe.png)
 
 ### Day 15: OpenStreetMap
 
@@ -90,8 +96,10 @@
 
 ### Day 16: Oceania
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day16_oceania.qmd): `altair`    
+**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day16_oceania.png)
 
 ### Day 17: Flow
 
