@@ -1,0 +1,171 @@
+---
+format:
+  html:
+    echo: false
+jupyter: python3
+---
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    
+    #quarto-content {
+        background: #1A161B;
+        color: #FFEAF4;
+    }
+    
+    p code:not(.sourceCode), li code:not(.sourceCode) {
+        font-family: 'Space Mono', monospace;
+        background-color: #FDFCF6;
+        color: #034F1D;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        font-family: 'Abril Fatface', serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.9rem;
+        font-family: 'Comfortaa', sans-serif;
+
+    }
+
+
+   #caption {
+        font-size: 0.6rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: #5C2313;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        font-size: 0.65rem;
+        /*font-style: italic;*/
+        margin-top: -1em;
+    }
+
+    /* = = Vega-Lite Charts = = */
+    /*
+    .vega-embed {
+        width: 100%;
+        display: flex;
+    }
+
+    .vega-embed details,
+    .vega-embed details summary {
+        position: relative;
+    }
+
+    .vega-bind-name {
+        font-weight: 400;
+        color: #F1EFE3
+    } */
+    /* - Tooltips - */
+    #vg-tooltip-element {
+        max-width: 200px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 500;
+        border-radius: 15px;
+        background-color: #FAF4E9;
+    }
+
+</style>
+
+<h1>#30DayMapChallenge Day 16: Oceania (Taylor's Version)</h1>
+
+<p>Hello <span style="font-family:'Abril Fatface', serif;">THE ERAS TOUR</span>! Welcome to your Oceania venues! (<span style='color:#C2EAA9;'>2024</span>)</p>
+<p id="nota_subtitle">
+<b>Note</b>: <b>"The Eras Tour"</b> has the concept of a musical journey through the different eras (musical albums and stages of life) of <b>Taylor Swift</b>. Currently, this tour is one of the most famous and successful in the world. It is also the first tour where Taylor Swift performs in Latin America.
+</p>
+
+```{python}
+#| eval: false
+import geopandas
+import pandas as pd
+gdf = geopandas.read_file("https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson")
+
+```
+
+
+```{python}
+import altair as alt
+alt.renderers.set_embed_options(actions=False)
+
+# = = LOAD DATA = = #
+url_geom_world = "https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson"
+data_geom_world = alt.Data(url = url_geom_world, format = alt.DataFormat(property = "features"))
+
+url_eras_tour_dates = alt.UrlData("https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/eras_tour_dates.csv", format= alt.CsvDataFormat())
+url_eras_tour_locations = alt.UrlData("https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/eras_tour_long-lat.csv", format= alt.CsvDataFormat())
+
+# = = DATAVIS CONFIG = = #
+dict_colours = dict(map_fill = "#C9D1E0", points_domain = [2023,2024], points_colours = ["#EAA9C2","#C2EAA9"])
+
+hover_selection = alt.selection_point(fields = ["address"])
+
+# = = LAYERS = = #
+oceania = (alt.Chart(data_geom_world)
+    .transform_filter(alt.FieldOneOfPredicate(field = "properties.CONTINENT", oneOf = ["Oceania"]))
+    .transform_filter("datum.properties.SOV_A3 != 'FJI'")
+    .mark_geoshape())
+
+points_eras_tour = (alt.Chart(url_eras_tour_dates)
+    .transform_filter("datum.continent_region == 'Oceania'")
+    .transform_calculate(date_year_num = "toNumber(year(datum.date_year_month_day))")
+    .transform_aggregate(
+        groupby = ["date_year_num", "address"], n_events = "count()")
+    .transform_lookup(
+        lookup = "address",
+        from_ = alt.LookupData(data=url_eras_tour_locations, key = "address", fields = ["lat","long"]))
+    .transform_calculate(info_tooltip = "toString(datum.n_events) + ' concerts at ' + toString(datum.address) + ' in ' + toString(datum.date_year_num)")
+    .encode(
+        latitude = "lat:Q",
+        longitude = "long:Q",
+        detail = "address:N",
+        size = alt.Size(shorthand = "n_events:Q",
+                        legend = None,
+                        scale = alt.Scale(range = [20, 250], domain = [1,6])
+                        ),
+        color = alt.Color(shorthand = "date_year_num:N",
+                          title = "Year",
+                          legend = None,
+                          scale = alt.Scale(range = dict_colours["points_colours"],
+                                            domain = dict_colours["points_domain"])
+                          ),
+        opacity = alt.condition(hover_selection, alt.value(1), alt.value(0.3)),
+        tooltip = "info_tooltip:N"
+    ).mark_circle()
+    )
+
+# = = FINAL DATAVIS = = #
+mapa = (oceania + points_eras_tour).project(
+        type = "equalEarth"
+    ).properties(
+        background = "transparent",
+        width = "container",
+    ).configure_geoshape(
+        fill = dict_colours['map_fill'],
+        stroke = "#1A161B",
+        strokeWidth = 0.5,
+        strokeOpacity = 1,
+    ).configure_circle(
+        stroke = "#1A161B",
+        strokeWidth = 1.2,
+    ).add_params(
+        hover_selection
+    )
+
+mapa
+```
+
+
+<p id="caption">
+<span style='font-weight:600;'>Data</span>: Eras Tour dates via <span style='font-weight:600;'>Wikipedia</span><br>Isaac Arroyo (@unisaacarroyov)
+</p>
+<br>
+<br>
