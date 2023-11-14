@@ -6,10 +6,10 @@ jupyter: python3
 ---
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
     
     #quarto-content {
-        background: #29232B;
+        background: #1A161B;
         color: #FFEAF4;
     }
     
@@ -28,12 +28,13 @@ jupyter: python3
     p {
         font-weight: 400;
         font-size: 0.9rem;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Comfortaa', sans-serif;
+
     }
 
 
    #caption {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         font-weight: 300;
     }
     
@@ -48,11 +49,36 @@ jupyter: python3
         margin-top: -1em;
     }
 
+    /* = = Vega-Lite Charts = = */
+    /*
+    .vega-embed {
+        width: 100%;
+        display: flex;
+    }
+
+    .vega-embed details,
+    .vega-embed details summary {
+        position: relative;
+    }
+
+    .vega-bind-name {
+        font-weight: 400;
+        color: #F1EFE3
+    } */
+    /* - Tooltips - */
+    #vg-tooltip-element {
+        max-width: 200px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 500;
+        border-radius: 15px;
+        background-color: #FAF4E9;
+    }
+
 </style>
 
 <h1>#30DayMapChallenge Day 10: North America (Taylor's Version)</h1>
 
-<p>Hello <span style="font-family:'Abril Fatface', serif;">THE ERAS TOUR</span>! Welcome to the North America dates!</p>
+<p>Hello <span style="font-family:'Abril Fatface', serif;">THE ERAS TOUR</span>! Welcome to your North America venues!</p>
 <p id="nota_subtitle">
 <b>Note</b>: <b>"The Eras Tour"</b> has the concept of a musical journey through the different eras (musical albums and stages of life) of <b>Taylor Swift</b>. Currently, this tour is one of the most famous and successful in the world. It is also the first tour where Taylor Swift performs in Latin America.
 </p>
@@ -78,12 +104,12 @@ url_eras_tour_dates = alt.UrlData("https://raw.githubusercontent.com/isaacarroyo
 url_eras_tour_locations = alt.UrlData("https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/data/eras_tour_long-lat.csv", format= alt.CsvDataFormat())
 
 # = = DATAVIS CONFIG = = #
-
+dict_colours = dict(map_fill = "#C9D1E0", points_domain = [2023,2024], points_colours = ["#EAA9C2","#C2EAA9"])
 
 # = = LAYERS = = #
 north_america = (alt.Chart(data_geom_world)
     .transform_filter("datum.properties.REGION_WB == 'North America'")
-    .mark_geoshape(fill = "black", stroke = "white"))
+    .mark_geoshape())
 
 points_eras_tour = (alt.Chart(url_eras_tour_dates)
     .transform_filter("datum.continent_region == 'North America'")
@@ -93,18 +119,21 @@ points_eras_tour = (alt.Chart(url_eras_tour_dates)
     .transform_lookup(
         lookup = "address",
         from_ = alt.LookupData(data=url_eras_tour_locations, key = "address", fields = ["lat","long"]))
+    .transform_calculate(info_tooltip = "toString(datum.n_events) + ' concerts at ' + toString(datum.address) + ' in ' + toString(datum.date_year_num)")
     .encode(
         latitude = "lat:Q",
         longitude = "long:Q",
         size = alt.Size(shorthand = "n_events:Q",
                         legend = None,
-                        scale = alt.Scale(range = [20, 200])),
+                        scale = alt.Scale(range = [20, 250], domain = [1,6])
+                        ),
         color = alt.Color(shorthand = "date_year_num:N",
                           title = "Year",
-                          legend = alt.Legend(orient="none"),
+                          legend = None,
+                          scale = alt.Scale(range = dict_colours["points_colours"],
+                                            domain = dict_colours["points_domain"])
                           ),
-        tooltip = [alt.Tooltip("n_events:Q", title = "# of concerts"),
-                   alt.Tooltip("address:N", title = "Where?")]
+        tooltip = "info_tooltip:N"
     ).mark_circle()
     )
 
@@ -114,21 +143,24 @@ mapa = (north_america + points_eras_tour).project(
     ).properties(
         background = "transparent",
         width = "container",
-    ).configure_legend(
-        legendX = 20,
-        legendY = 180
+    ).configure_geoshape(
+        fill = dict_colours['map_fill'],
+        stroke = "#1A161B",
+        strokeWidth = 0.5,
+        strokeOpacity = 1,
+    ).configure_circle(
+        stroke = "#1A161B",
+        strokeWidth = 1.2,
+        strokeOpacity = 1,
+        opacity = 0.85
     )
 
 mapa
-
-
-
-
 ```
 
 
 <p id="caption">
-<span style='font-weight:500;'>Data</span>: Eras Tour dates via <span style='font-weight:500;'>Wikipedia</span><br><em>Isaac Arroyo (@unisaacarroyov)</em>
+<span style='font-weight:600;'>Data</span>: Eras Tour dates via <span style='font-weight:600;'>Wikipedia</span><br>Isaac Arroyo (@unisaacarroyov)
 </p>
 <br>
 <br>
