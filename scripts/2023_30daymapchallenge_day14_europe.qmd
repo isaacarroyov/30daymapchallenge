@@ -78,7 +78,7 @@ jupyter: python3
 
 <h1>#30DayMapChallenge Day 14: Europe (Taylor's Version)</h1>
 
-<p>Hello <span style="font-family:'Abril Fatface', serif;">THE ERAS TOUR</span>! Welcome to your Europe venues! (<span style='color:#C2EAA9;'>2024</span>)</p>
+<p>Hello <span style="font-family:'Abril Fatface', serif;">ERAS TOUR</span>! Welcome to your Europe venues! (<span style='color:#C2EAA9;'>2024</span>)</p>
 <p id="nota_subtitle">
 <b>Note</b>: <b>"The Eras Tour"</b> has the concept of a musical journey through the different eras (musical albums and stages of life) of <b>Taylor Swift</b>. Currently, this tour is one of the most famous and successful in the world. It is also the first tour where Taylor Swift performs in Latin America.
 </p>
@@ -128,7 +128,7 @@ points_eras_tour = (alt.Chart(url_eras_tour_dates)
         longitude = "long:Q",
         size = alt.Size(shorthand = "n_events:Q",
                         legend = None,
-                        scale = alt.Scale(range = [20, 250], domain = [1,6])
+                        scale = alt.Scale(range = [20, 250], domain = [1,8])
                         ),
         detail = "address:N",
         color = alt.Color(shorthand = "date_year_num:N",
@@ -165,7 +165,7 @@ mapa
 
 
 <p id="caption">
-<span style='font-weight:600;'>Data</span>: Eras Tour dates via <span style='font-weight:600;'>Wikipedia</span><br>Isaac Arroyo (@unisaacarroyov)
+<span style='font-weight:600;'>Data</span>: The Eras Tour dates via <span style='font-weight:600;'>Taylor Swift's Official Website</span><br>Isaac Arroyo (@unisaacarroyov)
 </p>
 <br>
 <br>
