@@ -81,8 +81,10 @@
 
 ### Day 13: Choropleth
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day13_choropleth.R): `{ggplot2}` _and friends_  
+**Data**: [_TerraClimate a través de Google Earth Engine (tomados del repositorio de GitHub de "Desplazamiento Climático: La migración que no vemos")_](https://github.com/nmasfocusdatos/desplazamiento-climatico)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day13_choropleth.png)
 
 ### Day 14: Europe
 
