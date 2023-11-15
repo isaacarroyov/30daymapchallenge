@@ -61,7 +61,7 @@
 ### Day 10: North America
 
 [**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day10_north-america.qmd): `altair`  
-**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+**Data**: [Taylor Swift's "The Eras Tour" dates (US & Internatioal)](https://www.taylorswift.com/)
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day10_north-america.png)
 
@@ -73,7 +73,7 @@
 ### Day 12: <span style='text-decoration:line-through 2px;'>South</span> Latin America
 
 [**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day12_latin-america.qmd): `altair`  
-**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+**Data**: [Taylor Swift's "The Eras Tour" dates (US & Internatioal)](https://www.taylorswift.com/)
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day12_latin-america.png)
 
@@ -85,7 +85,7 @@
 ### Day 14: Europe
 
 [**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day14_europe.qmd): `altair`  
-**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+**Data**: [Taylor Swift's "The Eras Tour" dates (US & Internatioal)](https://www.taylorswift.com/)
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day14_europe.png)
 
@@ -97,7 +97,7 @@
 ### Day 16: Oceania
 
 [**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day16_oceania.qmd): `altair`    
-**Data**: [Taylor Swift's "The Eras Tour" venues](https://es.wikipedia.org/wiki/The_Eras_Tour#Fechas)
+**Data**: [Taylor Swift's "The Eras Tour" dates (US & Internatioal)](https://www.taylorswift.com/)
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day16_oceania.png)
 
