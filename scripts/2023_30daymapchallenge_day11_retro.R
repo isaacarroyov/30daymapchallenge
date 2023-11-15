@@ -8,6 +8,11 @@ library(sf)
 library(geojsonsf)
 sf_use_s2(FALSE)
 
+
+font_add_google("Cardo", "title")
+font_add_google("Libre Franklin", "body")
+showtext_auto()
+
 # = = LOAD DATA = = #
 # - - Uso de Suego y Vegetación Serie I de Yucatán (1978 - 1991)
 sf_usv_s01_yuc <- geojson_sf("./data/usv_series_01_yucatan.geojson") %>%
@@ -41,20 +46,43 @@ mapa_usv_s01_yuc <- sf_usv_s01_yuc_datavis %>%
   scale_fill_manual(values = moma.colors("Ohchi", n = 9)) +
   labs(title = "#30DayMapChallenge Day 11: Retro",
        subtitle = "Uso de Suelos y Vegetación en Yucatán, Serie I (1978-1991)",
-       caption = "<b>Datos</b>:<em>Uso del Suelo y Vegetación, (Serie I), en México, INEGI, 1978-1991</em> via <b>IDEGEO</b>") + # nolint
+       caption = "<b>Datos</b>: <em>Uso del Suelo y Vegetación, (Serie I), en México, INEGI, 1978-1991</em> via <b>IDEGEO</b>") + # nolint
   theme_void() +
+  guides(fill = guide_legend(title = "Tipo de suelo y vegetación",
+                             title.position = "top",
+                             label.position = "left",
+                             ncol = 2)) +
   theme(
-    plot.background = element_rect(fill = "#171D0C"),
+    plot.background = element_rect(fill = "#171D0C", color = "transparent"),
 
-    legend.position = "bottom",
-    legend.title = element_text(color = "#EBE7F2", face = "bold"),
-    legend.text = element_text(color = "#E4E5E2"),
+    legend.position = c(0.77, 0.1),
+    legend.title.align = 1,
+    legend.title = element_markdown(color = "#EBE7F2", face = "bold",
+                                    family = "title", size = 50,
+                                    lineheight = 0.2,
+                                    margin = margin(b = -0.2, unit = "in"),
+                                    ),
+    legend.text = element_text(color = "#E4E5E2", family = "body",
+                               size = 30,
+                               margin = margin(r = -0.25, unit = "in"),
+                               ),
 
     plot.title.position = "plot",
     plot.caption.position = "plot",
-    plot.title = element_textbox(color = "#E4E5E2"),
-    plot.subtitle = element_textbox(color = "#E4E5E2"),
-    plot.caption = element_textbox(color = "#E4E5E2", hjust = 0)
+    plot.title = element_textbox(color = "#E4E5E2", family = "title",
+                                 size = 100, face = "bold",
+                                 margin = margin(l = 0.1, b = 0.05, unit = "in"), # nolint
+                                 ),
+    plot.subtitle = element_textbox(color = "#E4E5E2", family = "body",
+                                    size = 50,
+                                    margin = margin(l = 0.1, t = 0.1, unit = "in")), # nolint
+    plot.caption = element_textbox(color = "#E4E5E2", hjust = 0,
+                                   family = "body", size = 30,
+                                   margin = margin(t = 1, l = 0.1, unit = "in") # nolint
+                                   )
   )
 
-tgutil::ggpreview(mapa_usv_s01_yuc, width = 11, height = 10, dpi = 300)
+# tgutil::ggpreview(mapa_usv_s01_yuc, width = 11, height = 10, dpi = 300, units = "in")
+
+ggsave(plot = mapa_usv_s01_yuc, width = 11, height = 10, dpi = 300,
+      units = "in", filename = "./maps/2023_30daymapchallenge_day11_retro.png")
