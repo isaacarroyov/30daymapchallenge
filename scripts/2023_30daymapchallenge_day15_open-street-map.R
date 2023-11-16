@@ -54,10 +54,12 @@ chetumal_small_streets <- chetumal_bb %>%
 
 # = = DATAVIS = = #
 # - - Google Fonts - - #
-
+font_add_google("Montserrat", "title")
+font_add_google("Lato", "body")
+showtext_auto()
 
 # - - Map - - #
-ggplot() +
+mapa_chetumal <- ggplot() +
   # ~ ~ Calles ~ ~ #
   geom_sf(data = cheutmal_big_streets$osm_lines,
           color = "black", linewidth = 0.5) +
@@ -82,9 +84,45 @@ ggplot() +
   geom_sf(data = chetumal_landuse_green_areas$osm_polygons,
           fill = "#556B2F",
           color = "black", linewidth = 0) +
+  # ~ ~ Title + Annotations ~ ~ #
+  labs(title = "#30DayMapChallenge Day 15: OpenStreetMap<br> Lugares de Chetumal, Quintana Roo", # nolint
+       subtitle = "<b style='color:#000000;'>Calles</b>, <b style='color:#556B2F;'>Areas Verdes</b>, <b style='color:#8B4513;'>Parques</b>, <b style='color:#C3941D;'>Escuelas</b> y <b style='color:#2B58DE;'>Cuerpos de agua</b><br><em style='font-size:30px;'><b>Nota</b>: En los <b style='color:#2B58DE;'>cuerpos de agua</b> se incluye la costa, bordes de cuerpos agua o elementos donde hay presencia significativa de agua)</em>", # nolint
+       caption = "<em>Isaac Arroyo (@unisaacarroyov)<br><b>Data</b>: Map data © OpenStreetMap contributors</em>") + # nolint
   theme_void() +
   theme(
-    plot.background = element_rect(fill = "#FDF5E6", color = "#FDF5E6")
+    plot.background = element_rect(fill = "#FDF5E6", color = "#FDF5E6"),
+    plot.title.position = "plot",
+    plot.caption.position = "plot",
+    plot.title = element_textbox(
+      face = "bold",
+      color = "#000000",
+      size = 65,
+      halign = 0.5,
+      hjust = 0.5,
+      lineheight = 0.4,
+      margin = margin(l = 0, t = 0.1, unit = "in"),
+      family = "title",
+      width = unit(8, "in")),
+    plot.subtitle = element_textbox(
+      size = 40,
+      color = "#000000",
+      halign = 0.5,
+      hjust = 0.5,
+      lineheight = 0.2,
+      margin = margin(b = -1, t = 0.2, unit = "in"), # nolint
+      family = "body",
+      width = unit(7, "in")),
+    plot.caption = element_textbox(
+      size = 30, color = "#000000",
+      halign = 0.5,
+      hjust = 0.5,
+      lineheight = 0.4,
+      margin = margin(t = -0.4, unit = "in"),
+      family = "body",
+      width = unit(8, "in"))
   )
 
-tgutil::ggpreview(width = 11, height = 8, units = "in")
+tgutil::ggpreview(plot = mapa_chetumal, width = 9, height = 8, units = "in")
+
+ggsave(plot = mapa_chetumal, width = 9, height = 8, units = "in", dpi = 300,
+       filename = "./maps/2023_30daymapchallenge_day15_open-street-map.png")
