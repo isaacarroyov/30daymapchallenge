@@ -1,208 +1,208 @@
-point_A,point_B,n_vuelos,lat_A,long_A,lat_B,long_B
-Acapulco,Cancun,18,16.84948,-99.90943,21.1622,-86.83568
-Acapulco,Guadalajara,18,16.84948,-99.90943,20.68758,-103.35104
-Acapulco,Mexico,513,16.84948,-99.90943,23.95282499,-102.548353419
-Acapulco,Monterrey,20,16.84948,-99.90943,25.67093,-100.30999
-Acapulco,Tijuana,62,16.84948,-99.90943,32.53507,-117.04097
-Aguascalientes,Cancun,62,21.8812,-102.29607,21.1622,-86.83568
-Aguascalientes,Mexico,331,21.8812,-102.29607,23.95282499,-102.548353419
-Aguascalientes,Monterrey,61,21.8812,-102.29607,25.67093,-100.30999
-Aguascalientes,Puerto Vallarta,64,21.8812,-102.29607,20.60841,-105.23525
-Aguascalientes,Tijuana,136,21.8812,-102.29607,32.53507,-117.04097
-Campeche,Mexico,126,19.84549,-90.53702,23.95282499,-102.548353419
-Cancun,Chihuahua,56,21.1622,-86.83568,28.63568,-106.07592
-Cancun,Ciudad Juarez,70,21.1622,-86.83568,31.73836,-106.48776
-Cancun,Del Bajio,150,21.1622,-86.83568,20.66774,-101.33058
-Cancun,Guadalajara,574,21.1622,-86.83568,20.68758,-103.35104
-Cancun,Merida,33,21.1622,-86.83568,20.9667,-89.62317
-Cancun,Mexicali,36,21.1622,-86.83568,32.6411,-115.4745
-Cancun,Mexico,2287,21.1622,-86.83568,23.95282499,-102.548353419
-Cancun,Monterrey,632,21.1622,-86.83568,25.67093,-100.30999
-Cancun,Oaxaca,32,21.1622,-86.83568,17.06173,-96.7261
-Cancun,Puebla,142,21.1622,-86.83568,19.04386,-98.19756
-Cancun,Queretaro,89,21.1622,-86.83568,20.59209,-100.39601
-Cancun,Reynosa,36,21.1622,-86.83568,26.09279,-98.27749
-Cancun,San Luis Potosi,72,21.1622,-86.83568,22.15271,-100.97663
-Cancun,Tampico,20,21.1622,-86.83568,22.25172,-97.86479
-Cancun,Tijuana,159,21.1622,-86.83568,32.53507,-117.04097
-Cancun,Torreon,18,21.1622,-86.83568,25.53938,-103.45327
-Cancun,Tuxtla Gutierrez,80,21.1622,-86.83568,16.75519,-93.11544
-Cancun,Veracruz,124,21.1622,-86.83568,19.19535,-96.13683
-Cancun,Villahermosa,55,21.1622,-86.83568,17.99864,-92.90197
-Chetumal,Guadalajara,36,18.50186,-88.30303,20.68758,-103.35104
-Chetumal,Mexico,246,18.50186,-88.30303,23.95282499,-102.548353419
-Chihuahua,Ciudad Juarez,32,28.63568,-106.07592,31.73836,-106.48776
-Chihuahua,Culiacan,59,28.63568,-106.07592,24.80769,-107.39447
-Chihuahua,Guadalajara,109,28.63568,-106.07592,20.68758,-103.35104
-Chihuahua,Hermosillo,42,28.63568,-106.07592,29.07455,-110.95912
-Chihuahua,Los Mochis,28,28.63568,-106.07592,25.79269,-108.98897
-Chihuahua,Mazatlan,18,28.63568,-106.07592,23.2,-106.42175
-Chihuahua,Mexico,520,28.63568,-106.07592,23.95282499,-102.548353419
-Chihuahua,Monterrey,88,28.63568,-106.07592,25.67093,-100.30999
-Chihuahua,Queretaro,23,28.63568,-106.07592,20.59209,-100.39601
-Chihuahua,Tijuana,63,28.63568,-106.07592,32.53507,-117.04097
-Ciudad Del Carmen,Mexico,184,18.65412,-91.78997,23.95282499,-102.548353419
-Ciudad Del Carmen,Queretaro,1,18.65412,-91.78997,20.59209,-100.39601
-Ciudad Del Carmen,Tampico,33,18.65412,-91.78997,22.25172,-97.86479
-Ciudad Del Carmen,Veracruz,28,18.65412,-91.78997,19.19535,-96.13683
-Ciudad Juarez,Del Bajio,62,31.73836,-106.48776,20.66774,-101.33058
-Ciudad Juarez,Durango,32,31.73836,-106.48776,24.00683,-104.68135
-Ciudad Juarez,Guadalajara,167,31.73836,-106.48776,20.68758,-103.35104
-Ciudad Juarez,Hermosillo,26,31.73836,-106.48776,29.07455,-110.95912
-Ciudad Juarez,Mazatlan,34,31.73836,-106.48776,23.2,-106.42175
-Ciudad Juarez,Mexico,441,31.73836,-106.48776,23.95282499,-102.548353419
-Ciudad Juarez,Monterrey,92,31.73836,-106.48776,25.67093,-100.30999
-Ciudad Juarez,Puerto Vallarta,18,31.73836,-106.48776,20.60841,-105.23525
-Ciudad Juarez,San Luis Potosi,2,31.73836,-106.48776,22.15271,-100.97663
-Ciudad Juarez,Tijuana,62,31.73836,-106.48776,32.53507,-117.04097
-Ciudad Juarez,Torreon,32,31.73836,-106.48776,25.53938,-103.45327
-Ciudad Obregon,Guadalajara,54,27.4934,-109.93542,20.68758,-103.35104
-Ciudad Obregon,Los Cabos,2,27.4934,-109.93542,23.06158,-109.69529
-Ciudad Obregon,Mexico,158,27.4934,-109.93542,23.95282499,-102.548353419
-Ciudad Obregon,Monterrey,20,27.4934,-109.93542,25.67093,-100.30999
-Ciudad Obregon,Tijuana,72,27.4934,-109.93542,32.53507,-117.04097
-Ciudad Victoria,Mexico,25,23.7311,-99.15389,23.95282499,-102.548353419
-Colima,Mexico,77,19.24249,-103.7273,23.95282499,-102.548353419
-Colima,Tijuana,78,19.24249,-103.7273,32.53507,-117.04097
-Cozumel,Mexico,122,20.49978,-86.95449,23.95282499,-102.548353419
-Culiacan,Guadalajara,164,24.80769,-107.39447,20.68758,-103.35104
-Culiacan,Hermosillo,70,24.80769,-107.39447,29.07455,-110.95912
-Culiacan,La Paz,81,24.80769,-107.39447,24.16185,-110.31322
-Culiacan,Mexicali,56,24.80769,-107.39447,32.6411,-115.4745
-Culiacan,Mexico,381,24.80769,-107.39447,23.95282499,-102.548353419
-Culiacan,Monterrey,85,24.80769,-107.39447,25.67093,-100.30999
-Culiacan,San José Del Cabo,74,24.80769,-107.39447,23.0769,-109.70915
-Culiacan,San Luis Potosi,38,24.80769,-107.39447,22.15271,-100.97663
-Culiacan,Tijuana,444,24.80769,-107.39447,32.53507,-117.04097
-Del Bajio,Mexicali,18,20.66774,-101.33058,32.6411,-115.4745
-Del Bajio,Mexico,327,20.66774,-101.33058,23.95282499,-102.548353419
-Del Bajio,Monterrey,124,20.66774,-101.33058,25.67093,-100.30999
-Del Bajio,Puerto Vallarta,18,20.66774,-101.33058,20.60841,-105.23525
-Del Bajio,San José Del Cabo,18,20.66774,-101.33058,23.0769,-109.70915
-Del Bajio,Tijuana,341,20.66774,-101.33058,32.53507,-117.04097
-Durango,Guadalajara,26,24.00683,-104.68135,20.68758,-103.35104
-Durango,Mexico,217,24.00683,-104.68135,23.95282499,-102.548353419
-Durango,Tijuana,94,24.00683,-104.68135,32.53507,-117.04097
-Guadalajara,Hermosillo,163,20.68758,-103.35104,29.07455,-110.95912
-Guadalajara,La Paz,134,20.68758,-103.35104,24.16185,-110.31322
-Guadalajara,Los Mochis,37,20.68758,-103.35104,25.79269,-108.98897
-Guadalajara,Mazatlan,18,20.68758,-103.35104,23.2,-106.42175
-Guadalajara,Merida,102,20.68758,-103.35104,20.9667,-89.62317
-Guadalajara,Mexicali,251,20.68758,-103.35104,32.6411,-115.4745
-Guadalajara,Mexico,1529,20.68758,-103.35104,23.95282499,-102.548353419
-Guadalajara,Monterrey,426,20.68758,-103.35104,25.67093,-100.30999
-Guadalajara,Oaxaca,34,20.68758,-103.35104,17.06173,-96.7261
-Guadalajara,Puebla,42,20.68758,-103.35104,19.04386,-98.19756
-Guadalajara,Puerto Escondido,20,20.68758,-103.35104,15.87124,-97.08704
-Guadalajara,Puerto Vallarta,298,20.68758,-103.35104,20.60841,-105.23525
-Guadalajara,Queretaro,30,20.68758,-103.35104,20.59209,-100.39601
-Guadalajara,Reynosa,42,20.68758,-103.35104,26.09279,-98.27749
-Guadalajara,San José Del Cabo,150,20.68758,-103.35104,23.0769,-109.70915
-Guadalajara,San Luis Potosi,33,20.68758,-103.35104,22.15271,-100.97663
-Guadalajara,Tapachula,24,20.68758,-103.35104,14.91117,-92.2646
-Guadalajara,Tijuana,1108,20.68758,-103.35104,32.53507,-117.04097
-Guadalajara,Torreon,22,20.68758,-103.35104,25.53938,-103.45327
-Guadalajara,Tuxtla Gutierrez,100,20.68758,-103.35104,16.75519,-93.11544
-Guadalajara,Veracruz,124,20.68758,-103.35104,19.19535,-96.13683
-Guadalajara,Villahermosa,36,20.68758,-103.35104,17.99864,-92.90197
-Hermosillo,La Paz,54,29.07455,-110.95912,24.16185,-110.31322
-Hermosillo,Mexicali,38,29.07455,-110.95912,32.6411,-115.4745
-Hermosillo,Mexico,523,29.07455,-110.95912,23.95282499,-102.548353419
-Hermosillo,Monterrey,76,29.07455,-110.95912,25.67093,-100.30999
-Hermosillo,Puerto Vallarta,6,29.07455,-110.95912,20.60841,-105.23525
-Hermosillo,Queretaro,26,29.07455,-110.95912,20.59209,-100.39601
-Hermosillo,San José Del Cabo,18,29.07455,-110.95912,23.0769,-109.70915
-Hermosillo,San Luis Potosi,20,29.07455,-110.95912,22.15271,-100.97663
-Hermosillo,Tijuana,139,29.07455,-110.95912,32.53507,-117.04097
-Huatulco,Mexico,515,15.83616,-96.322,23.95282499,-102.548353419
-Huatulco,Monterrey,18,15.83616,-96.322,25.67093,-100.30999
-Huatulco,Tijuana,26,15.83616,-96.322,32.53507,-117.04097
-Ixtapa Zihuatanejo,Mexico,389,17.66652,-101.59,23.95282499,-102.548353419
-Ixtapa Zihuatanejo,Tijuana,18,17.66652,-101.59,32.53507,-117.04097
-"Ixtepec, Oaxaca",Mexico,23,16.56052,-95.10375,23.95282499,-102.548353419
-La Paz,Loreto,13,24.16185,-110.31322,22.27195,-101.98604
-La Paz,Los Mochis,55,24.16185,-110.31322,25.79269,-108.98897
-La Paz,Mazatlan,90,24.16185,-110.31322,23.2,-106.42175
-La Paz,Mexico,278,24.16185,-110.31322,23.95282499,-102.548353419
-La Paz,Monterrey,4,24.16185,-110.31322,25.67093,-100.30999
-La Paz,Puerto Vallarta,30,24.16185,-110.31322,20.60841,-105.23525
-La Paz,Tijuana,75,24.16185,-110.31322,32.53507,-117.04097
-Loreto,Tijuana,39,22.27195,-101.98604,32.53507,-117.04097
-Los Mochis,Los Cabos,46,25.79269,-108.98897,23.06158,-109.69529
-Los Mochis,Mexico,130,25.79269,-108.98897,23.95282499,-102.548353419
-Los Mochis,Monterrey,18,25.79269,-108.98897,25.67093,-100.30999
-Los Mochis,Tijuana,82,25.79269,-108.98897,32.53507,-117.04097
-Los Cabos,Mazatlan,54,23.06158,-109.69529,23.2,-106.42175
-Manzanillo,Mexico,130,19.08552,-104.30856,23.95282499,-102.548353419
-Matamoros,Mexico,56,25.88015,-97.50357,23.95282499,-102.548353419
-Mazatlan,Mexico,348,23.2,-106.42175,23.95282499,-102.548353419
-Mazatlan,Monterrey,64,23.2,-106.42175,25.67093,-100.30999
-Mazatlan,Puerto Vallarta,1,23.2,-106.42175,20.60841,-105.23525
-Mazatlan,Queretaro,35,23.2,-106.42175,20.59209,-100.39601
-Mazatlan,Tijuana,194,23.2,-106.42175,32.53507,-117.04097
-Merida,Mexico,924,20.9667,-89.62317,23.95282499,-102.548353419
-Merida,Monterrey,131,20.9667,-89.62317,25.67093,-100.30999
-Merida,Oaxaca,18,20.9667,-89.62317,17.06173,-96.7261
-Merida,San Luis Potosi,1,20.9667,-89.62317,22.15271,-100.97663
-Merida,Tijuana,18,20.9667,-89.62317,32.53507,-117.04097
-Merida,Tuxtla Gutierrez,28,20.9667,-89.62317,16.75519,-93.11544
-Merida,Veracruz,30,20.9667,-89.62317,19.19535,-96.13683
-Merida,Villahermosa,62,20.9667,-89.62317,17.99864,-92.90197
-Mexicali,Mexico,292,32.6411,-115.4745,23.95282499,-102.548353419
-Mexicali,Morelia,10,32.6411,-115.4745,19.70295,-101.19365
-Mexico,Minatitlan,117,23.95282499,-102.548353419,17.98235,-94.54235
-Mexico,Monterrey,1459,23.95282499,-102.548353419,25.67093,-100.30999
-Mexico,Morelia,30,23.95282499,-102.548353419,19.70295,-101.19365
-Mexico,Nuevo Laredo,58,23.95282499,-102.548353419,27.49382,-99.50653
-Mexico,Oaxaca,489,23.95282499,-102.548353419,17.06173,-96.7261
-Mexico,Piedras Negras,25,23.95282499,-102.548353419,28.721800000000002,-100.56787
-Mexico,Puerto Escondido,464,23.95282499,-102.548353419,15.87124,-97.08704
-Mexico,Puerto Vallarta,705,23.95282499,-102.548353419,20.60841,-105.23525
-Mexico,Queretaro,188,23.95282499,-102.548353419,20.59209,-100.39601
-Mexico,Reynosa,240,23.95282499,-102.548353419,26.09279,-98.27749
-Mexico,San José Del Cabo,678,23.95282499,-102.548353419,23.0769,-109.70915
-Mexico,San Luis Potosi,284,23.95282499,-102.548353419,22.15271,-100.97663
-Mexico,Tampico,275,23.95282499,-102.548353419,22.25172,-97.86479
-Mexico,Tapachula,282,23.95282499,-102.548353419,14.91117,-92.2646
-Mexico,Tepic,46,23.95282499,-102.548353419,21.51198,-104.89164
-Mexico,Tijuana,1298,23.95282499,-102.548353419,32.53507,-117.04097
-Mexico,Torreon,345,23.95282499,-102.548353419,25.53938,-103.45327
-Mexico,Tuxtla Gutierrez,577,23.95282499,-102.548353419,16.75519,-93.11544
-Mexico,Veracruz,432,23.95282499,-102.548353419,19.19535,-96.13683
-Mexico,Villahermosa,453,23.95282499,-102.548353419,17.99864,-92.90197
-Mexico,Zacatecas,112,23.95282499,-102.548353419,22.77166,-102.57355
-Monterrey,Morelia,18,25.67093,-100.30999,19.70295,-101.19365
-Monterrey,Oaxaca,30,25.67093,-100.30999,17.06173,-96.7261
-Monterrey,Puebla,96,25.67093,-100.30999,19.04386,-98.19756
-Monterrey,Puerto Vallarta,137,25.67093,-100.30999,20.60841,-105.23525
-Monterrey,Queretaro,186,25.67093,-100.30999,20.59209,-100.39601
-Monterrey,San José Del Cabo,82,25.67093,-100.30999,23.0769,-109.70915
-Monterrey,San Luis Potosi,77,25.67093,-100.30999,22.15271,-100.97663
-Monterrey,Tampico,82,25.67093,-100.30999,22.25172,-97.86479
-Monterrey,Tijuana,218,25.67093,-100.30999,32.53507,-117.04097
-Monterrey,Tuxtla Gutierrez,64,25.67093,-100.30999,16.75519,-93.11544
-Monterrey,Veracruz,112,25.67093,-100.30999,19.19535,-96.13683
-Monterrey,Villahermosa,87,25.67093,-100.30999,17.99864,-92.90197
-Morelia,Tijuana,290,19.70295,-101.19365,32.53507,-117.04097
-Oaxaca,Tijuana,124,17.06173,-96.7261,32.53507,-117.04097
-Puebla,Tijuana,106,19.04386,-98.19756,32.53507,-117.04097
-Puerto Vallarta,Queretaro,73,20.60841,-105.23525,20.59209,-100.39601
-Puerto Vallarta,San Luis Potosi,60,20.60841,-105.23525,22.15271,-100.97663
-Puerto Vallarta,Tijuana,210,20.60841,-105.23525,32.53507,-117.04097
-Queretaro,San Luis Potosi,3,20.59209,-100.39601,22.15271,-100.97663
-Queretaro,Tampico,1,20.59209,-100.39601,22.25172,-97.86479
-Queretaro,Tijuana,32,20.59209,-100.39601,32.53507,-117.04097
-Queretaro,Torreon,29,20.59209,-100.39601,25.53938,-103.45327
-Reynosa,Veracruz,30,26.09279,-98.27749,19.19535,-96.13683
-Saltillo,San Luis Potosi,2,25.42227,-101.00094,22.15271,-100.97663
-San José Del Cabo,Tijuana,188,23.0769,-109.70915,32.53507,-117.04097
-San Luis Potosi,Tijuana,31,22.15271,-100.97663,32.53507,-117.04097
-San Luis Potosi,Torreon,1,22.15271,-100.97663,25.53938,-103.45327
-San Luis Potosi,Villahermosa,9,22.15271,-100.97663,17.99864,-92.90197
-Tapachula,Tijuana,26,14.91117,-92.2646,32.53507,-117.04097
-Tepic,Tijuana,109,21.51198,-104.89164,32.53507,-117.04097
-Tijuana,Torreon,18,32.53507,-117.04097,25.53938,-103.45327
-Tijuana,Tuxtla Gutierrez,46,32.53507,-117.04097,16.75519,-93.11544
-Tijuana,Uruapan,98,32.53507,-117.04097,19.42129,-102.06413
-Tijuana,Veracruz,26,32.53507,-117.04097,19.19535,-96.13683
-Tijuana,Zacatecas,123,32.53507,-117.04097,22.77166,-102.57355
+point_A,point_B,n_vuelos,lat_A,long_A,lat_B,long_B,description
+Acapulco,Cancun,18,16.84948,-99.90943,21.1622,-86.83568,Se realizaron 18 vuelos entre los aeropuertos de Acapulco y Cancun en Enero 2022
+Acapulco,Guadalajara,18,16.84948,-99.90943,20.68758,-103.35104,Se realizaron 18 vuelos entre los aeropuertos de Acapulco y Guadalajara en Enero 2022
+Acapulco,Ciudad de Mexico,513,16.84948,-99.90943,19.43194,-99.13315,Se realizaron 513 vuelos entre los aeropuertos de Acapulco y Ciudad de Mexico en Enero 2022
+Acapulco,Monterrey,20,16.84948,-99.90943,25.67093,-100.30999,Se realizaron 20 vuelos entre los aeropuertos de Acapulco y Monterrey en Enero 2022
+Acapulco,Tijuana,62,16.84948,-99.90943,32.53507,-117.04097,Se realizaron 62 vuelos entre los aeropuertos de Acapulco y Tijuana en Enero 2022
+Aguascalientes,Cancun,62,21.8812,-102.29607,21.1622,-86.83568,Se realizaron 62 vuelos entre los aeropuertos de Aguascalientes y Cancun en Enero 2022
+Aguascalientes,Ciudad de Mexico,331,21.8812,-102.29607,19.43194,-99.13315,Se realizaron 331 vuelos entre los aeropuertos de Aguascalientes y Ciudad de Mexico en Enero 2022
+Aguascalientes,Monterrey,61,21.8812,-102.29607,25.67093,-100.30999,Se realizaron 61 vuelos entre los aeropuertos de Aguascalientes y Monterrey en Enero 2022
+Aguascalientes,Puerto Vallarta,64,21.8812,-102.29607,20.60841,-105.23525,Se realizaron 64 vuelos entre los aeropuertos de Aguascalientes y Puerto Vallarta en Enero 2022
+Aguascalientes,Tijuana,136,21.8812,-102.29607,32.53507,-117.04097,Se realizaron 136 vuelos entre los aeropuertos de Aguascalientes y Tijuana en Enero 2022
+Campeche,Ciudad de Mexico,126,19.84549,-90.53702,19.43194,-99.13315,Se realizaron 126 vuelos entre los aeropuertos de Campeche y Ciudad de Mexico en Enero 2022
+Cancun,Chihuahua,56,21.1622,-86.83568,28.63568,-106.07592,Se realizaron 56 vuelos entre los aeropuertos de Cancun y Chihuahua en Enero 2022
+Cancun,Ciudad Juarez,70,21.1622,-86.83568,31.73836,-106.48776,Se realizaron 70 vuelos entre los aeropuertos de Cancun y Ciudad Juarez en Enero 2022
+Cancun,Del Bajio,150,21.1622,-86.83568,20.66774,-101.33058,Se realizaron 150 vuelos entre los aeropuertos de Cancun y Del Bajio en Enero 2022
+Cancun,Guadalajara,574,21.1622,-86.83568,20.68758,-103.35104,Se realizaron 574 vuelos entre los aeropuertos de Cancun y Guadalajara en Enero 2022
+Cancun,Merida,33,21.1622,-86.83568,20.9667,-89.62317,Se realizaron 33 vuelos entre los aeropuertos de Cancun y Merida en Enero 2022
+Cancun,Mexicali,36,21.1622,-86.83568,32.6411,-115.4745,Se realizaron 36 vuelos entre los aeropuertos de Cancun y Mexicali en Enero 2022
+Cancun,Ciudad de Mexico,2287,21.1622,-86.83568,19.43194,-99.13315,"Se realizaron 2,287 vuelos entre los aeropuertos de Cancun y Ciudad de Mexico en Enero 2022"
+Cancun,Monterrey,632,21.1622,-86.83568,25.67093,-100.30999,Se realizaron 632 vuelos entre los aeropuertos de Cancun y Monterrey en Enero 2022
+Cancun,Oaxaca,32,21.1622,-86.83568,17.06173,-96.7261,Se realizaron 32 vuelos entre los aeropuertos de Cancun y Oaxaca en Enero 2022
+Cancun,Puebla,142,21.1622,-86.83568,19.04386,-98.19756,Se realizaron 142 vuelos entre los aeropuertos de Cancun y Puebla en Enero 2022
+Cancun,Queretaro,89,21.1622,-86.83568,20.59209,-100.39601,Se realizaron 89 vuelos entre los aeropuertos de Cancun y Queretaro en Enero 2022
+Cancun,Reynosa,36,21.1622,-86.83568,26.09279,-98.27749,Se realizaron 36 vuelos entre los aeropuertos de Cancun y Reynosa en Enero 2022
+Cancun,San Luis Potosi,72,21.1622,-86.83568,22.15271,-100.97663,Se realizaron 72 vuelos entre los aeropuertos de Cancun y San Luis Potosi en Enero 2022
+Cancun,Tampico,20,21.1622,-86.83568,22.25172,-97.86479,Se realizaron 20 vuelos entre los aeropuertos de Cancun y Tampico en Enero 2022
+Cancun,Tijuana,159,21.1622,-86.83568,32.53507,-117.04097,Se realizaron 159 vuelos entre los aeropuertos de Cancun y Tijuana en Enero 2022
+Cancun,Torreon,18,21.1622,-86.83568,25.53938,-103.45327,Se realizaron 18 vuelos entre los aeropuertos de Cancun y Torreon en Enero 2022
+Cancun,Tuxtla Gutierrez,80,21.1622,-86.83568,16.75519,-93.11544,Se realizaron 80 vuelos entre los aeropuertos de Cancun y Tuxtla Gutierrez en Enero 2022
+Cancun,Veracruz,124,21.1622,-86.83568,19.19535,-96.13683,Se realizaron 124 vuelos entre los aeropuertos de Cancun y Veracruz en Enero 2022
+Cancun,Villahermosa,55,21.1622,-86.83568,17.99864,-92.90197,Se realizaron 55 vuelos entre los aeropuertos de Cancun y Villahermosa en Enero 2022
+Chetumal,Guadalajara,36,18.50186,-88.30303,20.68758,-103.35104,Se realizaron 36 vuelos entre los aeropuertos de Chetumal y Guadalajara en Enero 2022
+Chetumal,Ciudad de Mexico,246,18.50186,-88.30303,19.43194,-99.13315,Se realizaron 246 vuelos entre los aeropuertos de Chetumal y Ciudad de Mexico en Enero 2022
+Chihuahua,Ciudad Juarez,32,28.63568,-106.07592,31.73836,-106.48776,Se realizaron 32 vuelos entre los aeropuertos de Chihuahua y Ciudad Juarez en Enero 2022
+Chihuahua,Culiacan,59,28.63568,-106.07592,24.80769,-107.39447,Se realizaron 59 vuelos entre los aeropuertos de Chihuahua y Culiacan en Enero 2022
+Chihuahua,Guadalajara,109,28.63568,-106.07592,20.68758,-103.35104,Se realizaron 109 vuelos entre los aeropuertos de Chihuahua y Guadalajara en Enero 2022
+Chihuahua,Hermosillo,42,28.63568,-106.07592,29.07455,-110.95912,Se realizaron 42 vuelos entre los aeropuertos de Chihuahua y Hermosillo en Enero 2022
+Chihuahua,Los Mochis,28,28.63568,-106.07592,25.79269,-108.98897,Se realizaron 28 vuelos entre los aeropuertos de Chihuahua y Los Mochis en Enero 2022
+Chihuahua,Mazatlan,18,28.63568,-106.07592,23.2,-106.42175,Se realizaron 18 vuelos entre los aeropuertos de Chihuahua y Mazatlan en Enero 2022
+Chihuahua,Ciudad de Mexico,520,28.63568,-106.07592,19.43194,-99.13315,Se realizaron 520 vuelos entre los aeropuertos de Chihuahua y Ciudad de Mexico en Enero 2022
+Chihuahua,Monterrey,88,28.63568,-106.07592,25.67093,-100.30999,Se realizaron 88 vuelos entre los aeropuertos de Chihuahua y Monterrey en Enero 2022
+Chihuahua,Queretaro,23,28.63568,-106.07592,20.59209,-100.39601,Se realizaron 23 vuelos entre los aeropuertos de Chihuahua y Queretaro en Enero 2022
+Chihuahua,Tijuana,63,28.63568,-106.07592,32.53507,-117.04097,Se realizaron 63 vuelos entre los aeropuertos de Chihuahua y Tijuana en Enero 2022
+Ciudad Del Carmen,Ciudad de Mexico,184,18.65412,-91.78997,19.43194,-99.13315,Se realizaron 184 vuelos entre los aeropuertos de Ciudad Del Carmen y Ciudad de Mexico en Enero 2022
+Ciudad Del Carmen,Queretaro,1,18.65412,-91.78997,20.59209,-100.39601,Se realizaron 1 vuelos entre los aeropuertos de Ciudad Del Carmen y Queretaro en Enero 2022
+Ciudad Del Carmen,Tampico,33,18.65412,-91.78997,22.25172,-97.86479,Se realizaron 33 vuelos entre los aeropuertos de Ciudad Del Carmen y Tampico en Enero 2022
+Ciudad Del Carmen,Veracruz,28,18.65412,-91.78997,19.19535,-96.13683,Se realizaron 28 vuelos entre los aeropuertos de Ciudad Del Carmen y Veracruz en Enero 2022
+Ciudad Juarez,Del Bajio,62,31.73836,-106.48776,20.66774,-101.33058,Se realizaron 62 vuelos entre los aeropuertos de Ciudad Juarez y Del Bajio en Enero 2022
+Ciudad Juarez,Durango,32,31.73836,-106.48776,24.00683,-104.68135,Se realizaron 32 vuelos entre los aeropuertos de Ciudad Juarez y Durango en Enero 2022
+Ciudad Juarez,Guadalajara,167,31.73836,-106.48776,20.68758,-103.35104,Se realizaron 167 vuelos entre los aeropuertos de Ciudad Juarez y Guadalajara en Enero 2022
+Ciudad Juarez,Hermosillo,26,31.73836,-106.48776,29.07455,-110.95912,Se realizaron 26 vuelos entre los aeropuertos de Ciudad Juarez y Hermosillo en Enero 2022
+Ciudad Juarez,Mazatlan,34,31.73836,-106.48776,23.2,-106.42175,Se realizaron 34 vuelos entre los aeropuertos de Ciudad Juarez y Mazatlan en Enero 2022
+Ciudad Juarez,Ciudad de Mexico,441,31.73836,-106.48776,19.43194,-99.13315,Se realizaron 441 vuelos entre los aeropuertos de Ciudad Juarez y Ciudad de Mexico en Enero 2022
+Ciudad Juarez,Monterrey,92,31.73836,-106.48776,25.67093,-100.30999,Se realizaron 92 vuelos entre los aeropuertos de Ciudad Juarez y Monterrey en Enero 2022
+Ciudad Juarez,Puerto Vallarta,18,31.73836,-106.48776,20.60841,-105.23525,Se realizaron 18 vuelos entre los aeropuertos de Ciudad Juarez y Puerto Vallarta en Enero 2022
+Ciudad Juarez,San Luis Potosi,2,31.73836,-106.48776,22.15271,-100.97663,Se realizaron 2 vuelos entre los aeropuertos de Ciudad Juarez y San Luis Potosi en Enero 2022
+Ciudad Juarez,Tijuana,62,31.73836,-106.48776,32.53507,-117.04097,Se realizaron 62 vuelos entre los aeropuertos de Ciudad Juarez y Tijuana en Enero 2022
+Ciudad Juarez,Torreon,32,31.73836,-106.48776,25.53938,-103.45327,Se realizaron 32 vuelos entre los aeropuertos de Ciudad Juarez y Torreon en Enero 2022
+Ciudad Obregon,Guadalajara,54,27.4934,-109.93542,20.68758,-103.35104,Se realizaron 54 vuelos entre los aeropuertos de Ciudad Obregon y Guadalajara en Enero 2022
+Ciudad Obregon,Los Cabos,2,27.4934,-109.93542,23.06158,-109.69529,Se realizaron 2 vuelos entre los aeropuertos de Ciudad Obregon y Los Cabos en Enero 2022
+Ciudad Obregon,Ciudad de Mexico,158,27.4934,-109.93542,19.43194,-99.13315,Se realizaron 158 vuelos entre los aeropuertos de Ciudad Obregon y Ciudad de Mexico en Enero 2022
+Ciudad Obregon,Monterrey,20,27.4934,-109.93542,25.67093,-100.30999,Se realizaron 20 vuelos entre los aeropuertos de Ciudad Obregon y Monterrey en Enero 2022
+Ciudad Obregon,Tijuana,72,27.4934,-109.93542,32.53507,-117.04097,Se realizaron 72 vuelos entre los aeropuertos de Ciudad Obregon y Tijuana en Enero 2022
+Ciudad Victoria,Ciudad de Mexico,25,23.7311,-99.15389,19.43194,-99.13315,Se realizaron 25 vuelos entre los aeropuertos de Ciudad Victoria y Ciudad de Mexico en Enero 2022
+Colima,Ciudad de Mexico,77,19.24249,-103.7273,19.43194,-99.13315,Se realizaron 77 vuelos entre los aeropuertos de Colima y Ciudad de Mexico en Enero 2022
+Colima,Tijuana,78,19.24249,-103.7273,32.53507,-117.04097,Se realizaron 78 vuelos entre los aeropuertos de Colima y Tijuana en Enero 2022
+Cozumel,Ciudad de Mexico,122,20.49978,-86.95449,19.43194,-99.13315,Se realizaron 122 vuelos entre los aeropuertos de Cozumel y Ciudad de Mexico en Enero 2022
+Culiacan,Guadalajara,164,24.80769,-107.39447,20.68758,-103.35104,Se realizaron 164 vuelos entre los aeropuertos de Culiacan y Guadalajara en Enero 2022
+Culiacan,Hermosillo,70,24.80769,-107.39447,29.07455,-110.95912,Se realizaron 70 vuelos entre los aeropuertos de Culiacan y Hermosillo en Enero 2022
+Culiacan,La Paz,81,24.80769,-107.39447,24.16185,-110.31322,Se realizaron 81 vuelos entre los aeropuertos de Culiacan y La Paz en Enero 2022
+Culiacan,Mexicali,56,24.80769,-107.39447,32.6411,-115.4745,Se realizaron 56 vuelos entre los aeropuertos de Culiacan y Mexicali en Enero 2022
+Culiacan,Ciudad de Mexico,381,24.80769,-107.39447,19.43194,-99.13315,Se realizaron 381 vuelos entre los aeropuertos de Culiacan y Ciudad de Mexico en Enero 2022
+Culiacan,Monterrey,85,24.80769,-107.39447,25.67093,-100.30999,Se realizaron 85 vuelos entre los aeropuertos de Culiacan y Monterrey en Enero 2022
+Culiacan,San José Del Cabo,74,24.80769,-107.39447,23.0769,-109.70915,Se realizaron 74 vuelos entre los aeropuertos de Culiacan y San José Del Cabo en Enero 2022
+Culiacan,San Luis Potosi,38,24.80769,-107.39447,22.15271,-100.97663,Se realizaron 38 vuelos entre los aeropuertos de Culiacan y San Luis Potosi en Enero 2022
+Culiacan,Tijuana,444,24.80769,-107.39447,32.53507,-117.04097,Se realizaron 444 vuelos entre los aeropuertos de Culiacan y Tijuana en Enero 2022
+Del Bajio,Mexicali,18,20.66774,-101.33058,32.6411,-115.4745,Se realizaron 18 vuelos entre los aeropuertos de Del Bajio y Mexicali en Enero 2022
+Del Bajio,Ciudad de Mexico,327,20.66774,-101.33058,19.43194,-99.13315,Se realizaron 327 vuelos entre los aeropuertos de Del Bajio y Ciudad de Mexico en Enero 2022
+Del Bajio,Monterrey,124,20.66774,-101.33058,25.67093,-100.30999,Se realizaron 124 vuelos entre los aeropuertos de Del Bajio y Monterrey en Enero 2022
+Del Bajio,Puerto Vallarta,18,20.66774,-101.33058,20.60841,-105.23525,Se realizaron 18 vuelos entre los aeropuertos de Del Bajio y Puerto Vallarta en Enero 2022
+Del Bajio,San José Del Cabo,18,20.66774,-101.33058,23.0769,-109.70915,Se realizaron 18 vuelos entre los aeropuertos de Del Bajio y San José Del Cabo en Enero 2022
+Del Bajio,Tijuana,341,20.66774,-101.33058,32.53507,-117.04097,Se realizaron 341 vuelos entre los aeropuertos de Del Bajio y Tijuana en Enero 2022
+Durango,Guadalajara,26,24.00683,-104.68135,20.68758,-103.35104,Se realizaron 26 vuelos entre los aeropuertos de Durango y Guadalajara en Enero 2022
+Durango,Ciudad de Mexico,217,24.00683,-104.68135,19.43194,-99.13315,Se realizaron 217 vuelos entre los aeropuertos de Durango y Ciudad de Mexico en Enero 2022
+Durango,Tijuana,94,24.00683,-104.68135,32.53507,-117.04097,Se realizaron 94 vuelos entre los aeropuertos de Durango y Tijuana en Enero 2022
+Guadalajara,Hermosillo,163,20.68758,-103.35104,29.07455,-110.95912,Se realizaron 163 vuelos entre los aeropuertos de Guadalajara y Hermosillo en Enero 2022
+Guadalajara,La Paz,134,20.68758,-103.35104,24.16185,-110.31322,Se realizaron 134 vuelos entre los aeropuertos de Guadalajara y La Paz en Enero 2022
+Guadalajara,Los Mochis,37,20.68758,-103.35104,25.79269,-108.98897,Se realizaron 37 vuelos entre los aeropuertos de Guadalajara y Los Mochis en Enero 2022
+Guadalajara,Mazatlan,18,20.68758,-103.35104,23.2,-106.42175,Se realizaron 18 vuelos entre los aeropuertos de Guadalajara y Mazatlan en Enero 2022
+Guadalajara,Merida,102,20.68758,-103.35104,20.9667,-89.62317,Se realizaron 102 vuelos entre los aeropuertos de Guadalajara y Merida en Enero 2022
+Guadalajara,Mexicali,251,20.68758,-103.35104,32.6411,-115.4745,Se realizaron 251 vuelos entre los aeropuertos de Guadalajara y Mexicali en Enero 2022
+Guadalajara,Ciudad de Mexico,1529,20.68758,-103.35104,19.43194,-99.13315,"Se realizaron 1,529 vuelos entre los aeropuertos de Guadalajara y Ciudad de Mexico en Enero 2022"
+Guadalajara,Monterrey,426,20.68758,-103.35104,25.67093,-100.30999,Se realizaron 426 vuelos entre los aeropuertos de Guadalajara y Monterrey en Enero 2022
+Guadalajara,Oaxaca,34,20.68758,-103.35104,17.06173,-96.7261,Se realizaron 34 vuelos entre los aeropuertos de Guadalajara y Oaxaca en Enero 2022
+Guadalajara,Puebla,42,20.68758,-103.35104,19.04386,-98.19756,Se realizaron 42 vuelos entre los aeropuertos de Guadalajara y Puebla en Enero 2022
+Guadalajara,Puerto Escondido,20,20.68758,-103.35104,15.87124,-97.08704,Se realizaron 20 vuelos entre los aeropuertos de Guadalajara y Puerto Escondido en Enero 2022
+Guadalajara,Puerto Vallarta,298,20.68758,-103.35104,20.60841,-105.23525,Se realizaron 298 vuelos entre los aeropuertos de Guadalajara y Puerto Vallarta en Enero 2022
+Guadalajara,Queretaro,30,20.68758,-103.35104,20.59209,-100.39601,Se realizaron 30 vuelos entre los aeropuertos de Guadalajara y Queretaro en Enero 2022
+Guadalajara,Reynosa,42,20.68758,-103.35104,26.09279,-98.27749,Se realizaron 42 vuelos entre los aeropuertos de Guadalajara y Reynosa en Enero 2022
+Guadalajara,San José Del Cabo,150,20.68758,-103.35104,23.0769,-109.70915,Se realizaron 150 vuelos entre los aeropuertos de Guadalajara y San José Del Cabo en Enero 2022
+Guadalajara,San Luis Potosi,33,20.68758,-103.35104,22.15271,-100.97663,Se realizaron 33 vuelos entre los aeropuertos de Guadalajara y San Luis Potosi en Enero 2022
+Guadalajara,Tapachula,24,20.68758,-103.35104,14.91117,-92.2646,Se realizaron 24 vuelos entre los aeropuertos de Guadalajara y Tapachula en Enero 2022
+Guadalajara,Tijuana,1108,20.68758,-103.35104,32.53507,-117.04097,"Se realizaron 1,108 vuelos entre los aeropuertos de Guadalajara y Tijuana en Enero 2022"
+Guadalajara,Torreon,22,20.68758,-103.35104,25.53938,-103.45327,Se realizaron 22 vuelos entre los aeropuertos de Guadalajara y Torreon en Enero 2022
+Guadalajara,Tuxtla Gutierrez,100,20.68758,-103.35104,16.75519,-93.11544,Se realizaron 100 vuelos entre los aeropuertos de Guadalajara y Tuxtla Gutierrez en Enero 2022
+Guadalajara,Veracruz,124,20.68758,-103.35104,19.19535,-96.13683,Se realizaron 124 vuelos entre los aeropuertos de Guadalajara y Veracruz en Enero 2022
+Guadalajara,Villahermosa,36,20.68758,-103.35104,17.99864,-92.90197,Se realizaron 36 vuelos entre los aeropuertos de Guadalajara y Villahermosa en Enero 2022
+Hermosillo,La Paz,54,29.07455,-110.95912,24.16185,-110.31322,Se realizaron 54 vuelos entre los aeropuertos de Hermosillo y La Paz en Enero 2022
+Hermosillo,Mexicali,38,29.07455,-110.95912,32.6411,-115.4745,Se realizaron 38 vuelos entre los aeropuertos de Hermosillo y Mexicali en Enero 2022
+Hermosillo,Ciudad de Mexico,523,29.07455,-110.95912,19.43194,-99.13315,Se realizaron 523 vuelos entre los aeropuertos de Hermosillo y Ciudad de Mexico en Enero 2022
+Hermosillo,Monterrey,76,29.07455,-110.95912,25.67093,-100.30999,Se realizaron 76 vuelos entre los aeropuertos de Hermosillo y Monterrey en Enero 2022
+Hermosillo,Puerto Vallarta,6,29.07455,-110.95912,20.60841,-105.23525,Se realizaron 6 vuelos entre los aeropuertos de Hermosillo y Puerto Vallarta en Enero 2022
+Hermosillo,Queretaro,26,29.07455,-110.95912,20.59209,-100.39601,Se realizaron 26 vuelos entre los aeropuertos de Hermosillo y Queretaro en Enero 2022
+Hermosillo,San José Del Cabo,18,29.07455,-110.95912,23.0769,-109.70915,Se realizaron 18 vuelos entre los aeropuertos de Hermosillo y San José Del Cabo en Enero 2022
+Hermosillo,San Luis Potosi,20,29.07455,-110.95912,22.15271,-100.97663,Se realizaron 20 vuelos entre los aeropuertos de Hermosillo y San Luis Potosi en Enero 2022
+Hermosillo,Tijuana,139,29.07455,-110.95912,32.53507,-117.04097,Se realizaron 139 vuelos entre los aeropuertos de Hermosillo y Tijuana en Enero 2022
+Huatulco,Ciudad de Mexico,515,15.83616,-96.322,19.43194,-99.13315,Se realizaron 515 vuelos entre los aeropuertos de Huatulco y Ciudad de Mexico en Enero 2022
+Huatulco,Monterrey,18,15.83616,-96.322,25.67093,-100.30999,Se realizaron 18 vuelos entre los aeropuertos de Huatulco y Monterrey en Enero 2022
+Huatulco,Tijuana,26,15.83616,-96.322,32.53507,-117.04097,Se realizaron 26 vuelos entre los aeropuertos de Huatulco y Tijuana en Enero 2022
+Ixtapa Zihuatanejo,Ciudad de Mexico,389,17.66652,-101.59,19.43194,-99.13315,Se realizaron 389 vuelos entre los aeropuertos de Ixtapa Zihuatanejo y Ciudad de Mexico en Enero 2022
+Ixtapa Zihuatanejo,Tijuana,18,17.66652,-101.59,32.53507,-117.04097,Se realizaron 18 vuelos entre los aeropuertos de Ixtapa Zihuatanejo y Tijuana en Enero 2022
+"Ixtepec, Oaxaca",Ciudad de Mexico,23,16.56052,-95.10375,19.43194,-99.13315,"Se realizaron 23 vuelos entre los aeropuertos de Ixtepec, Oaxaca y Ciudad de Mexico en Enero 2022"
+La Paz,Loreto,13,24.16185,-110.31322,22.27195,-101.98604,Se realizaron 13 vuelos entre los aeropuertos de La Paz y Loreto en Enero 2022
+La Paz,Los Mochis,55,24.16185,-110.31322,25.79269,-108.98897,Se realizaron 55 vuelos entre los aeropuertos de La Paz y Los Mochis en Enero 2022
+La Paz,Mazatlan,90,24.16185,-110.31322,23.2,-106.42175,Se realizaron 90 vuelos entre los aeropuertos de La Paz y Mazatlan en Enero 2022
+La Paz,Ciudad de Mexico,278,24.16185,-110.31322,19.43194,-99.13315,Se realizaron 278 vuelos entre los aeropuertos de La Paz y Ciudad de Mexico en Enero 2022
+La Paz,Monterrey,4,24.16185,-110.31322,25.67093,-100.30999,Se realizaron 4 vuelos entre los aeropuertos de La Paz y Monterrey en Enero 2022
+La Paz,Puerto Vallarta,30,24.16185,-110.31322,20.60841,-105.23525,Se realizaron 30 vuelos entre los aeropuertos de La Paz y Puerto Vallarta en Enero 2022
+La Paz,Tijuana,75,24.16185,-110.31322,32.53507,-117.04097,Se realizaron 75 vuelos entre los aeropuertos de La Paz y Tijuana en Enero 2022
+Loreto,Tijuana,39,22.27195,-101.98604,32.53507,-117.04097,Se realizaron 39 vuelos entre los aeropuertos de Loreto y Tijuana en Enero 2022
+Los Mochis,Los Cabos,46,25.79269,-108.98897,23.06158,-109.69529,Se realizaron 46 vuelos entre los aeropuertos de Los Mochis y Los Cabos en Enero 2022
+Los Mochis,Ciudad de Mexico,130,25.79269,-108.98897,19.43194,-99.13315,Se realizaron 130 vuelos entre los aeropuertos de Los Mochis y Ciudad de Mexico en Enero 2022
+Los Mochis,Monterrey,18,25.79269,-108.98897,25.67093,-100.30999,Se realizaron 18 vuelos entre los aeropuertos de Los Mochis y Monterrey en Enero 2022
+Los Mochis,Tijuana,82,25.79269,-108.98897,32.53507,-117.04097,Se realizaron 82 vuelos entre los aeropuertos de Los Mochis y Tijuana en Enero 2022
+Los Cabos,Mazatlan,54,23.06158,-109.69529,23.2,-106.42175,Se realizaron 54 vuelos entre los aeropuertos de Los Cabos y Mazatlan en Enero 2022
+Manzanillo,Ciudad de Mexico,130,19.08552,-104.30856,19.43194,-99.13315,Se realizaron 130 vuelos entre los aeropuertos de Manzanillo y Ciudad de Mexico en Enero 2022
+Matamoros,Ciudad de Mexico,56,25.88015,-97.50357,19.43194,-99.13315,Se realizaron 56 vuelos entre los aeropuertos de Matamoros y Ciudad de Mexico en Enero 2022
+Mazatlan,Ciudad de Mexico,348,23.2,-106.42175,19.43194,-99.13315,Se realizaron 348 vuelos entre los aeropuertos de Mazatlan y Ciudad de Mexico en Enero 2022
+Mazatlan,Monterrey,64,23.2,-106.42175,25.67093,-100.30999,Se realizaron 64 vuelos entre los aeropuertos de Mazatlan y Monterrey en Enero 2022
+Mazatlan,Puerto Vallarta,1,23.2,-106.42175,20.60841,-105.23525,Se realizaron 1 vuelos entre los aeropuertos de Mazatlan y Puerto Vallarta en Enero 2022
+Mazatlan,Queretaro,35,23.2,-106.42175,20.59209,-100.39601,Se realizaron 35 vuelos entre los aeropuertos de Mazatlan y Queretaro en Enero 2022
+Mazatlan,Tijuana,194,23.2,-106.42175,32.53507,-117.04097,Se realizaron 194 vuelos entre los aeropuertos de Mazatlan y Tijuana en Enero 2022
+Merida,Ciudad de Mexico,924,20.9667,-89.62317,19.43194,-99.13315,Se realizaron 924 vuelos entre los aeropuertos de Merida y Ciudad de Mexico en Enero 2022
+Merida,Monterrey,131,20.9667,-89.62317,25.67093,-100.30999,Se realizaron 131 vuelos entre los aeropuertos de Merida y Monterrey en Enero 2022
+Merida,Oaxaca,18,20.9667,-89.62317,17.06173,-96.7261,Se realizaron 18 vuelos entre los aeropuertos de Merida y Oaxaca en Enero 2022
+Merida,San Luis Potosi,1,20.9667,-89.62317,22.15271,-100.97663,Se realizaron 1 vuelos entre los aeropuertos de Merida y San Luis Potosi en Enero 2022
+Merida,Tijuana,18,20.9667,-89.62317,32.53507,-117.04097,Se realizaron 18 vuelos entre los aeropuertos de Merida y Tijuana en Enero 2022
+Merida,Tuxtla Gutierrez,28,20.9667,-89.62317,16.75519,-93.11544,Se realizaron 28 vuelos entre los aeropuertos de Merida y Tuxtla Gutierrez en Enero 2022
+Merida,Veracruz,30,20.9667,-89.62317,19.19535,-96.13683,Se realizaron 30 vuelos entre los aeropuertos de Merida y Veracruz en Enero 2022
+Merida,Villahermosa,62,20.9667,-89.62317,17.99864,-92.90197,Se realizaron 62 vuelos entre los aeropuertos de Merida y Villahermosa en Enero 2022
+Mexicali,Ciudad de Mexico,292,32.6411,-115.4745,19.43194,-99.13315,Se realizaron 292 vuelos entre los aeropuertos de Mexicali y Ciudad de Mexico en Enero 2022
+Mexicali,Morelia,10,32.6411,-115.4745,19.70295,-101.19365,Se realizaron 10 vuelos entre los aeropuertos de Mexicali y Morelia en Enero 2022
+Ciudad de Mexico,Minatitlan,117,19.43194,-99.13315,17.98235,-94.54235,Se realizaron 117 vuelos entre los aeropuertos de Ciudad de Mexico y Minatitlan en Enero 2022
+Ciudad de Mexico,Monterrey,1459,19.43194,-99.13315,25.67093,-100.30999,"Se realizaron 1,459 vuelos entre los aeropuertos de Ciudad de Mexico y Monterrey en Enero 2022"
+Ciudad de Mexico,Morelia,30,19.43194,-99.13315,19.70295,-101.19365,Se realizaron 30 vuelos entre los aeropuertos de Ciudad de Mexico y Morelia en Enero 2022
+Ciudad de Mexico,Nuevo Laredo,58,19.43194,-99.13315,27.49382,-99.50653,Se realizaron 58 vuelos entre los aeropuertos de Ciudad de Mexico y Nuevo Laredo en Enero 2022
+Ciudad de Mexico,Oaxaca,489,19.43194,-99.13315,17.06173,-96.7261,Se realizaron 489 vuelos entre los aeropuertos de Ciudad de Mexico y Oaxaca en Enero 2022
+Ciudad de Mexico,Piedras Negras,25,19.43194,-99.13315,28.721800000000002,-100.56787,Se realizaron 25 vuelos entre los aeropuertos de Ciudad de Mexico y Piedras Negras en Enero 2022
+Ciudad de Mexico,Puerto Escondido,464,19.43194,-99.13315,15.87124,-97.08704,Se realizaron 464 vuelos entre los aeropuertos de Ciudad de Mexico y Puerto Escondido en Enero 2022
+Ciudad de Mexico,Puerto Vallarta,705,19.43194,-99.13315,20.60841,-105.23525,Se realizaron 705 vuelos entre los aeropuertos de Ciudad de Mexico y Puerto Vallarta en Enero 2022
+Ciudad de Mexico,Queretaro,188,19.43194,-99.13315,20.59209,-100.39601,Se realizaron 188 vuelos entre los aeropuertos de Ciudad de Mexico y Queretaro en Enero 2022
+Ciudad de Mexico,Reynosa,240,19.43194,-99.13315,26.09279,-98.27749,Se realizaron 240 vuelos entre los aeropuertos de Ciudad de Mexico y Reynosa en Enero 2022
+Ciudad de Mexico,San José Del Cabo,678,19.43194,-99.13315,23.0769,-109.70915,Se realizaron 678 vuelos entre los aeropuertos de Ciudad de Mexico y San José Del Cabo en Enero 2022
+Ciudad de Mexico,San Luis Potosi,284,19.43194,-99.13315,22.15271,-100.97663,Se realizaron 284 vuelos entre los aeropuertos de Ciudad de Mexico y San Luis Potosi en Enero 2022
+Ciudad de Mexico,Tampico,275,19.43194,-99.13315,22.25172,-97.86479,Se realizaron 275 vuelos entre los aeropuertos de Ciudad de Mexico y Tampico en Enero 2022
+Ciudad de Mexico,Tapachula,282,19.43194,-99.13315,14.91117,-92.2646,Se realizaron 282 vuelos entre los aeropuertos de Ciudad de Mexico y Tapachula en Enero 2022
+Ciudad de Mexico,Tepic,46,19.43194,-99.13315,21.51198,-104.89164,Se realizaron 46 vuelos entre los aeropuertos de Ciudad de Mexico y Tepic en Enero 2022
+Ciudad de Mexico,Tijuana,1298,19.43194,-99.13315,32.53507,-117.04097,"Se realizaron 1,298 vuelos entre los aeropuertos de Ciudad de Mexico y Tijuana en Enero 2022"
+Ciudad de Mexico,Torreon,345,19.43194,-99.13315,25.53938,-103.45327,Se realizaron 345 vuelos entre los aeropuertos de Ciudad de Mexico y Torreon en Enero 2022
+Ciudad de Mexico,Tuxtla Gutierrez,577,19.43194,-99.13315,16.75519,-93.11544,Se realizaron 577 vuelos entre los aeropuertos de Ciudad de Mexico y Tuxtla Gutierrez en Enero 2022
+Ciudad de Mexico,Veracruz,432,19.43194,-99.13315,19.19535,-96.13683,Se realizaron 432 vuelos entre los aeropuertos de Ciudad de Mexico y Veracruz en Enero 2022
+Ciudad de Mexico,Villahermosa,453,19.43194,-99.13315,17.99864,-92.90197,Se realizaron 453 vuelos entre los aeropuertos de Ciudad de Mexico y Villahermosa en Enero 2022
+Ciudad de Mexico,Zacatecas,112,19.43194,-99.13315,22.77166,-102.57355,Se realizaron 112 vuelos entre los aeropuertos de Ciudad de Mexico y Zacatecas en Enero 2022
+Monterrey,Morelia,18,25.67093,-100.30999,19.70295,-101.19365,Se realizaron 18 vuelos entre los aeropuertos de Monterrey y Morelia en Enero 2022
+Monterrey,Oaxaca,30,25.67093,-100.30999,17.06173,-96.7261,Se realizaron 30 vuelos entre los aeropuertos de Monterrey y Oaxaca en Enero 2022
+Monterrey,Puebla,96,25.67093,-100.30999,19.04386,-98.19756,Se realizaron 96 vuelos entre los aeropuertos de Monterrey y Puebla en Enero 2022
+Monterrey,Puerto Vallarta,137,25.67093,-100.30999,20.60841,-105.23525,Se realizaron 137 vuelos entre los aeropuertos de Monterrey y Puerto Vallarta en Enero 2022
+Monterrey,Queretaro,186,25.67093,-100.30999,20.59209,-100.39601,Se realizaron 186 vuelos entre los aeropuertos de Monterrey y Queretaro en Enero 2022
+Monterrey,San José Del Cabo,82,25.67093,-100.30999,23.0769,-109.70915,Se realizaron 82 vuelos entre los aeropuertos de Monterrey y San José Del Cabo en Enero 2022
+Monterrey,San Luis Potosi,77,25.67093,-100.30999,22.15271,-100.97663,Se realizaron 77 vuelos entre los aeropuertos de Monterrey y San Luis Potosi en Enero 2022
+Monterrey,Tampico,82,25.67093,-100.30999,22.25172,-97.86479,Se realizaron 82 vuelos entre los aeropuertos de Monterrey y Tampico en Enero 2022
+Monterrey,Tijuana,218,25.67093,-100.30999,32.53507,-117.04097,Se realizaron 218 vuelos entre los aeropuertos de Monterrey y Tijuana en Enero 2022
+Monterrey,Tuxtla Gutierrez,64,25.67093,-100.30999,16.75519,-93.11544,Se realizaron 64 vuelos entre los aeropuertos de Monterrey y Tuxtla Gutierrez en Enero 2022
+Monterrey,Veracruz,112,25.67093,-100.30999,19.19535,-96.13683,Se realizaron 112 vuelos entre los aeropuertos de Monterrey y Veracruz en Enero 2022
+Monterrey,Villahermosa,87,25.67093,-100.30999,17.99864,-92.90197,Se realizaron 87 vuelos entre los aeropuertos de Monterrey y Villahermosa en Enero 2022
+Morelia,Tijuana,290,19.70295,-101.19365,32.53507,-117.04097,Se realizaron 290 vuelos entre los aeropuertos de Morelia y Tijuana en Enero 2022
+Oaxaca,Tijuana,124,17.06173,-96.7261,32.53507,-117.04097,Se realizaron 124 vuelos entre los aeropuertos de Oaxaca y Tijuana en Enero 2022
+Puebla,Tijuana,106,19.04386,-98.19756,32.53507,-117.04097,Se realizaron 106 vuelos entre los aeropuertos de Puebla y Tijuana en Enero 2022
+Puerto Vallarta,Queretaro,73,20.60841,-105.23525,20.59209,-100.39601,Se realizaron 73 vuelos entre los aeropuertos de Puerto Vallarta y Queretaro en Enero 2022
+Puerto Vallarta,San Luis Potosi,60,20.60841,-105.23525,22.15271,-100.97663,Se realizaron 60 vuelos entre los aeropuertos de Puerto Vallarta y San Luis Potosi en Enero 2022
+Puerto Vallarta,Tijuana,210,20.60841,-105.23525,32.53507,-117.04097,Se realizaron 210 vuelos entre los aeropuertos de Puerto Vallarta y Tijuana en Enero 2022
+Queretaro,San Luis Potosi,3,20.59209,-100.39601,22.15271,-100.97663,Se realizaron 3 vuelos entre los aeropuertos de Queretaro y San Luis Potosi en Enero 2022
+Queretaro,Tampico,1,20.59209,-100.39601,22.25172,-97.86479,Se realizaron 1 vuelos entre los aeropuertos de Queretaro y Tampico en Enero 2022
+Queretaro,Tijuana,32,20.59209,-100.39601,32.53507,-117.04097,Se realizaron 32 vuelos entre los aeropuertos de Queretaro y Tijuana en Enero 2022
+Queretaro,Torreon,29,20.59209,-100.39601,25.53938,-103.45327,Se realizaron 29 vuelos entre los aeropuertos de Queretaro y Torreon en Enero 2022
+Reynosa,Veracruz,30,26.09279,-98.27749,19.19535,-96.13683,Se realizaron 30 vuelos entre los aeropuertos de Reynosa y Veracruz en Enero 2022
+Saltillo,San Luis Potosi,2,25.42227,-101.00094,22.15271,-100.97663,Se realizaron 2 vuelos entre los aeropuertos de Saltillo y San Luis Potosi en Enero 2022
+San José Del Cabo,Tijuana,188,23.0769,-109.70915,32.53507,-117.04097,Se realizaron 188 vuelos entre los aeropuertos de San José Del Cabo y Tijuana en Enero 2022
+San Luis Potosi,Tijuana,31,22.15271,-100.97663,32.53507,-117.04097,Se realizaron 31 vuelos entre los aeropuertos de San Luis Potosi y Tijuana en Enero 2022
+San Luis Potosi,Torreon,1,22.15271,-100.97663,25.53938,-103.45327,Se realizaron 1 vuelos entre los aeropuertos de San Luis Potosi y Torreon en Enero 2022
+San Luis Potosi,Villahermosa,9,22.15271,-100.97663,17.99864,-92.90197,Se realizaron 9 vuelos entre los aeropuertos de San Luis Potosi y Villahermosa en Enero 2022
+Tapachula,Tijuana,26,14.91117,-92.2646,32.53507,-117.04097,Se realizaron 26 vuelos entre los aeropuertos de Tapachula y Tijuana en Enero 2022
+Tepic,Tijuana,109,21.51198,-104.89164,32.53507,-117.04097,Se realizaron 109 vuelos entre los aeropuertos de Tepic y Tijuana en Enero 2022
+Tijuana,Torreon,18,32.53507,-117.04097,25.53938,-103.45327,Se realizaron 18 vuelos entre los aeropuertos de Tijuana y Torreon en Enero 2022
+Tijuana,Tuxtla Gutierrez,46,32.53507,-117.04097,16.75519,-93.11544,Se realizaron 46 vuelos entre los aeropuertos de Tijuana y Tuxtla Gutierrez en Enero 2022
+Tijuana,Uruapan,98,32.53507,-117.04097,19.42129,-102.06413,Se realizaron 98 vuelos entre los aeropuertos de Tijuana y Uruapan en Enero 2022
+Tijuana,Veracruz,26,32.53507,-117.04097,19.19535,-96.13683,Se realizaron 26 vuelos entre los aeropuertos de Tijuana y Veracruz en Enero 2022
+Tijuana,Zacatecas,123,32.53507,-117.04097,22.77166,-102.57355,Se realizaron 123 vuelos entre los aeropuertos de Tijuana y Zacatecas en Enero 2022

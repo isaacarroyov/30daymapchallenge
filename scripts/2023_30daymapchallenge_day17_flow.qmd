@@ -8,6 +8,62 @@ format:
 <h1>#30DayMapChallenge Day 17: Flow</h1>
 
 
+Flujo de los vuelos (ida y vuelta) entre ciudades de México.
+
+Durante Enero 2022, se registraron 32,987 vuelos, siendo el trayecto Ciudad de México - Cancún el de mayor número, con 2,287 vuelos entre ambas ciudades, es decir el 6.93% de todos los vuelos de Enero
+
+
+```{python}
+import numpy as np
+import pandas as pd
+import geopandas
+
+
+df = pd.read_csv("./../data/lat_long_estadistica_operacional_destino_ene_2022_clean.csv")
+
+```
+
+
+
+```{python}
+import altair as alt
+
+data_geom_mex = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Gobierno-Mexicano/geometrias/00ent_mexico.geojson", format = alt.DataFormat(property = "features"))
+
+hover_selection = alt.selection_point(fields = ["description"])
+
+
+mapa_mexico = alt.Chart(data_geom_mex).mark_geoshape(fill = "white", stroke = "black", strokeWidth = 0.5)
+
+chart_flow_vuelos = (alt.Chart(df)
+  .encode(
+    longitude = "long_A:Q",
+    latitude = "lat_A:Q",
+    longitude2 = "long_B:Q",
+    latitude2 = "lat_B:Q",
+    size = alt.Size("n_vuelos:Q").legend(None),
+    opacity = alt.condition(hover_selection, alt.value(1), alt.value(0.05)),
+    tooltip = "description:N")
+  )
+
+
+puntos = alt.Chart(df).encode(latitude = "lat_A:Q", longitude = "long_A:Q").mark_circle(color = "#222222", opacity = 1) + alt.Chart(df).encode(latitude = "lat_B:Q", longitude = "long_B:Q").mark_circle(color = "#222222", opacity = 1)
+
+
+
+lineas = chart_flow_vuelos.mark_rule(strokeCap = "round")
+
+
+
+(mapa_mexico + puntos + lineas).add_params(hover_selection).project(type = "equalEarth").properties(width = "container", height = 500)
+
+```
+
+
+Datos: Estadística Operacional por Destino 2022, Secretaría de Comunicación y Transporte (SCT) a través del Portal de Datos Abiertos de México.
+
+<br>
+<br>
 
 <details><summary>Data processing with Python</summary>
 
@@ -36,7 +92,9 @@ df.to_csv("./data/estadistica_operacional_destino_ene_2022_clean.csv", index = F
 library(tidyverse)
 library(tidygeocoder)
 
-df <- read_csv("./data/estadistica_operacional_destino_ene_2022_clean.csv") # nolint
+df <- read_csv("./data/estadistica_operacional_destino_ene_2022_clean.csv") %>%
+  mutate(point_A = if_else(point_A == "Mexico", "Mexico City", point_A),
+         point_B = if_else(point_B == "Mexico", "Mexico City", point_B))
 
 address_all_cities <- bind_rows(distinct(df, point_A) %>% rename(ciudad = point_A),
           distinct(df, point_B) %>% rename(ciudad = point_B)) %>%
@@ -46,7 +104,7 @@ address_all_cities <- bind_rows(distinct(df, point_A) %>% rename(ciudad = point_
 long_lat_cities <- address_all_cities %>%
   geocode(address = address, method = "arcgis")
 
-# = = COMPLETE DATAFRAME = = #
+# = = COMPLETE + SAVE DATAFRAME = = #
 df %>%
   left_join(y = select(long_lat_cities, -address),
             by = join_by(point_A == ciudad)) %>%
@@ -54,6 +112,11 @@ df %>%
   left_join(y = select(long_lat_cities, -address),
             by = join_by(point_B == ciudad)) %>%
   rename(lat_B = lat, long_B = long) %>%
+  mutate(
+    point_A = if_else(point_A == "Mexico City", "Ciudad de Mexico", point_A),
+    point_B = if_else(point_B == "Mexico City", "Ciudad de Mexico", point_B),
+    description = glue::glue("Se realizaron {scales::comma(n_vuelos)} vuelos entre los aeropuertos de {point_A} y {point_B} en Enero 2022")) %>%
   write_csv("./data/lat_long_estadistica_operacional_destino_ene_2022_clean.csv")
+
 ```
 </details>
