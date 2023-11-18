@@ -5,12 +5,84 @@ format:
     jupyter: python3    
 ---
 
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    
+    #quarto-content {
+        background: #1A161B;
+        color: #FFEAF4;
+    }
+    
+    p code:not(.sourceCode), li code:not(.sourceCode) {
+        font-family: 'Space Mono', monospace;
+        background-color: #FDFCF6;
+        color: #034F1D;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        font-family: 'Abril Fatface', serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.9rem;
+        font-family: 'Comfortaa', sans-serif;
+
+    }
+
+
+   #caption {
+        font-size: 0.6rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: #5C2313;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        font-size: 0.65rem;
+        /*font-style: italic;*/
+        margin-top: -1em;
+    }
+
+    /* = = Vega-Lite Charts = = */
+    /*
+    .vega-embed {
+        width: 100%;
+        display: flex;
+    }
+
+    .vega-embed details,
+    .vega-embed details summary {
+        position: relative;
+    }
+
+    .vega-bind-name {
+        font-weight: 400;
+        color: #F1EFE3
+    } */
+    /* - Tooltips - */
+    #vg-tooltip-element {
+        max-width: 200px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 500;
+        border-radius: 15px;
+        background-color: #FAF4E9;
+    }
+</style>
+
 <h1>#30DayMapChallenge Day 17: Flow</h1>
 
-
-Flujo de los vuelos (ida y vuelta) entre ciudades de México.
-
-Durante Enero 2022, se registraron 32,987 vuelos, siendo el trayecto Ciudad de México - Cancún el de mayor número, con 2,287 vuelos entre ambas ciudades, es decir el 6.93% de todos los vuelos de Enero
+<p>Flujo de los vuelos (ida y vuelta) entre ciudades de México.</p>
+<p id="nota_subtitle">
+<b>Durante Enero 2022, se registraron 32,987 vuelos, siendo el trayecto Ciudad de México - Cancún el de mayor número, con 2,287 vuelos entre ambas ciudades, es decir el 6.93% de todos los vuelos de Enero
+</p>
 
 
 ```{python}
@@ -60,10 +132,9 @@ lineas = chart_flow_vuelos.mark_rule(strokeCap = "round")
 ```
 
 
-Datos: Estadística Operacional por Destino 2022, Secretaría de Comunicación y Transporte (SCT) a través del Portal de Datos Abiertos de México.
-
-<br>
-<br>
+<p id="caption">
+<span style='font-weight:600;'>Datos</span>: Estadística Operacional por Destino 2022, Secretaría de Comunicación y Transporte (SCT) a través del <span style='font-weight:600;'>Portal de Datos Abiertos de México</span><br>Isaac Arroyo (@unisaacarroyov)
+</p>
 
 <details><summary>Data processing with Python</summary>
 
