@@ -1,0 +1,208 @@
+point_A,point_B,n_vuelos
+Acapulco,Cancun,18.0
+Acapulco,Guadalajara,18.0
+Acapulco,Mexico,513.0
+Acapulco,Monterrey,20.0
+Acapulco,Tijuana,62.0
+Aguascalientes,Cancun,62.0
+Aguascalientes,Mexico,331.0
+Aguascalientes,Monterrey,61.0
+Aguascalientes,Puerto Vallarta,64.0
+Aguascalientes,Tijuana,136.0
+Campeche,Mexico,126.0
+Cancun,Chihuahua,56.0
+Cancun,Ciudad Juarez,70.0
+Cancun,Del Bajio,150.0
+Cancun,Guadalajara,574.0
+Cancun,Merida,33.0
+Cancun,Mexicali,36.0
+Cancun,Mexico,2287.0
+Cancun,Monterrey,632.0
+Cancun,Oaxaca,32.0
+Cancun,Puebla,142.0
+Cancun,Queretaro,89.0
+Cancun,Reynosa,36.0
+Cancun,San Luis Potosi,72.0
+Cancun,Tampico,20.0
+Cancun,Tijuana,159.0
+Cancun,Torreon,18.0
+Cancun,Tuxtla Gutierrez,80.0
+Cancun,Veracruz,124.0
+Cancun,Villahermosa,55.0
+Chetumal,Guadalajara,36.0
+Chetumal,Mexico,246.0
+Chihuahua,Ciudad Juarez,32.0
+Chihuahua,Culiacan,59.0
+Chihuahua,Guadalajara,109.0
+Chihuahua,Hermosillo,42.0
+Chihuahua,Los Mochis,28.0
+Chihuahua,Mazatlan,18.0
+Chihuahua,Mexico,520.0
+Chihuahua,Monterrey,88.0
+Chihuahua,Queretaro,23.0
+Chihuahua,Tijuana,63.0
+Ciudad Del Carmen,Mexico,184.0
+Ciudad Del Carmen,Queretaro,1.0
+Ciudad Del Carmen,Tampico,33.0
+Ciudad Del Carmen,Veracruz,28.0
+Ciudad Juarez,Del Bajio,62.0
+Ciudad Juarez,Durango,32.0
+Ciudad Juarez,Guadalajara,167.0
+Ciudad Juarez,Hermosillo,26.0
+Ciudad Juarez,Mazatlan,34.0
+Ciudad Juarez,Mexico,441.0
+Ciudad Juarez,Monterrey,92.0
+Ciudad Juarez,Puerto Vallarta,18.0
+Ciudad Juarez,San Luis Potosi,2.0
+Ciudad Juarez,Tijuana,62.0
+Ciudad Juarez,Torreon,32.0
+Ciudad Obregon,Guadalajara,54.0
+Ciudad Obregon,Los Cabos,2.0
+Ciudad Obregon,Mexico,158.0
+Ciudad Obregon,Monterrey,20.0
+Ciudad Obregon,Tijuana,72.0
+Ciudad Victoria,Mexico,25.0
+Colima,Mexico,77.0
+Colima,Tijuana,78.0
+Cozumel,Mexico,122.0
+Culiacan,Guadalajara,164.0
+Culiacan,Hermosillo,70.0
+Culiacan,La Paz,81.0
+Culiacan,Mexicali,56.0
+Culiacan,Mexico,381.0
+Culiacan,Monterrey,85.0
+Culiacan,San José Del Cabo,74.0
+Culiacan,San Luis Potosi,38.0
+Culiacan,Tijuana,444.0
+Del Bajio,Mexicali,18.0
+Del Bajio,Mexico,327.0
+Del Bajio,Monterrey,124.0
+Del Bajio,Puerto Vallarta,18.0
+Del Bajio,San José Del Cabo,18.0
+Del Bajio,Tijuana,341.0
+Durango,Guadalajara,26.0
+Durango,Mexico,217.0
+Durango,Tijuana,94.0
+Guadalajara,Hermosillo,163.0
+Guadalajara,La Paz,134.0
+Guadalajara,Los Mochis,37.0
+Guadalajara,Mazatlan,18.0
+Guadalajara,Merida,102.0
+Guadalajara,Mexicali,251.0
+Guadalajara,Mexico,1529.0
+Guadalajara,Monterrey,426.0
+Guadalajara,Oaxaca,34.0
+Guadalajara,Puebla,42.0
+Guadalajara,Puerto Escondido,20.0
+Guadalajara,Puerto Vallarta,298.0
+Guadalajara,Queretaro,30.0
+Guadalajara,Reynosa,42.0
+Guadalajara,San José Del Cabo,150.0
+Guadalajara,San Luis Potosi,33.0
+Guadalajara,Tapachula,24.0
+Guadalajara,Tijuana,1108.0
+Guadalajara,Torreon,22.0
+Guadalajara,Tuxtla Gutierrez,100.0
+Guadalajara,Veracruz,124.0
+Guadalajara,Villahermosa,36.0
+Hermosillo,La Paz,54.0
+Hermosillo,Mexicali,38.0
+Hermosillo,Mexico,523.0
+Hermosillo,Monterrey,76.0
+Hermosillo,Puerto Vallarta,6.0
+Hermosillo,Queretaro,26.0
+Hermosillo,San José Del Cabo,18.0
+Hermosillo,San Luis Potosi,20.0
+Hermosillo,Tijuana,139.0
+Huatulco,Mexico,515.0
+Huatulco,Monterrey,18.0
+Huatulco,Tijuana,26.0
+Ixtapa Zihuatanejo,Mexico,389.0
+Ixtapa Zihuatanejo,Tijuana,18.0
+"Ixtepec, Oaxaca",Mexico,23.0
+La Paz,Loreto,13.0
+La Paz,Los Mochis,55.0
+La Paz,Mazatlan,90.0
+La Paz,Mexico,278.0
+La Paz,Monterrey,4.0
+La Paz,Puerto Vallarta,30.0
+La Paz,Tijuana,75.0
+Loreto,Tijuana,39.0
+Los Mochis,Los Cabos,46.0
+Los Mochis,Mexico,130.0
+Los Mochis,Monterrey,18.0
+Los Mochis,Tijuana,82.0
+Los Cabos,Mazatlan,54.0
+Manzanillo,Mexico,130.0
+Matamoros,Mexico,56.0
+Mazatlan,Mexico,348.0
+Mazatlan,Monterrey,64.0
+Mazatlan,Puerto Vallarta,1.0
+Mazatlan,Queretaro,35.0
+Mazatlan,Tijuana,194.0
+Merida,Mexico,924.0
+Merida,Monterrey,131.0
+Merida,Oaxaca,18.0
+Merida,San Luis Potosi,1.0
+Merida,Tijuana,18.0
+Merida,Tuxtla Gutierrez,28.0
+Merida,Veracruz,30.0
+Merida,Villahermosa,62.0
+Mexicali,Mexico,292.0
+Mexicali,Morelia,10.0
+Mexico,Minatitlan,117.0
+Mexico,Monterrey,1459.0
+Mexico,Morelia,30.0
+Mexico,Nuevo Laredo,58.0
+Mexico,Oaxaca,489.0
+Mexico,Piedras Negras,25.0
+Mexico,Puerto Escondido,464.0
+Mexico,Puerto Vallarta,705.0
+Mexico,Queretaro,188.0
+Mexico,Reynosa,240.0
+Mexico,San José Del Cabo,678.0
+Mexico,San Luis Potosi,284.0
+Mexico,Tampico,275.0
+Mexico,Tapachula,282.0
+Mexico,Tepic,46.0
+Mexico,Tijuana,1298.0
+Mexico,Torreon,345.0
+Mexico,Tuxtla Gutierrez,577.0
+Mexico,Veracruz,432.0
+Mexico,Villahermosa,453.0
+Mexico,Zacatecas,112.0
+Monterrey,Morelia,18.0
+Monterrey,Oaxaca,30.0
+Monterrey,Puebla,96.0
+Monterrey,Puerto Vallarta,137.0
+Monterrey,Queretaro,186.0
+Monterrey,San José Del Cabo,82.0
+Monterrey,San Luis Potosi,77.0
+Monterrey,Tampico,82.0
+Monterrey,Tijuana,218.0
+Monterrey,Tuxtla Gutierrez,64.0
+Monterrey,Veracruz,112.0
+Monterrey,Villahermosa,87.0
+Morelia,Tijuana,290.0
+Oaxaca,Tijuana,124.0
+Puebla,Tijuana,106.0
+Puerto Vallarta,Queretaro,73.0
+Puerto Vallarta,San Luis Potosi,60.0
+Puerto Vallarta,Tijuana,210.0
+Queretaro,San Luis Potosi,3.0
+Queretaro,Tampico,1.0
+Queretaro,Tijuana,32.0
+Queretaro,Torreon,29.0
+Reynosa,Veracruz,30.0
+Saltillo,San Luis Potosi,2.0
+San José Del Cabo,Tijuana,188.0
+San Luis Potosi,Tijuana,31.0
+San Luis Potosi,Torreon,1.0
+San Luis Potosi,Villahermosa,9.0
+Tapachula,Tijuana,26.0
+Tepic,Tijuana,109.0
+Tijuana,Torreon,18.0
+Tijuana,Tuxtla Gutierrez,46.0
+Tijuana,Uruapan,98.0
+Tijuana,Veracruz,26.0
+Tijuana,Zacatecas,123.0
