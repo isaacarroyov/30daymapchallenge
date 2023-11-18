@@ -1,0 +1,59 @@
+---
+format:
+  html:
+    echo: false
+    jupyter: python3    
+---
+
+<h1>#30DayMapChallenge Day 17: Flow</h1>
+
+
+
+<details><summary>Data processing with Python</summary>
+
+```python
+# = = LOAD DATA = = #
+flights = pd.read_csv("./data/estadistica_operacional_destino_ene_2022.csv")
+flights['n_vuelos'] = pd.to_numeric(flights['n_vuelos'].str.replace(",", "").str.replace("-", ""), errors="coerce")
+flights = flights.dropna().reset_index(drop = True)
+
+# = = SUMMING UP THE FLIGHTS BETWEEN TWO CITIES = = #
+df = flights.groupby([flights[['from', 'to']].min(axis=1), flights[['from', 'to']].max(axis=1)])['n_vuelos'].sum().reset_index()
+df.columns = ["point_A", "point_B", "n_vuelos"]
+
+df['point_A'] = df['point_A'].str.title()
+df['point_B'] = df['point_B'].str.title()
+
+# = = SAVE CSV = = #
+df.to_csv("./data/estadistica_operacional_destino_ene_2022_clean.csv", index = False)
+```
+
+</details>
+
+<details><summary>Get latitude and longitude with R</summary>
+
+```R
+library(tidyverse)
+library(tidygeocoder)
+
+df <- read_csv("./data/estadistica_operacional_destino_ene_2022_clean.csv") # nolint
+
+address_all_cities <- bind_rows(distinct(df, point_A) %>% rename(ciudad = point_A),
+          distinct(df, point_B) %>% rename(ciudad = point_B)) %>%
+  distinct() %>%
+  mutate(address = glue::glue("{ciudad}, Mexico"))
+
+long_lat_cities <- address_all_cities %>%
+  geocode(address = address, method = "arcgis")
+
+# = = COMPLETE DATAFRAME = = #
+df %>%
+  left_join(y = select(long_lat_cities, -address),
+            by = join_by(point_A == ciudad)) %>%
+  rename(lat_A = lat, long_A = long) %>%
+  left_join(y = select(long_lat_cities, -address),
+            by = join_by(point_B == ciudad)) %>%
+  rename(lat_B = lat, long_B = long) %>%
+  write_csv("./data/lat_long_estadistica_operacional_destino_ene_2022_clean.csv")
+```
+</details>
