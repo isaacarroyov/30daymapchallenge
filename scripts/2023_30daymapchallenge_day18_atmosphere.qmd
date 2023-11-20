@@ -7,8 +7,8 @@ format:
 ---
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:wght@700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+      
     body {
         background: #F1F0E8;
         color: #000000;
@@ -23,17 +23,17 @@ format:
     h1 {
         font-weight: 700;
         font-size: 1.8rem;
-        font-family: 'Oxygen', sans-serif;
+        font-family: 'Libre Baskerville', serif;
     }
 
     p {
         font-weight: 400;
         font-size: 0.75rem;
-        font-family: 'Noto Serif', serif;
+        font-family: 'Lato', sans-serif
     }
 
     details>summary {
-      font-family: 'Oxygen', sans-serif;
+      font-family: 'Libre Baskerville', serif;
       font-weight: 700;
       font-size: 0.75rem;
       color: #000000; /*Mismo color que aparece en body (texto)*/
@@ -42,7 +42,7 @@ format:
 
 
     #title_style {
-      font-family: 'Oxygen', sans-serif;
+      font-family: 'Libre Baskerville', serif;
       font-size: 1.1rem;
       font-weight: 700
     }
@@ -81,7 +81,7 @@ format:
     /* - Tooltips - */
     #vg-tooltip-element {
         max-width: 200px;
-        font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
+        font-family: 'Lato', sans-serif /* Cambiar dependiendo de font-family de <p> */
         /*color: #51271E; /* Font del cuerpo*/
         font-weight: 400;
         border-radius: 15px;
@@ -92,8 +92,8 @@ format:
 <h1>#30DayMapChallenge Day 18: Atmosphere</h1>
 
 <p id="title_style">Vapor de Agua en Latinoamérica.</p>
-<p id="nota_subtitle">
-La personas llegan a creer que el vapor de agua es el principal motivo por el clima actual de la Tierra. Sin embargo, esto es falso, ya que el incremento del vapor de agua no causa el calentamiento del planeta, es una <b>consecuencia</b>.
+<p id="nota_subtitle" style="margin-bottom:-0.2em;">
+La personas llegan a creer que el vapor de agua es el principal motivo por el calentamiento actual de la Tierra. Sin embargo, esto es falso, ya que el incremento del vapor de agua <em>no causa</em> el calentamiento del planeta, es una <b>consecuencia</b>. El incremento del vapor de agua <b>amplifica</b> el calentamiento causado por otros gases de efecto invernadero.
 </p>
 
 ```{r}
@@ -102,6 +102,12 @@ La personas llegan a creer que el vapor de agua es el principal motivo por el cl
 library(tidyverse)
 library(sf)
 library(ggtext)
+library(sysfonts)
+library(showtext)
+
+font_add_google("Libre Baskerville", "Libre Baskerville")
+font_add_google("Lato", "Lato")
+showtext_auto()
 
 # setwd("./scripts")
 
@@ -122,9 +128,15 @@ p1 <- ggplot() +
   ) + 
   theme_void() +
   theme(
-    legend.position = c(0.2,0.3),
-    legend.title = element_markdown(face = "bold"),
-    legend.text = element_markdown(),
+    legend.position = c(0.2,0.31),
+    legend.title = element_markdown(face = "bold",
+                                    family = "Libre Baskerville",
+                                    size = 30,
+                                    lineheight = 0.2,
+                                    margin = margin(b = -0.2, unit = "in")),
+    legend.text = element_markdown(family = "Lato",
+                                   size = 25,
+                                   margin = margin(l = -0.15, unit = "in")),
     legend.background = element_rect(fill = "#EEE0C9", color = "transparent"),
     legend.margin = margin(rep(0.1, 4), unit = "in"),
     legend.key = element_blank(),
@@ -133,7 +145,7 @@ p1 <- ggplot() +
 tgutil::ggpreview(plot = p1, bg = "#F1F0E8")
 ```
 
-<p id="caption">
+<p id="caption" style="margin-top:-4em;">
 Datos: <span style='font-weight:600;'>NCEP/NCAR Reanalysis Project</span> a través de Google Earth Engine.<br>Isaac Arroyo (@unisaacarroyov)
 </p>
 
