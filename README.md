@@ -109,20 +109,22 @@
 
 ### Day 17: Flow
 
-[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day17_flow.qmd): `{ggplot2}` _and friends_  
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day17_flow.qmd): `altair`  
 **Data**: [_Estadística Operacional por Destino 2022, Secretaría de Comunicación y Transporte (SCT)_](https://datos.gob.mx/busca/dataset/infraestructura-aeroportuaria/resource/caf5d160-0ae2-44ee-b870-ea731723ea39)
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/2222433792e3456090adc3bf9dab2e03fa698b79/maps/2023_30daymapchallenge_day17_flow.png)
 
 ### Day 18: Atmosphere
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day18_atmosphere.qmd): `{ggplot2}` _and friends_  
+**Data**: [_NCEP/NCAR Reanalysis Project a través de Google Earth Engine_]()
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/607c7440bb2fff06712c7191f6df9bf4be4559a0/maps/2023_30daymapchallenge_day18_atmosphere.png)
 
 ### Day 19: 5 minute map
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code (Data Processing)**](): Datawrapper  
+**Data**: [Taylor Swift's "The Eras Tour" dates (US & Internatioal)](https://www.taylorswift.com/)
 
 ### Day 20: Outdoors
 
