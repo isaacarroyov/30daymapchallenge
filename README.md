@@ -109,8 +109,10 @@
 
 ### Day 17: Flow
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day17_flow.qmd): `{ggplot2}` _and friends_  
+**Data**: [_Estadística Operacional por Destino 2022, Secretaría de Comunicación y Transporte (SCT)_](https://datos.gob.mx/busca/dataset/infraestructura-aeroportuaria/resource/caf5d160-0ae2-44ee-b870-ea731723ea39)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/2222433792e3456090adc3bf9dab2e03fa698b79/maps/2023_30daymapchallenge_day17_flow.png)
 
 ### Day 18: Atmosphere
 
