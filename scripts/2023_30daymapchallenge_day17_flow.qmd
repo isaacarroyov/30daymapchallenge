@@ -16,7 +16,7 @@ format:
     
     div[id^=cb] {
         font-family: 'Space Mono', monospace;
-        /*background-color: #FDFCF6;*/ /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
         font-size: 0.75rem;
     }
 
@@ -86,7 +86,7 @@ format:
         color: #51271E;
         font-weight: 400;
         border-radius: 15px;
-        background-color: #FBF4EE; /* Cambiar dependiendo del tema + fondo + chart a usar */
+        background-color: #FDFBF9; /* Cambiar dependiendo del tema + fondo + chart a usar */
     }
 </style>
 
@@ -112,11 +112,11 @@ df = pd.read_csv("./../data/lat_long_estadistica_operacional_destino_ene_2022_cl
 
 ```{python}
 import altair as alt
+alt.renderers.set_embed_options(actions=False)
 
 data_geom_mex = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Gobierno-Mexicano/geometrias/00ent_mexico.geojson", format = alt.DataFormat(property = "features"))
 
 hover_selection = alt.selection_point(fields = ["description"])
-
 
 mapa_mexico = alt.Chart(
     data_geom_mex
@@ -132,7 +132,9 @@ chart_flow_vuelos = (alt.Chart(df)
     latitude = "lat_A:Q",
     longitude2 = "long_B:Q",
     latitude2 = "lat_B:Q",
-    size = alt.Size("n_vuelos:Q").legend(None),
+    size = alt.condition(hover_selection,
+                         alt.Size("n_vuelos:Q").legend(None),
+                         alt.value(1)),
     opacity = alt.condition(hover_selection, alt.value(1), alt.value(0.05)),
     tooltip = "description:N")
   )
@@ -142,7 +144,7 @@ puntos = alt.Chart(df).encode(latitude = "lat_A:Q", longitude = "long_A:Q").mark
 
 lineas = chart_flow_vuelos.mark_rule(strokeCap = "round", color = "#6C3428")
 
-mapa_final = ((mapa_mexico + puntos + lineas)
+mapa_final = ((mapa_mexico + lineas + puntos)
   .add_params(hover_selection)
   .project(type = "equalEarth")
   .properties(
