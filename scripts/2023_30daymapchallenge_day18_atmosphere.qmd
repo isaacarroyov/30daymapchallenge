@@ -91,7 +91,7 @@ format:
 
 <h1>#30DayMapChallenge Day 18: Atmosphere</h1>
 
-<p id="title_style">Vapor de Agua en Latinoamérica.</p>
+<p id="title_style">Vapor de Agua en Latinoamérica (Noviembre 13 - 14, 2023).</p>
 <p id="nota_subtitle" style="margin-bottom:-0.2em;">
 La personas llegan a creer que el vapor de agua es el principal motivo por el calentamiento actual de la Tierra. Sin embargo, esto es falso, ya que el incremento del vapor de agua <em>no causa</em> el calentamiento del planeta, es una <b>consecuencia</b>. El incremento del vapor de agua <b>amplifica</b> el calentamiento causado por otros gases de efecto invernadero.
 </p>
