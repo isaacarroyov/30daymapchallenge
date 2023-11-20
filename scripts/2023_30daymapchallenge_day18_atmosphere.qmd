@@ -10,11 +10,11 @@ format:
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
     body {
-        /* background: #F9FCFD;
-        color: #51271E;*/
+        background: #F1F0E8;
+        color: #000000;
     }
     
-    div[id^=cb] {
+    code[class^=sourceC]{
         font-family: 'Space Mono', monospace;
         /*background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
         font-size: 0.75rem;
@@ -36,7 +36,7 @@ format:
       font-family: 'Oxygen', sans-serif;
       font-weight: 700;
       font-size: 0.75rem;
-      /*color: #51271E; /*Mismo color que aparece en body (texto)*/
+      color: #000000; /*Mismo color que aparece en body (texto)*/
       /*filter: saturate(50%) /*Menor saturación*/
     }
 
@@ -93,7 +93,7 @@ format:
 
 <p id="title_style">Vapor de Agua en Latinoamérica.</p>
 <p id="nota_subtitle">
-No se que escribir, pero se va a escribir algooooo.
+La personas llegan a creer que el vapor de agua es el principal motivo por el clima actual de la Tierra. Sin embargo, esto es falso, ya que el incremento del vapor de agua no causa el calentamiento del planeta, es una <b>consecuencia</b>.
 </p>
 
 ```{r}
@@ -101,6 +101,7 @@ No se que escribir, pero se va a escribir algooooo.
 #| fig-asp: 1
 library(tidyverse)
 library(sf)
+library(ggtext)
 
 # setwd("./scripts")
 
@@ -114,15 +115,22 @@ p1 <- ggplot() +
           linewidth = 0) +
   geom_sf(data = sf_latam,
           fill = "transparent",
-          color = "black") +
-  MetBrewer::scale_fill_met_d("Greek", direction = -1) +
+          color = "#EEE0C9",
+          linewidth = 0.5) +
+  scale_fill_manual(values = MetBrewer::met.brewer("Hokusai2", n = 4), labels = paste(c("0 a 15","15 a 30","30 a 45",'Mayor que 45'), "kg&frasl;m<sup>2</sup>")) +
+  guides(fill = ggplot2::guide_legend(title = "Cantiad de vapor<br>de agua")
+  ) + 
   theme_void() +
   theme(
-    legend.position = c(0.2,0.3)
-
+    legend.position = c(0.2,0.3),
+    legend.title = element_markdown(face = "bold"),
+    legend.text = element_markdown(),
+    legend.background = element_rect(fill = "#EEE0C9", color = "transparent"),
+    legend.margin = margin(rep(0.1, 4), unit = "in"),
+    legend.key = element_blank(),
   )
 
-tgutil::ggpreview(plot = p1, bg = "transparent")
+tgutil::ggpreview(plot = p1, bg = "#F1F0E8")
 ```
 
 <p id="caption">
