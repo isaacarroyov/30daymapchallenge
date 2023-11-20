@@ -2,21 +2,21 @@
 format:
   html:
     echo: false
-    theme: journal
-    jupyter: python3    
+    theme: cosmo
+    fig-responsive: true
 ---
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
     body {
-        background: #F9FCFD;
-        color: #51271E;
+        /* background: #F9FCFD;
+        color: #51271E;*/
     }
     
     div[id^=cb] {
         font-family: 'Space Mono', monospace;
-        background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        /*background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
         font-size: 0.75rem;
     }
 
@@ -36,10 +36,9 @@ format:
       font-family: 'Oxygen', sans-serif;
       font-weight: 700;
       font-size: 0.75rem;
-      color: #51271E; /*Mismo color que aparece en body (texto)*/
+      /*color: #51271E; /*Mismo color que aparece en body (texto)*/
       /*filter: saturate(50%) /*Menor saturación*/
     }
-
 
 
     #title_style {
@@ -83,10 +82,10 @@ format:
     #vg-tooltip-element {
         max-width: 200px;
         font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
-        color: #51271E;
+        /*color: #51271E; /* Font del cuerpo*/
         font-weight: 400;
         border-radius: 15px;
-        background-color: #FDFBF9; /* Cambiar dependiendo del tema + fondo + chart a usar */
+        /*background-color: #FDFBF9; /* Cambiar dependiendo del tema + fondo + chart a usar */
     }
 </style>
 
@@ -94,29 +93,37 @@ format:
 
 <p id="title_style">Vapor de Agua en Latinoamérica.</p>
 <p id="nota_subtitle">
-No se que escribir, pero se va a escribir
+No se que escribir, pero se va a escribir algooooo.
 </p>
 
+```{r}
+#| warning: false
+#| fig-asp: 1
+library(tidyverse)
+library(sf)
 
-```{python}
-import numpy as np
-import pandas as pd
-import geopandas
+# setwd("./scripts")
 
+sf_water_vapor_latam <- geojsonsf::geojson_sf("./../data/water_vapor_latam.geojson")
+sf_latam <- geojsonsf::geojson_sf("https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson") %>%
+  filter(REGION_WB == 'Latin America & Caribbean')
 
+p1 <- ggplot() +
+  geom_sf(data = sf_water_vapor_latam,
+          mapping = aes(fill = ordered(zone)),
+          linewidth = 0) +
+  geom_sf(data = sf_latam,
+          fill = "transparent",
+          color = "black") +
+  MetBrewer::scale_fill_met_d("Greek", direction = -1) +
+  theme_void() +
+  theme(
+    legend.position = c(0.2,0.3)
 
+  )
+
+tgutil::ggpreview(plot = p1, bg = "transparent")
 ```
-
-
-
-```{python}
-import altair as alt
-alt.renderers.set_embed_options(actions=False)
-
-
-
-```
-
 
 <p id="caption">
 Datos: <span style='font-weight:600;'>NCEP/NCAR Reanalysis Project</span> a través de Google Earth Engine.<br>Isaac Arroyo (@unisaacarroyov)
