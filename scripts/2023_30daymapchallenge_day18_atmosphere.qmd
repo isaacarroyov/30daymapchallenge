@@ -1,0 +1,162 @@
+---
+format:
+  html:
+    echo: false
+    theme: journal
+    jupyter: python3    
+---
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    
+    body {
+        background: #F9FCFD;
+        color: #51271E;
+    }
+    
+    div[id^=cb] {
+        font-family: 'Space Mono', monospace;
+        background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        font-family: 'Oxygen', sans-serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.75rem;
+        font-family: 'Noto Serif', serif;
+    }
+
+    details>summary {
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: #51271E; /*Mismo color que aparece en body (texto)*/
+      /*filter: saturate(50%) /*Menor saturación*/
+    }
+
+
+
+    #title_style {
+      font-family: 'Oxygen', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700
+    }
+
+
+   #caption {
+        font-size: 0.6rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: steelblue;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        margin-top: -1em;
+    }
+
+    /* = = Vega-Lite Charts = = */
+    /*
+    .vega-embed {
+        width: 100%;
+        display: flex;
+    }
+
+    .vega-embed details,
+    .vega-embed details summary {
+        position: relative;
+    }
+
+    .vega-bind-name {
+        font-weight: 400;
+        color: #F1EFE3
+    } */
+    /* - Tooltips - */
+    #vg-tooltip-element {
+        max-width: 200px;
+        font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
+        color: #51271E;
+        font-weight: 400;
+        border-radius: 15px;
+        background-color: #FDFBF9; /* Cambiar dependiendo del tema + fondo + chart a usar */
+    }
+</style>
+
+<h1>#30DayMapChallenge Day 18: Atmosphere</h1>
+
+<p id="title_style">Vapor de Agua en Latinoamérica.</p>
+<p id="nota_subtitle">
+No se que escribir, pero se va a escribir
+</p>
+
+
+```{python}
+import numpy as np
+import pandas as pd
+import geopandas
+
+
+
+```
+
+
+
+```{python}
+import altair as alt
+alt.renderers.set_embed_options(actions=False)
+
+
+
+```
+
+
+<p id="caption">
+Datos: <span style='font-weight:600;'>NCEP/NCAR Reanalysis Project</span> a través de Google Earth Engine.<br>Isaac Arroyo (@unisaacarroyov)
+</p>
+
+<details><summary>Earth Engine Python API</summary>
+
+```python
+import ee
+import geemap
+ee.Initialize()
+
+# = = ROI = = #
+roi = ee.Geometry.Rectangle([[-123.5, -55.5],[-32.5,32.5 ]])
+
+# = = LOAD DATA = = #
+imgColl_waterVapor = ee.ImageCollection('NCEP_RE/surface_wv').filter(ee.Filter.date('2023-11-13', '2023-11-14'))
+img_waterVapor = imgColl_waterVapor.select('pr_wtr').mean().clip(roi)
+
+# = = CREATE VECTORS = = #
+# - - Categories - - #
+category_ranges = img_waterVapor.gt(0).add(img_waterVapor.gt(15)).add(img_waterVapor.gt(30)).add(img_waterVapor.gt(45))
+category_ranges = category_ranges.updateMask(category_ranges.neq(0))
+
+fc = category_ranges.addBands(img_waterVapor).reduceToVectors(
+    geometry = roi,
+    crs = img_waterVapor.projection(),
+    scale = 278300,
+    geometryType = 'polygon',
+    eightConnected = False,
+    labelProperty = 'zone',
+    reducer = ee.Reducer.mean())
+
+# = = SAVE TO DRIVE = = #
+geemap.ee_export_vector_to_drive(
+    collection = fc,
+    description= "Exportar datos de Vapor de Agua de LATAM",
+    fileNamePrefix = "water_vapor_latam",
+    fileFormat = "GeoJSON",
+    folder = "folder_name")
+```
+
+</details>
