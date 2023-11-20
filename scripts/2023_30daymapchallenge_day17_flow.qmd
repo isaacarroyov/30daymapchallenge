@@ -2,36 +2,50 @@
 format:
   html:
     echo: false
+    theme: journal
     jupyter: python3    
 ---
 
-
-
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
-    #quarto-content {
-        background: #1A161B;
-        color: #FFEAF4;
+    body {
+        background: #FFFFFF;
+        color: #000000;
     }
     
-    p code:not(.sourceCode), li code:not(.sourceCode) {
+    div[id^=cb] {
         font-family: 'Space Mono', monospace;
-        background-color: #FDFCF6;
-        color: #034F1D;
+        /*background-color: #FDFCF6;*/ /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        font-size: 0.75rem;
     }
 
     h1 {
-        font-weight: 400;
+        font-weight: 700;
         font-size: 1.8rem;
-        font-family: 'Abril Fatface', serif;
+        font-family: 'Oxygen', sans-serif;
     }
 
     p {
         font-weight: 400;
-        font-size: 0.9rem;
-        font-family: 'Comfortaa', sans-serif;
+        font-size: 0.75rem;
+        font-family: 'Noto Serif', serif;
+    }
 
+    details>summary {
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: #000000; /*Mismo color que aparece en body (texto)*/
+      filter: saturate(50%) /*Menor saturación*/
+    }
+
+
+
+    #title_style {
+      font-family: 'Oxygen', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700
     }
 
 
@@ -41,13 +55,11 @@ format:
     }
     
     #url_paleta_colores {
-        color: #5C2313;
+        color: steelblue;
         text-decoration: none;
     }
 
     #nota_subtitle {
-        font-size: 0.65rem;
-        /*font-style: italic;*/
         margin-top: -1em;
     }
 
@@ -70,18 +82,18 @@ format:
     /* - Tooltips - */
     #vg-tooltip-element {
         max-width: 200px;
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight: 500;
+        font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
+        font-weight: 400;
         border-radius: 15px;
-        background-color: #FAF4E9;
+        /* background-color: #FAF4E9; /* Cambiar dependiendo del tema + fondo + chart a usar */
     }
 </style>
 
 <h1>#30DayMapChallenge Day 17: Flow</h1>
 
-<p>Flujo de los vuelos (ida y vuelta) entre ciudades de México.</p>
+<p id="title_style">Flujo de los vuelos (ida y vuelta) entre ciudades de México.</p>
 <p id="nota_subtitle">
-<b>Durante Enero 2022, se registraron 32,987 vuelos, siendo el trayecto Ciudad de México - Cancún el de mayor número, con 2,287 vuelos entre ambas ciudades, es decir el 6.93% de todos los vuelos de Enero
+Durante Enero 2022, se registraron 32,987 vuelos, siendo el trayecto Ciudad de México - Cancún el de mayor número, con 2,287 vuelos entre ambas ciudades, es decir el 6.93% de todos los vuelos de Enero
 </p>
 
 
