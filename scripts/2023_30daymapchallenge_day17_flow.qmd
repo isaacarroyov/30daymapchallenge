@@ -10,8 +10,8 @@ format:
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
     body {
-        background: #FFFFFF;
-        color: #000000;
+        background: #F9FCFD;
+        color: #51271E;
     }
     
     div[id^=cb] {
@@ -36,8 +36,8 @@ format:
       font-family: 'Oxygen', sans-serif;
       font-weight: 700;
       font-size: 0.75rem;
-      color: #000000; /*Mismo color que aparece en body (texto)*/
-      filter: saturate(50%) /*Menor saturación*/
+      color: #51271E; /*Mismo color que aparece en body (texto)*/
+      /*filter: saturate(50%) /*Menor saturación*/
     }
 
 
@@ -83,9 +83,10 @@ format:
     #vg-tooltip-element {
         max-width: 200px;
         font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
+        color: #51271E;
         font-weight: 400;
         border-radius: 15px;
-        /* background-color: #FAF4E9; /* Cambiar dependiendo del tema + fondo + chart a usar */
+        background-color: #FBF4EE; /* Cambiar dependiendo del tema + fondo + chart a usar */
     }
 </style>
 
@@ -117,7 +118,13 @@ data_geom_mex = alt.Data(url = "https://raw.githubusercontent.com/isaacarroyov/d
 hover_selection = alt.selection_point(fields = ["description"])
 
 
-mapa_mexico = alt.Chart(data_geom_mex).mark_geoshape(fill = "white", stroke = "black", strokeWidth = 0.5)
+mapa_mexico = alt.Chart(
+    data_geom_mex
+  ).mark_geoshape(
+    fill = "#CEE6F3",
+    stroke = "black",
+    strokeWidth = 0.5
+  )
 
 chart_flow_vuelos = (alt.Chart(df)
   .encode(
@@ -131,15 +138,20 @@ chart_flow_vuelos = (alt.Chart(df)
   )
 
 
-puntos = alt.Chart(df).encode(latitude = "lat_A:Q", longitude = "long_A:Q").mark_circle(color = "#222222", opacity = 1) + alt.Chart(df).encode(latitude = "lat_B:Q", longitude = "long_B:Q").mark_circle(color = "#222222", opacity = 1)
+puntos = alt.Chart(df).encode(latitude = "lat_A:Q", longitude = "long_A:Q").mark_circle(color = "#51271E", opacity = 1) + alt.Chart(df).encode(latitude = "lat_B:Q", longitude = "long_B:Q").mark_circle(color = "#51271E", opacity = 1)
 
+lineas = chart_flow_vuelos.mark_rule(strokeCap = "round", color = "#6C3428")
 
+mapa_final = ((mapa_mexico + puntos + lineas)
+  .add_params(hover_selection)
+  .project(type = "equalEarth")
+  .properties(
+    background = "transparent",
+    width = "container",
+    height = 500)
+    )
 
-lineas = chart_flow_vuelos.mark_rule(strokeCap = "round")
-
-
-
-(mapa_mexico + puntos + lineas).add_params(hover_selection).project(type = "equalEarth").properties(width = "container", height = 500)
+mapa_final
 
 ```
 
