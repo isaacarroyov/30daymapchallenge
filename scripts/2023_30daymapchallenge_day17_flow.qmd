@@ -14,9 +14,9 @@ format:
         color: #51271E;
     }
     
-    div[id^=cb] {
+    code[class^=sourceC]{
         font-family: 'Space Mono', monospace;
-        background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        /*background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
         font-size: 0.75rem;
     }
 
