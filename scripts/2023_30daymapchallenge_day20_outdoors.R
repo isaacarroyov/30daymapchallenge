@@ -5,6 +5,10 @@ library(showtext)
 library(ggtext)
 library(osmdata)
 
+font_add_google("Ruda", "title")
+font_add_google("Arvo", "body")
+showtext_auto()
+
 # = = LOAD CITY DATA = = #
 # ~ ~ Bouding Box ~ ~ #
 merida_bb <- getbb("Mérida, Yucatán, México")
@@ -36,13 +40,6 @@ merida_med_small_streets <- merida_bb %>%
                             "unclassified", "service", "footway")) %>%
   osmdata_sf()
 
-merida_small_streets <- merida_bb %>%
-  opq() %>%
-  add_osm_feature(key = "highway",
-                  value = c()) %>% # nolint
-  osmdata_sf()
-
-
 # = = DATAVIS = = #
 
 mapa_merida <- ggplot() +
@@ -60,17 +57,43 @@ mapa_merida <- ggplot() +
           fill = "#76DD5D",
           linewidth = 0) +
   theme_void() +
-  labs(title = "#30DayMapChallenge Day 20: Outdoors<br>Las <span style='#B6DD5D;'>áreas verdes</span> y <span style='#76DD5D;'>parques</span> de Mérida.", # nolint
-       subtitle = "¿Dónde están? ¿Hay muchas? ¿Se necesitan más? ¿Quiénes tienen más parques y áreas verdes cerca?", # nolint
-       caption = "<em>Isaac Arroyo (@unisaacarroyov)<br><b>Data</b>: Map data © OpenStreetMap contributors</em>") + # nolint
+  labs(title = "#30DayMapChallenge Day 20: Outdoors<br>Las <span style='color:#B6DD5D;'>áreas verdes</span> y <span style='color:#76DD5D;'>parques</span> de Mérida.", # nolint
+       subtitle = "¿Dónde están? ¿Hay muchas? ¿Se necesitan más?<br>¿Quiénes tienen más parques y áreas verdes cerca?", # nolint
+       caption = "Isaac Arroyo (@unisaacarroyov)<br>Datos: <em>Map data © <b>OpenStreetMap</b> contributors</em>") + # nolint
   theme(
     plot.title.position = "plot",
     plot.caption.position = "plot",
-    plot.title = element_textbox(color = "#F4EAD5", size = 70, lineheight = 0.3), # nolint
-    plot.subtitle = element_textbox(color = "#F4EAD5", size = 40), # nolint
-    plot.caption = element_textbox(color = "#F4EAD5", size = 30)
+    plot.title = element_textbox(color = "#F4EAD5",
+                                 family = "title",
+                                 size = 70,
+                                 hjust = 0.5,
+                                 halign = 0.5,
+                                 margin = margin(t = 0.3, b = 0.1, unit = "in"),
+                                 lineheight = 0.4),
+    plot.subtitle = element_textbox(color = "#F4EAD5",
+                                    family = "body",
+                                    lineheight = 0.2,
+                                    hjust = 0.5,
+                                    halign = 0.5,
+                                    margin = margin(b = -2,
+                                                    t = 0.1,
+                                                    unit = "in"),
+                                    size = 40),
+    plot.caption = element_textbox(color = "#F4EAD5",
+                                   family = "body",
+                                   hjust = 0.5,
+                                   halign = 0.5,
+                                   margin = margin(t = -1,
+                                                   b = 0.2,
+                                                   unit = "in"),
+                                   lineheight = 0.5,
+                                   size = 30)
   )
 
 tgutil::ggpreview(plot = mapa_merida,
                   width = 10, height = 10,
                   bg = "#232323", dpi = 300)
+
+ggsave(plot = mapa_merida, bg = "#232323",
+       width = 10, height = 10, unit = "in",
+       filename = "./maps/2023_30daymapchallenge_day20_outdoors.png")
