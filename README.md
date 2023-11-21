@@ -130,8 +130,10 @@
 
 ### Day 20: Outdoors
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day20_outdoors.R): `{ggplot2}` _and friends_  
+**Data**: _OpenStreetMap (R package `{osmdata}`)_
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day20_outdoors.png)
 
 ### Day 21: Raster
 
