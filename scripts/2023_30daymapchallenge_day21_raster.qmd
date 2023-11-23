@@ -1,0 +1,188 @@
+---
+format:
+  html:
+    echo: false
+    theme: journal
+    code-fold: true
+    jupyter: python3
+---
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    
+    body {
+        background: #F9FCFD;
+        color: #51271E;
+    }
+    
+    code[class^=sourceC]{
+        font-family: 'Space Mono', monospace;
+        /*background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        font-family: 'Oxygen', sans-serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.75rem;
+        font-family: 'Noto Serif', serif;
+    }
+
+    details>summary {
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: #51271E; /*Mismo color que aparece en body (texto)*/
+      /*filter: saturate(50%) /*Menor saturación*/
+    }
+
+
+
+    #title_style {
+      font-family: 'Oxygen', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700
+    }
+
+
+   #caption {
+        font-size: 0.6rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: steelblue;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        margin-top: -1em;
+    }
+
+    /* = = Vega-Lite Charts = = */
+    /*
+    .vega-embed {
+        width: 100%;
+        display: flex;
+    }
+
+    .vega-embed details,
+    .vega-embed details summary {
+        position: relative;
+    }
+
+    .vega-bind-name {
+        font-weight: 400;
+        color: #F1EFE3
+    } */
+    /* - Tooltips - */
+    #vg-tooltip-element {
+        max-width: 200px;
+        font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
+        color: #51271E;
+        font-weight: 400;
+        border-radius: 15px;
+        background-color: #FDFBF9; /* Cambiar dependiendo del tema + fondo + chart a usar */
+    }
+</style>
+
+<h1>#30DayMapChallenge Day 21: Raster</h1>
+
+<p id="title_style">Mismo mes, diferente año, diferente nivel de sequía</p>
+<p id="nota_subtitle">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor elementum purus, quis porta turpis pellentesque ut. Donec ornare lorem eget erat scelerisque fermentum. Donec mollis viverra venenatis. Donec diam mauris, luctus vitae metus nec.
+</p>
+
+
+```{python}
+#| eval: false
+#| echo: true
+#| code-summary: "Obtención y manipulación de datos raster de Google Earth Engine"
+import ee
+
+ee.Initialize()
+print("Todo bien!")
+
+# = = EXTRACT DATA = = #
+def func_scalling(img):
+    return img.multiply(0.01).copyProperties(img, img.propertyNames())
+
+
+# - - Carga de Terra Climate y declaracion de parámetros - - #
+img_coll = ee.ImageCollection("IDAHO_EPSCOR/TERRACLIMATE")
+scale_img_coll = 4638.3
+img_coll_start_year = 1958 # Empezando en Enero
+img_coll_end_year = 2022 # Terminando en Diciembre
+
+# Geometria de México
+fc_polygons_countries = ee.FeatureCollection("USDOS/LSIB/2017")
+geom_mexico = fc_polygons_countries.filter(ee.Filter.eq("COUNTRY_NA","Mexico")).first().geometry()
+
+# Cargar datos, seleccionar banda, escalarlos y limitarlos a la mexico
+img_coll_interes = img_coll.select(["pdsi"]).filterBounds(geom_mexico).map(func_scalling)
+
+# Dar como propiedad a la imagen: date_month y date_year
+def create_month_year(img):
+    full_date = ee.Date(ee.Number(img.get("system:time_start")))
+    date_year = ee.Number(full_date.get("year"))
+    date_month = ee.Number(full_date.get("month"))
+    return img.set({"date_month": date_month, "date_year": date_year})
+
+# Etiquetar date_month y date_year como prop de la imagen
+img_coll_tag_month_year = img_coll_interes.map(create_month_year)
+
+# Crear una ImageCollection con n Images de a 12 bandas cada una.
+# n -> numero de años que tenga la ImageCollection
+# 12 bandas -> 1 banda = 1 mes
+list_new_collection_by_year = ee.List.sequence(img_coll_start_year, img_coll_end_year)\
+    .map(
+        lambda element: img_coll_tag_month_year\
+                        .filter(ee.Filter.eq("date_year", element))\
+                        .toBands()\
+                        .set({"date_year": element})\
+                        .rename(list(map(lambda x: '0'+str(x) if x <= 9 else str(x), range(1,13))))
+    )
+
+final_data_img_coll = ee.ImageCollection.fromImages(list_new_collection_by_year)
+
+```
+
+```{python}
+#| eval: false
+#| echo: true
+#| code-summary: "Exportar mapa (datos raster) como imágenes PNG"
+# = = REQUESTS = = #
+import requests
+
+# = = COLOR PALETTE = = #
+mapVisParams = dict(min = - 4, max = 4, palette = ["DE5905","ffffff","058ADE"])
+
+list_years = [2004, 2022]
+month_interes = "03"
+
+for year in list_years:
+    r_img = final_data_img_coll.select([month_interes])\
+            .filter(ee.Filter.eq("date_year", year))\
+            .first()\
+            .clip(geom_mexico)
+    r_img_url = r_img.getThumbURL(mapVisParams)
+    response_r_img_url = requests.get(r_img_url)
+    if response_r_img_url.status_code == 200:
+        with open(f"./pdsi_mexico_{year}_{month_interes}.png" , "wb") as f:
+            f.write(response_r_img_url.content)
+            print("Imagen guardada")
+    else:
+        print("No se pudo guardar la imagen. Seguimos...\n")
+        continue
+
+```
+
+
+<p id="caption">
+<span style='font-weight:600;'>Datos</span>: <em>TerraClimate</em> a través de <span style='font-weight:600;'>Google Earth Engine</span><br><span style='font-weight:600;'>Código</span>: Repositorio de GitHub de la investigación "Desplazamiento climático: la migración que no vemos", N+ Focus.<br>Isaac Arroyo (@unisaacarroyov)
+</p>
