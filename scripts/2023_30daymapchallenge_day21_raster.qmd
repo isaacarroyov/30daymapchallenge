@@ -3,8 +3,6 @@ format:
   html:
     echo: false
     theme: journal
-    code-fold: true
-    jupyter: python3
 ---
 
 <style>
@@ -64,30 +62,9 @@ format:
         margin-top: -1em;
     }
 
-    /* = = Vega-Lite Charts = = */
-    /*
-    .vega-embed {
-        width: 100%;
-        display: flex;
-    }
-
-    .vega-embed details,
-    .vega-embed details summary {
-        position: relative;
-    }
-
-    .vega-bind-name {
-        font-weight: 400;
-        color: #F1EFE3
-    } */
-    /* - Tooltips - */
-    #vg-tooltip-element {
-        max-width: 200px;
-        font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
-        color: #51271E;
-        font-weight: 400;
-        border-radius: 15px;
-        background-color: #FDFBF9; /* Cambiar dependiendo del tema + fondo + chart a usar */
+    /* = = Observable Plot classes = = */
+    .tick {
+        font-family: 'Noto Serif', serif;
     }
 </style>
 
@@ -98,11 +75,26 @@ format:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor elementum purus, quis porta turpis pellentesque ut. Donec ornare lorem eget erat scelerisque fermentum. Donec mollis viverra venenatis. Donec diam mauris, luctus vitae metus nec.
 </p>
 
+```{ojs}
+Plot.legend({
+  style: { fontSize: "0.75rem" },
+  width: 620,
+  height: 60,
+  tickSize: 10,
+  color: {
+    type: "diverging",
+    domain: [-5, 0, 5],
+    label: ["Índice de Severidad de Sequía de Palmer"],
+    range: ["#DE5905", "#ffffff", "#058ADE"],
+    ticks: 5
+  }
+})
+```
 
-```{python}
-#| eval: false
-#| echo: true
-#| code-summary: "Obtención y manipulación de datos raster de Google Earth Engine"
+
+<details><summary>Obtención y manipulación de datos raster de Google Earth Engine</summary>
+
+```python
 import ee
 
 ee.Initialize()
@@ -152,10 +144,12 @@ final_data_img_coll = ee.ImageCollection.fromImages(list_new_collection_by_year)
 
 ```
 
-```{python}
-#| eval: false
-#| echo: true
-#| code-summary: "Exportar mapa (datos raster) como imágenes PNG"
+</details>
+
+
+<details><summary>Exportar mapa (datos raster) como imágenes PNG</summary>
+
+```python
 # = = REQUESTS = = #
 import requests
 
@@ -173,7 +167,7 @@ for year in list_years:
     r_img_url = r_img.getThumbURL(mapVisParams)
     response_r_img_url = requests.get(r_img_url)
     if response_r_img_url.status_code == 200:
-        with open(f"./pdsi_mexico_{year}_{month_interes}.png" , "wb") as f:
+        with open(f"name_of_images_{date_year}.png" , "wb") as f:
             f.write(response_r_img_url.content)
             print("Imagen guardada")
     else:
@@ -181,6 +175,7 @@ for year in list_years:
         continue
 
 ```
+</details>
 
 
 <p id="caption">
