@@ -123,7 +123,7 @@
 
 ### Day 19: 5 minute map (with Datawrapper)
 
-[**Code (Data Processing)**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day19_five-minute-map_data-processing.R): R
+[**Code (Data Processing)**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day19_five-minute-map_data-processing.R): R  
 **Data**: [Taylor Swift's "The Eras Tour" dates (US & Internatioal)](https://www.taylorswift.com/)
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day19_five-minute-map.png)
@@ -137,8 +137,10 @@
 
 ### Day 21: Raster
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day21_raster.qmd): Google Earth Engine Python API + Observable Plot (legend)  
+**Data**: [_TerraClimate via Google Earth Engine_]()
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day21_raster.png)
 
 ### Day 22: North is not always up
 
