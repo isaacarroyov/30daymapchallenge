@@ -6,11 +6,11 @@ format:
 ---
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Quicksand:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
     body {
-        background: #F9FCFD;
-        color: #51271E;
+        background: #FBF7EB;
+        color: #701A1A;
     }
     
     code[class^=sourceC]{
@@ -22,27 +22,34 @@ format:
     h1 {
         font-weight: 700;
         font-size: 1.8rem;
-        font-family: 'Oxygen', sans-serif;
+        font-family: 'Oswald', sans-serif;
     }
 
     p {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 0.75rem;
-        font-family: 'Noto Serif', serif;
+        font-family: 'Quicksand', sans-serif;
     }
 
     details>summary {
-      font-family: 'Oxygen', sans-serif;
+      font-family: 'Oswald', sans-serif;
       font-weight: 700;
       font-size: 0.75rem;
-      color: #51271E; /*Mismo color que aparece en body (texto)*/
+      color: #701A1A; /*Mismo color que aparece en body (texto)*/
       /*filter: saturate(50%) /*Menor saturación*/
     }
 
-
+    .figure-caption {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        color: #000000;
+        font-size: 0.75rem;
+        color: #701A1A;
+        text-align: center;
+    }
 
     #title_style {
-      font-family: 'Oxygen', sans-serif;
+      font-family: 'Oswald', sans-serif;
       font-size: 1.1rem;
       font-weight: 700
     }
@@ -50,7 +57,7 @@ format:
 
    #caption {
         font-size: 0.6rem;
-        font-weight: 300;
+        font-weight: 400;
     }
     
     #url_paleta_colores {
@@ -64,7 +71,14 @@ format:
 
     /* = = Observable Plot classes = = */
     .tick {
-        font-family: 'Noto Serif', serif;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 500;
+    }
+
+    div[id^=ojs-cell-] {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
     }
 </style>
 
@@ -72,25 +86,42 @@ format:
 
 <p id="title_style">Mismo mes, diferente año, diferente nivel de sequía</p>
 <p id="nota_subtitle">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor elementum purus, quis porta turpis pellentesque ut. Donec ornare lorem eget erat scelerisque fermentum. Donec mollis viverra venenatis. Donec diam mauris, luctus vitae metus nec.
+El <b>Índice de Severidad de Sequía de Palmer (PDSI, por sus siglas en inglés)</b> es uno de los indicadores de sequía sin unidades y de los más populares, es común ver en mapas que sus valores van entre -4 y 4.<br>Los valores negativos son condiciones de sequía, siendo los valores menores que -4 condiciones de sequía extrema; valores postivos indican condiciones de humedad, siendo los valores mayores que 4 condiciones de humedad extrema; y valores cercanos a cero indican condiciones normales.
 </p>
 
 ```{ojs}
 Plot.legend({
-  style: { fontSize: "0.75rem" },
-  width: 620,
-  height: 60,
+  style: {
+    fontSize: "0.75rem",
+    marginBottom: 10,
+    backgroundColor: "#FBF7EB",
+    fontFamily: "Oswald",
+  },
+  width: 420,
+  height: 55,
   tickSize: 10,
+  label: "Índice de Severidad de Sequía de Palmer",
   color: {
     type: "diverging",
-    domain: [-5, 0, 5],
-    label: ["Índice de Severidad de Sequía de Palmer"],
+    domain: [-4.5, 0, 4.5],
     range: ["#DE5905", "#ffffff", "#058ADE"],
     ticks: 5
   }
 })
 ```
 
+
+::: {.column-page layout-ncol=2}
+
+![Sequía en México durante Marzo 2004](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day21_raster_pdsi_mexico_2004_03.png)
+
+![Sequía en México durante Marzo 2022](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day21_raster_pdsi_mexico_2022_03.png)
+:::
+
+
+<p id="caption">
+<span style='font-weight:600;'>Datos</span>: TerraClimate a través de <span style='font-weight:600;'>Google Earth Engine</span><br><span style='font-weight:600;'>Código</span>: Repositorio de GitHub de la investigación "Desplazamiento climático: la migración que no vemos", N+ Focus.<br>Isaac Arroyo (@unisaacarroyov)
+</p>
 
 <details><summary>Obtención y manipulación de datos raster de Google Earth Engine</summary>
 
@@ -176,8 +207,3 @@ for year in list_years:
 
 ```
 </details>
-
-
-<p id="caption">
-<span style='font-weight:600;'>Datos</span>: <em>TerraClimate</em> a través de <span style='font-weight:600;'>Google Earth Engine</span><br><span style='font-weight:600;'>Código</span>: Repositorio de GitHub de la investigación "Desplazamiento climático: la migración que no vemos", N+ Focus.<br>Isaac Arroyo (@unisaacarroyov)
-</p>
