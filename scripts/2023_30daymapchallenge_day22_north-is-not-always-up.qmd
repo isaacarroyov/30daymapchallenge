@@ -7,11 +7,12 @@ format:
 ---
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&family=Karla:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
     body {
-        background: #F9FCFD;
-        color: #51271E;
+        background: #FFF8EA;
+        color: #113946;
     }
     
     code[class^=sourceC]{
@@ -23,27 +24,27 @@ format:
     h1 {
         font-weight: 700;
         font-size: 1.8rem;
-        font-family: 'Oxygen', sans-serif;
+        font-family: 'Karla', sans-serif;
     }
 
     p {
         font-weight: 400;
         font-size: 0.75rem;
-        font-family: 'Noto Serif', serif;
+        font-family: 'Inconsolata', monospace;
     }
 
     details>summary {
-      font-family: 'Oxygen', sans-serif;
+      font-family: 'Karla', sans-serif;
       font-weight: 700;
       font-size: 0.75rem;
-      color: #51271E; /*Mismo color que aparece en body (texto)*/
+      color: #113946; /*Mismo color que aparece en body (texto)*/
       /*filter: saturate(50%) /*Menor saturación*/
     }
 
 
 
     #title_style {
-      font-family: 'Oxygen', sans-serif;
+      font-family: 'Karla', sans-serif;
       font-size: 1.1rem;
       font-weight: 700
     }
@@ -82,30 +83,61 @@ format:
     /* - Tooltips - */
     #vg-tooltip-element {
         max-width: 200px;
-        font-family: 'Noto Serif', serif; /* Cambiar dependiendo de font-family de <p> */
-        color: #51271E;
+        font-family: 'Inconsolata', monospace; /* Cambiar dependiendo de font-family de <p> */
+        color: #113946;
         font-weight: 400;
         border-radius: 15px;
         background-color: #FDFBF9; /* Cambiar dependiendo del tema + fondo + chart a usar */
     }
 </style>
 
-<h1>#30DayMapChallenge Day 22: North is not always up</h1>
+<h1 style='text-align:center;'>#30DayMapChallenge<br>Day 22: North is not always up</h1>
 
-<p id="title_style">... except when talking about <em>per capita</em> CO<sub>2</sub> emissions</p>
+<div style='text-align:center;'>
+<p id="title_style">... and is not even in the <em>center</em></p>
 <p id="nota_subtitle">
-Carbon dioxide (CO<sub>2</sub>) emissions from fossil fuels and industry. Land use change is not included.
+Playing with the <b>orthographic</b> projection in Altair.
 </p>
+</div>
 
 
 ```{python}
-#| eval: false
+import pandas as pd
+import numpy as np
+import geopandas
+import altair as alt 
+alt.renderers.set_embed_options(actions=False)
+
+# = = World geom = = #
+url_geom_world = "https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson"
+data_geom_world = alt.Data(url = url_geom_world, format = alt.DataFormat(property = "features"))
+
+# = = Circle = = #
+sphere = alt.Chart(alt.sphere()).mark_geoshape(
+    fill = "transparent", stroke = "#113946", strokeWidth = 2
+)
+
+# = = World Map - CO2 per capita = = #
+world_map_paint = (alt.Chart(data = data_geom_world)
+  .transform_calculate(random_numbers = "random()")
+  .encode(color = alt.Color(shorthand = "random_numbers:Q",
+                            legend = None,
+                            scale = alt.Scale(range = ["#2B2A4C", "#B31312", "#EA906C", "#EEE2DE"],
+                                              interpolate = "rgb")))
+  .mark_geoshape(stroke = "#FFF8EA", strokeWidth = 0.2)
+)
+
+mapa = world_map_paint + sphere
+
+(mapa
+  .project(type="orthographic", rotate=alt.expr("[90, -120, -40]"))
+  .properties(width = "container", height = 500, background = "transparent")
+  )
 
 ```
 
 
-
-
-<p id="caption">
-<b>Data</b>: <br></b>Isaac Arroyo (@unisaacarroyov)</b>
+<p id="caption" style='text-align:center;'>
+The colors are just random numbers<br>
+<b>Isaac Arroyo (@unisaacarroyov)</b>
 </p>
