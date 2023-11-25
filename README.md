@@ -148,10 +148,11 @@
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day22_north-is-not-always-up.png)
 
-### Day 23: 3D
+### Day 23: 3D (with Flourish)
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+**Data**: [_Estadística Operacional por Destino 2022, Secretaría de Comunicación y Transporte (SCT)_](https://datos.gob.mx/busca/dataset/infraestructura-aeroportuaria/resource/caf5d160-0ae2-44ee-b870-ea731723ea39)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day23_3d.png)
 
 ### Day 24: Black and White
 
