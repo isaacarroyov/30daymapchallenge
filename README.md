@@ -156,8 +156,10 @@
 
 ### Day 24: Black and White
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day24_black-and-white.R): `{ggplot2}` _and friends_  
+**Data**: [_Shaded Relief, Water, Drainages, and Ocean Bottom, Natural Earth_](https://www.naturalearthdata.com/downloads/10m-cross-blend-hypso/cross-blended-hypso-with-relief-water-drains-and-ocean-bottom/)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day24_black-and-white.png)
 
 ### Day 25: Antartica
 
