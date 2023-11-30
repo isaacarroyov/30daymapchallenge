@@ -161,10 +161,12 @@
 
 ![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day24_black-and-white.png)
 
-### Day 25: Antartica
+### Day 25: Antarctica
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day25_antarctica.qmd): `altair`  
+**Data**: [_Subantarctic glaciers via Wikipedia_](https://en.wikipedia.org/wiki/Subantarctic#Subantarctic_glaciers)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day25_antarctica.png)
 
 ### Day 26: Minimal
 
