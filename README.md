@@ -170,8 +170,10 @@
 
 ### Day 26: Minimal
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day26_minimal.R): `{ggplot2}` _and friends_  
+**Data**: _Ríos atravesando Tabasco, México_
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day26_minimal.png)
 
 ### Day 27: Dot
 
