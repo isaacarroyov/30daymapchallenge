@@ -11,7 +11,7 @@ format:
   @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&family=Karla:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
     body {
-        background: #FFFFFF;
+        background: #EFF1F3;
         color: #000000;
     }
     
@@ -100,8 +100,6 @@ format:
 
 ```{python}
 import pandas as pd
-import numpy as np
-import geopandas
 import altair as alt 
 alt.renderers.set_embed_options(actions=False)
 
@@ -109,20 +107,32 @@ alt.renderers.set_embed_options(actions=False)
 url_geom_world = "https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson"
 data_geom_world = alt.Data(url = url_geom_world, format = alt.DataFormat(property = "features"))
 
+# = = Glacieres = = #
+df = pd.read_csv("./../data/list_of_glaciers.csv")
+
 # = = Circle = = #
 sphere = alt.Chart(alt.sphere()).mark_geoshape(
-    fill = "lightgray", stroke = "#000000", strokeWidth = 2
-)
+    fill = "#EFF1F3", strokeWidth = 0.5, stroke = "#000000")
 
 # = = World Map - CO2 per capita = = #
 world_map_paint = (alt.Chart(data = data_geom_world)
-  .mark_geoshape(fill = "#222222", stroke = "#000000")
+  .encode(
+    color = alt.condition("datum.properties.NAME_EN == 'Antarctica'",
+      alt.value("#FEC48A"), alt.value("#DEE3E8")),
+      )
+  .mark_geoshape(stroke = "#000000")
 )
 
-mapa = sphere + world_map_paint
+# = = Puntos de glacieres = = #
+points_glacieres = (alt.Chart(df)
+  .encode(latitude = "Lat:Q",longitude = "Long:Q", tooltip = 'Name of Glacier')
+  .mark_circle(color = "#D68523", size = 80, stroke="#000000", strokeWidth = 1)
+  )
+
+mapa = sphere + world_map_paint + points_glacieres
 
 (mapa
-  .project(type="orthographic", rotate=alt.expr("[145, 90, 0]"))
+  .project(type="orthographic", rotate=alt.expr("[145, 100, 0]"), scale = 400)
   .properties(width = "container", height = 500, background = "transparent")
   )
 
