@@ -1,0 +1,135 @@
+---
+format:
+  html:
+    echo: false
+    theme: journal
+    jupyter: python3    
+---
+
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&family=Karla:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    
+    body {
+        background: #FFFFFF;
+        color: #000000;
+    }
+    
+    code[class^=sourceC]{
+        font-family: 'Space Mono', monospace;
+        /*background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        font-family: 'Karla', sans-serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.75rem;
+        font-family: 'Inconsolata', monospace;
+    }
+
+    details>summary {
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: #000000; /*Mismo color que aparece en body (texto)*/
+      /*filter: saturate(50%) /*Menor saturación*/
+    }
+
+
+
+    #title_style {
+      font-family: 'Karla', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700
+    }
+
+
+   #caption {
+        font-size: 0.6rem;
+        font-weight: 300;
+    }
+    
+    #url_paleta_colores {
+        color: steelblue;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        margin-top: -1em;
+    }
+
+    /* = = Vega-Lite Charts = = */
+    /*
+    .vega-embed {
+        width: 100%;
+        display: flex;
+    }
+
+    .vega-embed details,
+    .vega-embed details summary {
+        position: relative;
+    }
+
+    .vega-bind-name {
+        font-weight: 400;
+        color: #F1EFE3
+    } */
+    /* - Tooltips - */
+    #vg-tooltip-element {
+        max-width: 200px;
+        font-family: 'Inconsolata', monospace; /* Cambiar dependiendo de font-family de <p> */
+        color: #000000;
+        font-weight: 400;
+        border-radius: 15px;
+        background-color: #FFFFFF; /* Cambiar dependiendo del tema + fondo + chart a usar */
+    }
+</style>
+
+<h1 style='text-align:center;'>#30DayMapChallenge<br>Day 25: Antartica (and its glaciers)</h1>
+
+<div style='text-align:center;'>
+<p id="note_subtitle">more specifically subantartic glaciers</p>
+</div>
+
+
+```{python}
+import pandas as pd
+import numpy as np
+import geopandas
+import altair as alt 
+alt.renderers.set_embed_options(actions=False)
+
+# = = World geom = = #
+url_geom_world = "https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Mundo/world_shapes_from_altair_website.geojson"
+data_geom_world = alt.Data(url = url_geom_world, format = alt.DataFormat(property = "features"))
+
+# = = Circle = = #
+sphere = alt.Chart(alt.sphere()).mark_geoshape(
+    fill = "lightgray", stroke = "#000000", strokeWidth = 2
+)
+
+# = = World Map - CO2 per capita = = #
+world_map_paint = (alt.Chart(data = data_geom_world)
+  .mark_geoshape(fill = "#222222", stroke = "#000000")
+)
+
+mapa = sphere + world_map_paint
+
+(mapa
+  .project(type="orthographic", rotate=alt.expr("[145, 90, 0]"))
+  .properties(width = "container", height = 500, background = "transparent")
+  )
+
+```
+
+
+<p id="caption" style='text-align:center;'>
+<b>Data</b>: List of Subantarctic glaciers via Wikipedia<br>
+<b>Isaac Arroyo (@unisaacarroyov)</b>
+</p>
