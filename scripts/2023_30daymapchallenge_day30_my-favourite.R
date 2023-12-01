@@ -5,6 +5,10 @@ library(ggtext)
 library(sysfonts)
 library(showtext)
 
+font_add_google("Noto Sans", "body")
+font_add_google("Oxygen", "title")
+showtext_auto()
+
 isla_mujeres_bb <- getbb("Isla Mujeres, Quintana Roo, Mexico")
 
 # = = Calles = = #
@@ -72,20 +76,33 @@ mapa <- ggplot() +
   geom_richtext(
     data = tibble(
       x = c(-86.71),
-      y = c(21.26),
-      label = c("#30DayMapChallenge<br>Day 30: My favourite... island<br><br>Isla Mujeres")), # nolint
+      y = c(21.266),
+      label = c("#30DayMapChallenge Day 30:<br>My favourite . . . island<br><span style='font-size:90pt;'>Isla Mujeres</span>")), # nolint
     mapping = aes(x = x, y = y, label = label),
     hjust = 1,
-    vjust = 1
+    vjust = 1,
+    family = "title",
+    size = 23,
+    lineheight = 0.5,
+    fill = "transparent",
+    label.colour = "transparent",
+    text.colour = "black",
+    fontface = "bold",
   ) +
   geom_richtext(
     data = tibble(
       x = c(-86.75),
       y = c(21.20),
-      label = c("Isaac Arroyo<br>Map data © OpenStreetMap contributors")), # nolint
+      label = c("<b>Isaac Arroyo (@unisaacarroyov)</b><br>Map data © OpenStreetMap contributors")), # nolint
     mapping = aes(x = x, y = y, label = label),
     hjust = 0,
-    vjust = 0
+    vjust = 0,
+    family = "body",
+    lineheight = 0.5,
+    fill = "transparent",
+    label.colour = "transparent",
+    text.colour = "black",
+    size = 12
   )
 
 tgutil::ggpreview(height = 10, width = 6, units = "in", plot = mapa, bg = "lightblue") # nolint
