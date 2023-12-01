@@ -182,8 +182,9 @@
 
 ### Day 28: Is this a chart or a map?
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day28_is-this-a-chart-or-a-map.qmd): `altair`  
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day28_is-this-a-chart-or-a-map.png)
 
 ### Day 29: Population
 
