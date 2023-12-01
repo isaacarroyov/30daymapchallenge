@@ -1,0 +1,156 @@
+---
+format:
+  html:
+    echo: false
+    theme: journal
+    jupyter: python3    
+---
+
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:wght@700&display=swap');
+    
+    body {
+        background: #FFFFFF;
+        color: #000000;
+    }
+    
+    code[class^=sourceC]{
+        font-family: 'Space Mono', monospace;
+        /*background-color: #FDFBF9; /*Cambiar dependiendo del fondo que se tenga + el tema de Quarto*/
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        font-family: 'Vollkorn', serif;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 0.75rem;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    details>summary {
+      font-family: 'Vollkorn', serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: #000000; /*Mismo color que aparece en body (texto)*/
+      /*filter: saturate(50%) /*Menor saturación*/
+    }
+
+    #title_style {
+      font-family: 'Vollkorn', serif;
+      font-size: 1.1rem;
+      font-weight: 700
+    }
+
+
+   #caption {
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+    
+    #url_paleta_colores {
+        color: steelblue;
+        text-decoration: none;
+    }
+
+    #nota_subtitle {
+        margin-top: -1em;
+    }
+
+    /* = = Vega-Lite Charts = = */
+    /*
+    .vega-embed {
+        width: 100%;
+        display: flex;
+    }*/
+
+    /*
+    .vega-embed details,
+    .vega-embed details summary {
+        position: relative;
+    }*/
+
+    /*
+    .vega-bind-name {
+        font-weight: 400;
+        color: #F1EFE3
+    } */
+    /* - Tooltips - */
+    #vg-tooltip-element {
+        max-width: 100px;
+        font-family: 'Raleway', sans-serif; /* Cambiar dependiendo de font-family de <p> */
+        color: #000000;
+        font-weight: 600;
+        border-radius: 15px;
+        text-align: center;
+        background-color: #FFFFFF; /* Cambiar dependiendo del tema + fondo + chart a usar */
+    }
+</style>
+
+<h1 style='text-align:center;'>#30DayMapChallenge<br>Day 28: Is this a chart or a map?</h1>
+
+<div style='text-align:center;'>
+<p id="note_subtitle">scatterplot or map?</p>
+</div>
+
+```{python}
+#| output: false
+import numpy as np
+import pandas as pd
+import geopandas
+import altair as alt 
+alt.renderers.set_embed_options(actions=False)
+
+# = = Geometría de México = = #
+geom_mexico = geopandas.read_file("https://raw.githubusercontent.com/isaacarroyov/datos_facil_acceso/main/Gobierno-Mexicano/geometrias/00ent_mexico.geojson")
+mexico_centroids = geom_mexico.copy()
+mexico_centroids['geometry'] = mexico_centroids["geometry"].centroid
+mexico_centroids["lon"] = mexico_centroids.geometry.x
+mexico_centroids["lat"] = mexico_centroids.geometry.y
+mexico_centroids = mexico_centroids.drop(columns = ["geometry","cve_geo"])
+
+# = = Areas de México = = #
+data_areas = pd.read_csv("./../data/superficie_estados_mexico.csv")
+data_areas["nombre_estado"] = data_areas["nombre_estado"].apply(lambda x: x if x != "CDMX, Ciudad de México" else "Ciudad de México")
+
+# = = Unir datos = = #
+df = pd.merge(left = data_areas, right = mexico_centroids, on = "nombre_estado", how = "left")
+
+```
+
+
+```{python}
+# = = DATA VIS = = #
+mapa = (alt.Chart(df)
+  .transform_calculate(info = "datum.nombre_estado + ' tiene una superficie de ' + format(datum.km2, ',.0f') + ' km²'")
+  .encode(
+    tooltip = "info:N",
+    latitude = "lat",
+    longitude = "lon",
+    size = alt.Size(
+      shorthand = "km2:Q",
+      legend = alt.Legend(
+        labelExpr = "datum.label + ' km²'",
+        values = [2000,20000,200000]),
+      # legend = None,
+      title = "Superficie",
+      scale = alt.Scale(range = [0,2500])))
+  .mark_point(filled=True, shape = "square"))
+
+
+(mapa
+  .properties(width = "container")
+  .configure_legend(orient = "none", titleAnchor = "start", legendY = 180)
+  )
+
+```
+
+
+<p id="caption" style='text-align:center;margin-top:1rem;'>
+<b>Isaac Arroyo (@unisaacarroyov)</b>
+</p>
