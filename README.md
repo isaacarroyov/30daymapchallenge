@@ -188,8 +188,10 @@
 
 ### Day 29: Population
 
-[**Code**](): `{ggplot2}` _and friends_  
-**Data**: [_Name_]()
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day29_population.R): `{ggplot2}` _and friends_  
+**Data**: [_Principales resultados por AGEB y manzana urbana 2020, INEGI_](https://www.inegi.org.mx/app/scitel/Default?ev=10)
+
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day29_population.png)
 
 ### Day 30: My favourite...
 
