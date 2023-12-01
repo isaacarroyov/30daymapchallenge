@@ -11,8 +11,8 @@ format:
   @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:wght@700&display=swap');
     
     body {
-        background: #FFFFFF;
-        color: #000000;
+        background: #FCF6E4;
+        color: #0C3B36;
     }
     
     code[class^=sourceC]{
@@ -37,7 +37,7 @@ format:
       font-family: 'Vollkorn', serif;
       font-weight: 700;
       font-size: 0.75rem;
-      color: #000000; /*Mismo color que aparece en body (texto)*/
+      color: #0C3B36; /*Mismo color que aparece en body (texto)*/
       /*filter: saturate(50%) /*Menor saturación*/
     }
 
@@ -84,11 +84,13 @@ format:
     #vg-tooltip-element {
         max-width: 100px;
         font-family: 'Raleway', sans-serif; /* Cambiar dependiendo de font-family de <p> */
-        color: #000000;
+        color: #0C3B36;
         font-weight: 600;
         border-radius: 15px;
+        border-color: #000000;
+        border-width: 1.5px;
         text-align: center;
-        background-color: #FFFFFF; /* Cambiar dependiendo del tema + fondo + chart a usar */
+        background-color: #FEF9F8; /* Cambiar dependiendo del tema + fondo + chart a usar */
     }
 </style>
 
@@ -126,12 +128,16 @@ df = pd.merge(left = data_areas, right = mexico_centroids, on = "nombre_estado",
 
 ```{python}
 # = = DATA VIS = = #
+
+hover_selection = alt.selection_point()
+
 mapa = (alt.Chart(df)
   .transform_calculate(info = "datum.nombre_estado + ' tiene una superficie de ' + format(datum.km2, ',.0f') + ' km²'")
   .encode(
     tooltip = "info:N",
     latitude = "lat",
     longitude = "lon",
+    opacity = alt.condition(hover_selection, alt.value(1), alt.value(0.2)),
     size = alt.Size(
       shorthand = "km2:Q",
       legend = alt.Legend(
@@ -140,12 +146,28 @@ mapa = (alt.Chart(df)
       # legend = None,
       title = "Superficie",
       scale = alt.Scale(range = [0,2500])))
-  .mark_point(filled=True, shape = "square"))
+  .mark_point(
+    filled=True,
+    fill = "#D83F31",
+    shape = "square",
+    stroke = "black",
+    strokeWidth = 0.7)
+  )
 
 
 (mapa
-  .properties(width = "container")
-  .configure_legend(orient = "none", titleAnchor = "start", legendY = 180)
+  .add_params(
+    hover_selection)
+  .properties(
+    width = "container",
+    background = "transparent")
+  .configure_legend(
+    titleColor = "#0C3B36",
+    labelColor = "#0C3B36",
+    symbolStrokeWidth = 0.7,
+    orient = "none",
+    titleAnchor = "start",
+    legendY = 180)
   )
 
 ```
