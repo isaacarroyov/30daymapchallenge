@@ -1,0 +1,7 @@
+library(tidyverse)
+library(ggtext)
+library(sysfonts)
+library(showtext)
+library(MoMAColors)
+library(sf)
+sf_use_s2(FALSE)
