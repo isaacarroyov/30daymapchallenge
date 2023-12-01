@@ -68,6 +68,24 @@ mapa <- ggplot() +
   geom_sf(data = isla_mujeres_natural_beach$osm_polygons, fill = "purple") +
   geom_sf(data = isla_mujeres_natural_water$osm_polygons, fill = "yellow") +
   geom_sf(data = isla_mujeres_small_builing$osm_polygons, fill = "gray60") +
-  geom_sf(data = isla_mujeres_natural_coastline$osm_lines, color = "black")
+  geom_sf(data = isla_mujeres_natural_coastline$osm_lines, color = "black") +
+  geom_richtext(
+    data = tibble(
+      x = c(-86.71),
+      y = c(21.26),
+      label = c("#30DayMapChallenge<br>Day 30: My favourite... island<br><br>Isla Mujeres")), # nolint
+    mapping = aes(x = x, y = y, label = label),
+    hjust = 1,
+    vjust = 1
+  ) +
+  geom_richtext(
+    data = tibble(
+      x = c(-86.75),
+      y = c(21.20),
+      label = c("Isaac Arroyo<br>Map data © OpenStreetMap contributors")), # nolint
+    mapping = aes(x = x, y = y, label = label),
+    hjust = 0,
+    vjust = 0
+  )
 
 tgutil::ggpreview(height = 10, width = 6, units = "in", plot = mapa, bg = "lightblue") # nolint
