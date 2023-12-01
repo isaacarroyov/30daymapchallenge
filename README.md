@@ -195,6 +195,6 @@
 
 ### Day 30: My favourite...
 
-[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day27_dots.R): `{ggplot2}` _and friends_  
+[**Code**](https://github.com/isaacarroyov/30daymapchallenge/blob/main/scripts/2023_30daymapchallenge_day30_my-favourite.R): `{ggplot2}` _and friends_  
 
-![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day27_dots.png)
+![](https://raw.githubusercontent.com/isaacarroyov/30daymapchallenge/main/maps/2023_30daymapchallenge_day30_my-favourite.png)
